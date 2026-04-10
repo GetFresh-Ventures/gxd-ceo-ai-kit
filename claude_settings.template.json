@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit",
+        "command": "if echo \"$CLAUDE_COMMAND\" | grep -qiE 'send|email|post' || echo \"$CLAUDE_FILE_PATH\" | grep -qE '\\.md|\\.txt'; then python3 ~/.claude/hooks/pre-send-review.py \"$CLAUDE_FILE_PATH\" \"$CLAUDE_COMMAND\"; fi",
+        "description": "GFV Voice/Quality Gate Check before sending communications or finalizing emails"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "command": "python3 ~/.claude/hooks/session-stop.py --log || true",
+        "description": "Update GFV sync logs periodically"
+      }
+    ]
+  }
+}
