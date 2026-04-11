@@ -175,7 +175,7 @@ Generic advice when live data exists is a failure mode.
 ### Pattern 10: Agent Protocol Compliance
 All C-suite advisory skills MUST follow the agent-protocol skill:
 - **Invocation syntax:** `[INVOKE:role|question]` for cross-role queries
-- **Loop prevention:** No self-invocation, max depth 2, no circular calls
+- **Loop prevention & Death Loop Short-Circuit:** No self-invocation, max depth 2. For Judge/Architect debates, MAXIMUM 2 critique loops. If consensus fails by attempt 3, BREAK loop and flag as BLOCKED.
 - **Quality loop:** Self-verify → peer-verify → critic pre-screen (by stakes)
 - **Standard output formats:** Use the three formats defined in agent-protocol
 - **Communication rules:** Bottom line first, max 5 bullets, owners + deadlines on actions
@@ -330,7 +330,7 @@ Switching to: [Skill Name / Persona]
 ### Pattern 17: Decision Complexity Scoring
 
 Orchestrator and C-Suite skills MUST formally score inputs from 1-5 to determine the correct execution routing:
-- **Score 1-2 (Operational):** Single skill, execute immediately (Auto-Resolve).
+- **Score 1-2 (Operational - Auto-Resolve):** Single skill, execute immediately without wait. **BLAST RADIUS CONTAINMENT:** Auto-Resolve is strictly isolated to internal state changes (Linear, Internal Dashboards). NO outbound client communication or budget allocation is ever permitted as Score 1-2.
 - **Score 3 (Strategic):** Single skill, Draft-First (Await approval).
 - **Score 4 (High Risk):** Multi-skill sequential handoff.
 - **Score 5 (Critical):** "Board Meeting" protocol (3+ personas independently debating via Reflexion).

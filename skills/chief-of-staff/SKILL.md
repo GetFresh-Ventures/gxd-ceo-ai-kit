@@ -30,6 +30,15 @@ When triaging incoming signals, strictly score the complexity to determine the e
 - **Score 4 (High Risk - Financial/Pricing):** Multi-agent sequential handoff and peer verification.
 - **Score 5 (Critical - Legal/Board):** Escalate immediately. Spawn a "Board Meeting" with 3+ personas (e.g., Requirements Validator, Architect, Reviewer) to aggressively debate before presenting to the CEO.
 
+## Headless Polling Protocol (Cron Operations)
+
+The Chief of Staff skill does not wait for Diraj to prompt it. It is authorized to run headlessly via cron or background sweep (e.g., `pil_morning_digest.py`):
+1. **Wake-up Trigger:** Execute every 4 hours automatically.
+2. **Sweep:** Pull live state changes from Linear (tasks), Fathom (meetings), and HubSpot (deals).
+3. **Triage:** Run the 1-5 Decision Complexity Score on all new signals.
+4. **Auto-Resolve (Score 1-2):** Immediately execute low-risk operational updates in the background. **NO OUTBOUND COMM OR BUDGET CHANGES PERMITTED.**
+5. **Digest (Score 3-5):** For anything Strategic or higher, do not execute. Build a prioritized, compressed `morning_digest.md` and queue it for Diraj's next login.
+
 ## Architecture (3 Layers)
 
 The system works by separating concerns:

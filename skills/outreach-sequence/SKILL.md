@@ -108,6 +108,8 @@ Before finalizing any outbound sequence, process the drafted sequence through th
 3. **Persona C (Quality Reviewer):** Are the banned words completely removed? Is the tone perfectly matched to the CEO voice model?
 If any judge rejects the sequence, rewrite the failing touches before presenting to Diraj.
 
+**Death Loop Short-Circuit:** Maximum 2 critique loops allowed. If the 3 personas cannot reach consensus after 2 rewrite attempts across the sequence, you MUST break the loop. Output the sequence labeled `[BLOCKED BY JUDGMENT LOOP]` and explicitly flag the specific touches causing failure for Diraj's manual validation.
+
 ## Pre-Launch Checks (from clawchief)
 
 Before sending the first touch:

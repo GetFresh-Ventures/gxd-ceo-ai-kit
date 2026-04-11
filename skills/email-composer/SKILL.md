@@ -91,6 +91,8 @@ For Investor/Board, Legal, or High-Value Prospect emails, **do not** just presen
 3. **Persona C (Quality Reviewer):** CoVe - Is the tone exact? Does it strictly adhere to the banned words list?
 If they disagree, synthesize an executive summary of the debate, and present the final perfected draft based on this strict critique.
 
+**Death Loop Short-Circuit:** Maximum 2 critique loops allowed. If the 3 personas cannot reach consensus after 2 rewrite attempts, you MUST break the loop. Output the best draft labeled `[BLOCKED BY JUDGMENT LOOP]` and explicitly flag it for Diraj's manual intervention to prevent token burning.
+
 ### Step 6: Present for Approval
 
 Show the full email inline. Wait for explicit **"send it"** before any action.
