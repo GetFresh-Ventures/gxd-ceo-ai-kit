@@ -1,5 +1,5 @@
 # Growth by Design
-**Version**: v1.4.0  
+**Version**: v1.5.0  
 **A GTM Enablement Kit for the AI-Powered Executive**
 
 *An exclusive framework for GFV Portfolio CEOs.*
@@ -71,7 +71,7 @@ The AI will walk you through an interactive wizard to configure your voice model
 
 ## What Can It Do?
 
-Once installed, you have access to **35 pre-built skills** and **4 multi-step workflows** that cover everything from day-to-day execution to strategic C-suite advisory. You invoke them by saying their name (e.g., "run email-composer") or, on Claude Code, by typing the `/slash` command directly.
+Once installed, you have access to **48 pre-built skills** and **4 multi-step workflows** that cover everything from day-to-day execution to strategic C-suite advisory. You invoke them by saying their name (e.g., "run email-composer") or, on Claude Code, by typing the `/slash` command directly.
 
 ### Skills — Day-to-Day Execution
 
@@ -103,7 +103,7 @@ Once installed, you have access to **35 pre-built skills** and **4 multi-step wo
 | `/scenario-war-room` | Cascading multi-variable risk modeling — "what if X AND Y both happen?" |
 | `/competitive-intel` | 5-layer competitive tracking with battlecard templates and win/loss analysis |
 
-### Skills — Infrastructure (New in v1.4.0)
+### Skills — Infrastructure
 
 | Skill | What it does |
 |-------|-------------|
@@ -112,7 +112,9 @@ Once installed, you have access to **35 pre-built skills** and **4 multi-step wo
 | `/decision-logger` | Two-layer decision memory — raw transcripts vs approved-only, conflict detection |
 | `/change-management` | Organizational change, reorg planning, pivot communications |
 | `/launch-strategy` | Product/service launch playbooks with GTM alignment |
-| `/deal-review` | Deal evaluation and pipeline health checks |
+| `/experiment-loop` | Scientific method for business: baseline → one change → measure → keep/discard → repeat |
+| `/strategic-decision` | 5-perspective GO/NO-GO/DEFER framework for major decisions |
+| `/gfv-hooks` | Event-driven lifecycle hooks with safety gates |
 
 ### Skills — Technical / Builder
 
@@ -294,6 +296,16 @@ To add a new workflow:
 
 ## Release History
 
+### What's New in v1.5.0 (Battle-Tested Skill Elevation)
+- **9 Skills Elevated to v2:** chief-of-staff, post-meeting-brief, pipeline-pulse, weekly-ceo-brief, deal-review, verify-execution, email-composer, outreach-sequence, meeting-prep
+- **New: experiment-loop** — Scientific method for CEO initiatives from autoagent's hill-climbing pattern
+- **New: SKILLS-REGISTRY.md** — Complete registry of all 48 skills with categories, trigger phrases, and composition patterns
+- **Resolve-First Pattern** (clawchief) — Skills now ACT on findings instead of just reporting them
+- **Failure Taxonomy** (autoagent) — 7-category diagnosis framework for debugging any operational failure
+- **Source-of-Truth Enforcement** — Every skill now requires live system verification, never memory alone
+- **Composition Patterns** — Documented skill chains for full meeting lifecycle, deal progression, fundraise cycles
+- **Skill count: 35 → 48** across advisory, operational, technical, and infrastructure categories
+
 ### What's New in v1.4.0 (CEO Enablement Infrastructure)
 - **Full C-Suite Advisory System:** 12 advisory skills (CEO, CFO, COO, CMO, CRO, Founder Coach, Executive Mentor, Board Deck Builder, Financial Analyst, Scenario War Room, Competitive Intel, Chief of Staff v2.0)
 - **Agent Protocol:** Formal inter-agent communication standard — `[INVOKE:role|question]` syntax, loop prevention, 4-step quality verification before any output reaches the CEO
@@ -341,7 +353,8 @@ gfv_growth_by_design/
 ├── README.md                        ← This file
 ├── bootstrap.sh                     ← One-command setup script
 ├── claude_settings.template.json    ← Claude Code settings template
-├── skills/                          ← 35 pre-built skills (slash commands)
+├── SKILLS-REGISTRY.md               ← Complete skill registry (48 skills, 6 categories)
+├── skills/                          ← 48 pre-built skills (slash commands)
 │   ├── agent-protocol/              ← Inter-agent communication standard
 │   ├── chief-of-staff/              ← C-suite orchestration layer
 │   ├── ceo-advisor/                 ← Strategic advisory

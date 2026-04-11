@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-04-11 10:50 AM PT — v1.5.0 — Battle-Tested Skill Elevation
+
+### Why it matters
+This release takes 9 core operational skills from "report mode" to "resolve mode" by integrating battle-tested patterns from two production founder operating systems: Ryan Carson's clawchief (daily autonomous chief-of-staff for Untangle) and kevinrgu's autoagent (autonomous agent engineering harness). The kit also gains the experiment-loop skill (scientific method for business optimization), a comprehensive SKILLS-REGISTRY with 48 skills categorized and cross-referenced, and every operational skill now enforces source-of-truth grounding and action-first behavior.
+
+### Added
+- **`skills/experiment-loop`** — Scientific method for any CEO initiative: baseline → one change → measure → keep/discard → repeat. Keep/discard ledger, overfitting test, simplicity criterion, failure analysis framework. Inspired by autoagent's autonomous hill-climbing methodology.
+- **`SKILLS-REGISTRY.md`** — Complete registry of all 48 skills across 6 categories (Execution Infrastructure, C-Suite Advisory, Revenue Enablement, Document Processing, Daily Operations, Growth Engine). Includes trigger phrases, composition patterns (skill chains), design principles, and full source attribution.
+
+### Elevated (v1 → v2)
+- **`skills/chief-of-staff`** — 3-layer architecture from clawchief: Priority Map (P0-P3 urgency) → Auto-Resolver (4 resolution modes: auto-resolve / draft-first / escalate / ignore) → Heartbeat (orchestration). Meeting notes ingestion pipeline, inbox clearing rules with auto-handle/escalate boundary, safe auto-resolve lane.
+- **`skills/post-meeting-brief`** — "Not handled until outputs are in the system" rule: meeting notes are only processed when tasks are in Linear, deals updated in HubSpot, follow-ups on calendar, and follow-up email drafted. Auto-resolve bias for operational follow-ups.
+- **`skills/pipeline-pulse`** — Resolve-first: for every stalled deal, draft the follow-up and create the task in the same turn. Structured follow-up cadence (2d → 5d → 7d → stop and escalate). Source-of-truth enforcement: tracker updated in same turn as action.
+- **`skills/weekly-ceo-brief`** — Resolve during synthesis: create tasks, draft emails, update systems while building the brief. Open loops resolved, not just listed. Simplicity criterion: scannable in < 3 minutes.
+- **`skills/deal-review`** — Autoagent failure taxonomy (7 diagnosis patterns: wrong contact, missing capability evidence, weak info gathering, bad execution, missing verification, silent failure, priority shift). Overfitting test: "If this exact deal disappeared, would this still be worthwhile?"
+- **`skills/verify-execution`** — Full failure taxonomy, overfitting test, simplicity criterion. "Not verified until captured" rule: saying "it works" ≠ verified, only captured runtime output = verified.
+- **`skills/email-composer`** — Source-of-truth gathering before drafting, clawchief thread rules (reply in-thread, preserve CC), auto-resolver draft-first boundary, reply templates for scheduling/follow-up/holding.
+- **`skills/outreach-sequence`** — Structured follow-up cadence with CRM update at every touch. Pre-launch verification checks. Experiment-loop integration: every sequence is an experiment tracked in the ledger.
+- **`skills/meeting-prep`** — Confidence tags (🟢 verified / 🟡 inferred / 🔴 assumed). Open loop detection from previous interactions. Post-meeting handoff instructions.
+
+### Design Patterns Integrated
+- **Resolve, don't summarize** — Every skill should DO work, not just report (clawchief)
+- **Source of truth or bust** — Always ground in live systems, never memory alone (clawchief)
+- **One variable per experiment** — From experiment-loop, but applies everywhere (autoagent)
+- **Not handled until in the system** — Reading ≠ Processing (clawchief)
+- **Failure taxonomy** — 7 diagnosis categories for debugging any failure (autoagent)
+- **Overfitting test** — "Would this still help if the exact case disappeared?" (autoagent)
+- **Simplicity criterion** — Same result + simpler approach = keep simpler (autoagent)
+
+### Files Modified
+- CHANGELOG.md, README.md, SKILLS-REGISTRY.md (new)
+- skills/experiment-loop/SKILL.md (new)
+- skills/chief-of-staff/SKILL.md, skills/post-meeting-brief/SKILL.md
+- skills/pipeline-pulse/SKILL.md, skills/weekly-ceo-brief/SKILL.md
+- skills/deal-review/SKILL.md, skills/verify-execution/SKILL.md
+- skills/email-composer/SKILL.md, skills/outreach-sequence/SKILL.md
+- skills/meeting-prep/SKILL.md
+
 ## 2026-04-11 8:40 AM PT — v1.4.0 — CEO Enablement Infrastructure
 
 ### Why it matters
