@@ -1,5 +1,5 @@
 # Growth by Design
-**Version**: v1.8.0  
+**Version**: v1.9.0  
 **A GTM Enablement Kit for the AI-Powered Executive**
 
 *An exclusive framework for GFV Portfolio CEOs.*
@@ -297,6 +297,9 @@ To add a new workflow:
 ---
 
 ## Release History
+
+### What's New in v1.9.0 (Structural Map Priority)
+- **Anti-File-Dump Constraint (Pattern 27):** Hard ban on pulling 500+ line files into standard context windows without first extracting a line-bounded structural map/outline of functions and classes.
 
 ### What's New in v1.8.0 (The Subagent Verification Protocol)
 - **Subagent Reporting Contract (Pattern 23):** Orchestrators must reject any findings that do not cite file paths, API names, and copyable snippets. 

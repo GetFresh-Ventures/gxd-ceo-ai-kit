@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-04-11 12:05 PM PT — v1.9.0 — Structural Map Priority
+
+### Why it matters
+Extracting the final critical architectural parameter from the dotmack `claude-mem` codebase, this release officially eradicates the most common cause of context window degradation: the raw file dump. Agents are now mathematically barred from reading massive files purely to navigate them. They must index line bounds via AST/headers before loading line-specific implementations.
+
+### Added
+- **`SKILL-AUTHORING-STANDARD.md`** — Added Pattern 27: Structural Map Priority (Anti-File-Dump) mandating the `Index -> Outline -> Unfold` orchestration loop strictly over raw full-file extraction logic.
+
+### Files Modified
+- CHANGELOG.md, README.md, SKILL-AUTHORING-STANDARD.md
+
 ## 2026-04-11 11:58 AM PT — v1.8.0 — The Subagent Verification Protocol
 
 ### Why it matters

@@ -362,6 +362,9 @@ When searching massive databases, vector stores, or the PIL, agents MUST NOT exe
 ### Pattern 26: Post-Execution Verification Isolation
 An agent writing code must not be the agent verifying its own code. After an implementation step, the orchestrator must execute verification in isolated logic bounds via subagents: a "Verification pass" (run tests/scripts), an "Anti-Pattern pass" (grep for forbidden code), and a "Code Quality pass". Only commit upon successful isolated verification.
 
+### Pattern 27: Structural Map Priority (Anti-File-Dump)
+Never execute an unfettered full-file fetch to dump a 500+ line source code file or payload into your active context window. You must adopt an "Index -> Outline -> Unfold" strategy: first extract a structural map representing function headers, class definitions, and their line bounds. Once the target logic block is identified, precisely fetch only those exact start and end lines.
+
 ---
 
 ## Quality Checklist
