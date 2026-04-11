@@ -1,5 +1,5 @@
 # Growth by Design
-**Version**: v1.5.1  
+**Version**: v1.6.0  
 **A GTM Enablement Kit for the AI-Powered Executive**
 
 *An exclusive framework for GFV Portfolio CEOs.*
@@ -295,6 +295,12 @@ To add a new workflow:
 ---
 
 ## Release History
+
+### What's New in v1.6.0 (The "Frontier OS" Hardening)
+- **Zero-Chitchat UX / High-Signal Output:** Global ban on conversational filler and time-estimation. UI is forced into flat markdown lists.
+- **PlanMode Execution Barrier:** High-risk tasks (Score 4 & 5) now require explicit user approval on a `plan.md` artifact before any execution tokens are spent.
+- **Speculative Parallelism (Turn-Penalty):** All agents process file searches sequentially as parallel arrays upfront across the repo to eliminate wasted context turns.
+- **Git Amend Failsafe (Truncate-Don't-Amend):** Hard ban on `git commit --amend` to prevent pipeline corruption over failed commit hooks.
 
 ### What's New in v1.5.0 (Battle-Tested Skill Elevation)
 - **9 Skills Elevated to v2:** chief-of-staff, post-meeting-brief, pipeline-pulse, weekly-ceo-brief, deal-review, verify-execution, email-composer, outreach-sequence, meeting-prep

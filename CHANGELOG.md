@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-04-11 11:47 AM PT — v1.6.0 — The "Frontier OS" Hardening
+
+### Why it matters
+This release incorporates the state-of-the-art meta-agentic constraints found in leaked system prompts from frontier models (Claude Code, OpenAI Codex, GPT-5 Agent Mode, Gemini CLI). It strictly enforces contextual economy, hard execution barriers for high-risk operations, and zero-chitchat commands, elevating the Kit from a robust advisory harness into an enterprise-grade autonomous operating system that mirrors internal orchestration at Anthropic and Google.
+
+### Added
+- **`SKILL-AUTHORING-STANDARD.md`** — Added Pattern 18: Speculative Parallelism (Turn-Penalty Heuristic) ensuring zero back-and-forth wasted context turns by blasting parallel queries upfront.
+- **`SKILL-AUTHORING-STANDARD.md`** — Added Pattern 19: Git Failsafe (Truncate-Don't-Amend) enforcing a strict ban on `git commit --amend` to protect repository histories.
+- **`SKILL-AUTHORING-STANDARD.md`** — Upgraded Pattern 17 (Score 4 & 5 tasks) with the "EnterPlanMode" execution barrier preventing execution token burn without user approval.
+
+### Changed
+- **`workflows/session-protocol.md`** — Added the Zero Chitchat (High-Signal Output) boundary. Banned conversational filler ("Done", "Got it") and arbitrary time estimates. Emphasized flat UX constraints.
+- Promoted `README.md` to version 1.6.0 reflecting the new Frontier OS constraints.
+
+### Files Modified
+- CHANGELOG.md, README.md, SKILL-AUTHORING-STANDARD.md
+- ../.agents/workflows/session-protocol.md
+
 ## 2026-04-11 11:30 AM PT — v1.5.1 — Meta-Agentic Hardening
 
 ### Why it matters

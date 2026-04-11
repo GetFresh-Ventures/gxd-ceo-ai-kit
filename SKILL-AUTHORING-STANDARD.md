@@ -332,8 +332,14 @@ Switching to: [Skill Name / Persona]
 Orchestrator and C-Suite skills MUST formally score inputs from 1-5 to determine the correct execution routing:
 - **Score 1-2 (Operational - Auto-Resolve):** Single skill, execute immediately without wait. **BLAST RADIUS CONTAINMENT:** Auto-Resolve is strictly isolated to internal state changes (Linear, Internal Dashboards). NO outbound client communication or budget allocation is ever permitted as Score 1-2.
 - **Score 3 (Strategic):** Single skill, Draft-First (Await approval).
-- **Score 4 (High Risk):** Multi-skill sequential handoff.
-- **Score 5 (Critical):** "Board Meeting" protocol (3+ personas independently debating via Reflexion).
+- **Score 4 (High Risk - Plan Mode Barrier):** Multi-skill sequential handoff. MUST execute an "EnterPlanMode" barrier. The agent must pause, draft a `plan.md`, and await explicit user approval ("ExitPlanMode") before burning execution tokens.
+- **Score 5 (Critical - Board Meeting):** "Board Meeting" protocol (3+ personas independently debating via Reflexion). Also requires the "EnterPlanMode" barrier.
+
+### Pattern 18: Speculative Parallelism (The Turn-Penalty Heuristic)
+Unnecessary turns are more expensive than wasted context. All GFV agents must execute **speculative parallel tool calls** upfront. Do not take slow, linear "think-then-act" turns to find a file. Blast parallel queries (glob, grep, read) across the repo on Turn 1 to build context instantly.
+
+### Pattern 19: Git Failsafe (Truncate-Don't-Amend)
+For any codebase or repository management skill (e.g. `macbotcos-release`), if a pre-commit hook fails or a commit needs fixing: **The commit did not happen.** Do NOT attempt to use `git commit --amend`, as this will destroy the previous valid commit history. Always create a NEW commit.
 
 ---
 
