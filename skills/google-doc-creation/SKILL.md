@@ -113,18 +113,20 @@ Lines containing these keywords are automatically styled **bold red** (`#CC1919`
 
 Every professional report MUST include a branded title page. Pass `cover_page` dict to `create_formatted_doc()`.
 
-**Layout (top → bottom, all centered):**
+**Layout (top → bottom, all centered, NO blank lines):**
 
 | Element | Style |
 |---------|-------|
-| **Vertical push** | 9 blank lines (~40% down the page) |
-| **Main title** | 36pt, bold, Navy `#1B2A4A`, centered |
-| **Subtitle** | 28pt, regular, Gray `#666666`, centered, 16pt below |
-| **Domain** | 14pt, italic, Navy, centered, with 2pt navy `borderBottom` divider |
-| **Prepared by** | 13pt, Gray, centered, 8pt above |
-| **Date** | 13pt, Gray, centered |
-| **CONFIDENTIAL** | 10pt, Light Gray `#999999`, centered, 24pt above |
+| **Main title** | 36pt, bold, Navy `#1B2A4A`, centered, **200pt `spaceAbove`** (pushes ~40% down page) |
+| **Subtitle** | 24pt, regular, Gray `#666666`, centered, 30pt below |
+| **Domain** | 13pt, italic, Navy, centered, 1.5pt navy `borderBottom` divider, 8pt padding |
+| **Prepared by** | 12pt, Gray, centered, 24pt above |
+| **Date** | 12pt, Gray, centered, 30pt below |
+| **CONFIDENTIAL** | 9pt, Light Gray `#999999`, centered, 20pt above |
 | **Page break** | Separates title page from body content |
+
+> [!IMPORTANT]
+> **NEVER use blank `\n` lines for vertical spacing.** They inherit the default 11pt paragraph height and will push content to page 2. Always use `spaceAbove`/`spaceBelow` on paragraph styles. The 200pt `spaceAbove` on the title paragraph is the canonical way to push content down the page.
 
 **Usage:**
 
@@ -265,10 +267,28 @@ apply_professional_styling(doc_file["id"], docs_svc)
 5. **Nested lists** — Only single-level bullets/numbers supported.
 6. **Page breaks** — Google Docs auto-paginates. Tables may split across pages. Use `keepWithNext` on headings to prevent orphans.
 
+## Post-Creation Validation — MANDATORY
+
+After every doc creation, the agent MUST visually validate the output. Open the doc URL in the browser and verify:
+
+| Check | What to Look For |
+|-------|------------------|
+| **Title page fits one page** | All elements (title, subtitle, domain, attribution, date, CONFIDENTIAL) are visible on page 1 with no overflow to page 2 |
+| **Page break is clean** | Content body starts on the page after the title page |
+| **Headings are navy** | H1, H2, H3 should all be Navy `#1B2A4A`, not black |
+| **Table headers are navy** | First row of each table should have navy background with white bold text |
+| **Table columns are readable** | Auto-fitted column widths, no crushed/garbled cells |
+| **Alternating row shading** | Even rows should have `#F5F5F5` background |
+| **Red callouts** | Lines containing ❌, ⚠️, BLOCKED, etc. should be bold red |
+| **No orphan headings** | Headings should not appear alone at the bottom of a page |
+
+If ANY check fails, fix the issue before returning the URL to the user.
+
 ## Troubleshooting
 
 | Problem | Cause | Fix |
 |---------|-------|-----|
+| Title page splits across 2 pages | Blank lines used for spacing | Remove blank lines, use `spaceAbove: 200pt` on title paragraph |
 | Tables after first one garbled | Chunk splitting | Never chunk — send all requests in one batch |
 | No styling applied | SA auth missing | Ensure `~/.config/gfv/gfv_service_account.json` exists |
 | "index out of range" error | Doc doesn't start at index 1 | Create a blank doc first, don't reuse existing |
