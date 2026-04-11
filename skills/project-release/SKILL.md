@@ -10,6 +10,7 @@ This skill provides a structured release process for AI-powered executives manag
 ## Prerequisites
 - A git repository initialized with a `README.md` and `CHANGELOG.md`.
 - Ensure there are no uncommitted changes or dirty working states prior to running this release.
+- GitHub CLI (`gh`) installed and authenticated for publishing formal releases.
 - (Optional) Linear Project ID + Linear API Key for project board synchronization.
 
 ## Phase 1: Determine Version Details
@@ -56,7 +57,13 @@ Execute the following to commit the version into history:
 4. Push to remote:
    `git push origin main --tags --force-with-lease`
 
-## Phase 4: Linear Sync (If Applicable)
+## Phase 4: GitHub Release Publish
+After the tag is pushed to origin, you must formally publish the release to the GitHub UI using the GitHub CLI (`gh`).
+1. Extract the exact bulleted body of the new release from `CHANGELOG.md` into a temporary file (e.g. `/tmp/vX.Y.Z_release_notes.md`).
+2. Run the GitHub CLI release creator:
+   `/opt/homebrew/bin/gh release create vX.Y.Z --title "vX.Y.Z: Release Title" -F /tmp/vX.Y.Z_release_notes.md`
+
+## Phase 5: Linear Sync (If Applicable)
 If the active environment is tied to a Linear Project:
 1. Extract the new `CHANGELOG.md` entry.
 2. Formulate a markdown payload summarizing the release, including a direct link to the `git commit` hash on GitHub.
@@ -65,4 +72,5 @@ If the active environment is tied to a Linear Project:
 ## Verification & Execution Gates
 - **GATE**: Ensure `CHANGELOG.md` and `README.md` are correctly formatted before committing.
 - **GATE**: Verify `git push` succeeded and did not reject the tag.
+- **GATE**: Verify `gh release create` successfully returning the GitHub URL for the release.
 - **GATE**: Ensure Linear sync returned a `success` response.
