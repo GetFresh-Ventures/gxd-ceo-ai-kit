@@ -87,13 +87,33 @@ Rules:
 
 ---
 
-## STEP 4: Update README.md
+## STEP 4: Update README.md (GATE: must be comprehensive and CEO-accessible)
 
-- Locate the version identifier at the top (e.g., `**Version**: vX.Y.Z`) and increment it.
-- Locate or create the `"What's New in vX.Y.Z"` section to highlight the critical changes being pushed in this release.
-- Previous "What's New" section should remain below the new one.
+The README is the product's front door. It must be written for **two audiences** in this order:
 
-**GATE: README.md must reference the new version before proceeding.**
+### Audience 1: The Uninitiated CEO (top of the file)
+A CEO who has never seen this project should be able to read the README and understand:
+- **What this is** — in plain language, no jargon
+- **Who it's for** — and who it's NOT for
+- **Quick Start** — exact terminal commands to go from zero to working in under 5 minutes
+- **What it can do** — a full inventory of every skill, workflow, tool, and hook with 1-line descriptions
+- **How it works** — the architecture explained for a non-technical reader (brain directory, AGENT.md, skills, tools, hooks)
+
+### Audience 2: The Advanced User (lower in the file)
+Below the CEO-friendly sections, include:
+- Agent-agnostic architecture details (how AGENT.md maps to different IDEs)
+- Advanced tooling (Dream protocol, Ralph loop, autoresearch, cost routing)
+- How to extend the kit (adding new skills, workflows)
+- Release history showing every version's "What's New"
+
+### README Structural Requirements
+- `**Version**: vX.Y.Z` badge at the top, updated to the new version
+- "Release History" section with a `What's New in vX.Y.Z` block for the current release
+- Previous release "What's New" blocks must remain below the current one
+- Full repository tree showing the directory structure
+- Tables for skill/workflow/tool inventories — not just bullet lists
+
+**GATE: README.md must reference the new version AND meet the comprehensiveness standard above before proceeding. If the README is just a version bump without substantive context, the release MUST NOT proceed.**
 
 ---
 
