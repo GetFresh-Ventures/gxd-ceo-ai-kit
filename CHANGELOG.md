@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-04-11 11:55 AM PT — v1.7.0 — Deep Infrastructure Safeguards
+
+### Why it matters
+This release completes the Frontier OS architecture implementation by addressing the final systemic vulnerabilities discovered during the leak payload analysis. It hardens visual/browser execution against prompt injection, introduces native background execution capability, and enforces a compression framework ensuring the parent agent process never suffers context degradation or OOM when handling massive enterprise data dumps.
+
+### Added
+- **`SKILL-AUTHORING-STANDARD.md`** — Added Pattern 20: Untrusted UI / Browser Paranoia to enforce strict bounds on executing text scraped via the DOM, preventing injection attacks.
+- **`SKILL-AUTHORING-STANDARD.md`** — Added Pattern 21: Context Paging (The Memento Protocol) and shipped its native tool `tools/gfv-memento.py` to allow orchestrators to compress multi-megabyte payloads to local memory safely.
+- **`SKILL-AUTHORING-STANDARD.md`** — Added Pattern 22: The Generalist Sponge (Headless Offloading) and shipped its native tool `tools/gfv-generalist.sh` to allow the orchestrator to offload any loop >5 steps to the background via `nohup` python execution, preserving chat responsiveness.
+
+### Files Modified
+- CHANGELOG.md, README.md, SKILL-AUTHORING-STANDARD.md
+- tools/gfv-memento.py, tools/gfv-generalist.sh
+
 ## 2026-04-11 11:47 AM PT — v1.6.0 — The "Frontier OS" Hardening
 
 ### Why it matters

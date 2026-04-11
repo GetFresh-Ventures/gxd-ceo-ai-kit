@@ -1,5 +1,5 @@
 # Growth by Design
-**Version**: v1.6.0  
+**Version**: v1.7.0  
 **A GTM Enablement Kit for the AI-Powered Executive**
 
 *An exclusive framework for GFV Portfolio CEOs.*
@@ -194,6 +194,8 @@ Skills follow a strict pattern:
 | `lint-agent.sh` | Validates `AGENT.md` formatting to prevent silent IDE tooling failures |
 | `gfv-audit.sh` | Audit tool for operational health checks |
 | `lint-claude-md.sh` | Validates Claude-specific markdown formatting |
+| `gfv-memento.py` | Context pager — allows agents to compress and save 10k+ line documents without blowing up token history |
+| `gfv-generalist.sh` | Headless execution wrapper — spins complex python scripts out into a background `nohup` process so the agent doesn't paralyze the chat |
 
 ### 5. `hooks/` — Lifecycle Interceptors
 
@@ -295,6 +297,11 @@ To add a new workflow:
 ---
 
 ## Release History
+
+### What's New in v1.7.0 (Deep Infrastructure Safeguards)
+- **Untrusted Browser Paranoia:** New meta-rules to safeguard against prompt injection when reading visual DOM elements.
+- **Context Paging (Memento Protocol):** `gfv-memento.py` tool added to allow the agent to read 40-page documents, compress the insights, and flush its history without crashing.
+- **Generalist Headless Sponge:** `gfv-generalist.sh` tool added to allow the agent to spawn any loop over 5 steps into a background thread instantly.
 
 ### What's New in v1.6.0 (The "Frontier OS" Hardening)
 - **Zero-Chitchat UX / High-Signal Output:** Global ban on conversational filler and time-estimation. UI is forced into flat markdown lists.
