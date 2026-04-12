@@ -144,10 +144,18 @@ if ($installEngineClaw -match "^[Yy]$") {
         git pull
     }
     
-    Write-Host "  📦 Building EngineClaw (this may take a minute)..."
-    Set-Location $ENGINECLAW_DIR
-    pnpm install
-    pnpm build
+    if (Get-Command "pnpm" -ErrorAction SilentlyContinue) {
+        Write-Host "  📦 Building EngineClaw (this may take a minute)..." -ForegroundColor Green
+        Set-Location $ENGINECLAW_DIR
+        try {
+            pnpm install
+            pnpm build
+        } catch {
+            Write-Host "  ⚠️ Warning: EngineClaw build failed. You may need to run 'pnpm build' manually." -ForegroundColor Yellow
+        }
+    } else {
+        Write-Host "  ⚠️ pnpm is still missing. Skipping EngineClaw build step." -ForegroundColor Yellow
+    }
     
     # Map EngineClaw data into dual-brain to ensure single source of truth
     $ENGINECLAW_STATE = Join-Path $HOME ".engineclaw"

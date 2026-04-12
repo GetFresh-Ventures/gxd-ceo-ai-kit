@@ -208,8 +208,12 @@ if [[ "$INSTALL_ENGINECLAW" =~ ^[Yy]$ ]]; then
         (cd "$ENGINECLAW_DIR" && git pull)
     fi
     
-    echo "  📦 Building EngineClaw (this may take a minute)..."
-    (cd "$ENGINECLAW_DIR" && pnpm install && pnpm build)
+    if command -v pnpm &> /dev/null; then
+        echo "  📦 Building EngineClaw (this may take a minute)..."
+        (cd "$ENGINECLAW_DIR" && pnpm install && pnpm build) || echo "  ⚠️ Warning: EngineClaw build failed. You may need to run 'pnpm install && pnpm build' inside $ENGINECLAW_DIR manually."
+    else
+        echo "  ⚠️ pnpm is still missing. Skipping EngineClaw build step."
+    fi
     
     # Map EngineClaw data into dual-brain to ensure single source of truth
     ENGINECLAW_STATE="$HOME/.engineclaw"

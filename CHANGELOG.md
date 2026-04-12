@@ -2,6 +2,12 @@
 
 All notable changes to the GetFresh CEO Enablement Kit for AI will be documented in this file.
 
+## 2026-04-12 1:04 PM PT — v1.15.0 — VoxCPM Executive Voice Engine
+
+### Added
+- **Audio Briefing Engine:** Bootstrapped native VoxCPM Text-to-Speech into the toolkit (`hooks/generate_audio.py`), explicitly integrated via the overarching `skills/audio-briefing` capability.
+- **Vocal Calibration Intake:** Upgraded `skills/onboard` Executive Interview to include "Phase 4: Audio Clone Calibration", scaffolding the local `~/ceo-brain/reference_voice.wav` physical footprint for multi-lingual zero-shot voice cloning.
+
 ## 2026-04-12 2:50 PM CT — v1.14.0 — Windows Native Support and E2E Proactive Sync
 
 ### Added
