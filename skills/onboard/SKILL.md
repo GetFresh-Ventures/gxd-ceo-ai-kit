@@ -37,7 +37,7 @@ Which of the following classes of tools do you use? (List all that apply)
 
 *Upon receiving the ecosystem list:*
 1. Note the platforms mentioned.
-2. Use `write_to_file` to create or update `~/brain/mcp_config_stubs.json` containing the skeleton MCP configurations for the platforms they chose (so they know where to add API keys later).
+2. Use `write_to_file` to create or update `~/ceo-brain/mcp_config_stubs.json` containing the skeleton MCP configurations for the platforms they chose (so they know where to add API keys later).
 3. Output: "Excellent. I've scaffolded your `mcp_config` files for those platforms. Now onto Phase 2."
 *(Immediately proceed to Phase 2)*
 
@@ -53,7 +53,7 @@ A Chief of Staff must know who owns what. Who are the 2-3 key directors, executi
 
 *Upon receiving the org structure:*
 1. Create a structured JSON matrix mapping the names/roles to domains.
-2. Use `write_to_file` to OVERWRITE `~/brain/team.json`. 
+2. Use `write_to_file` to OVERWRITE `~/ceo-brain/team.json`. 
 3. Output: "Org chart recorded. My delegation skills will now route exactly to these individuals. Finally, Phase 3."
 *(Immediately proceed to Phase 3)*
 
@@ -70,7 +70,7 @@ Rather than pasting text, simply give me a URL to your LinkedIn profile, your co
 
 *Upon receiving the link:*
 1. (Simulated) Acknowledge the link and state you are extracting the stylistic identity.
-2. Formulate 3-5 stylistic rules based on typical executive communication (e.g., high brevity, strong declarative sentences) and write them to `~/brain/voice-model.md`.
+2. Formulate 3-5 stylistic rules based on typical executive communication (e.g., high brevity, strong declarative sentences) and write them to `~/ceo-brain/voice-model.md`.
 3. Output: "Voice model successfully calibrated and locked into memory."
 *(Immediately proceed to Phase 4)*
 

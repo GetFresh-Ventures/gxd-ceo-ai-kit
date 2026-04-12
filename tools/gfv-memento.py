@@ -3,7 +3,7 @@ import sys
 import json
 from datetime import datetime
 
-MEMENTO_DIR = os.path.expanduser("~/brain/mementos")
+MEMENTO_DIR = os.path.expanduser("~/ceo-brain/mementos")
 
 def save_memento(task_id, content):
     os.makedirs(MEMENTO_DIR, exist_ok=True)

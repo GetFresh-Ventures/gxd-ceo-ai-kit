@@ -1,5 +1,5 @@
 # Voice Model Template
-<!-- Copy this to ~/brain/voice-model.md and fill in your patterns -->
+<!-- Copy this to ~/ceo-brain/voice-model.md and fill in your patterns -->
 
 ## About
 **Name**: [Your Name]

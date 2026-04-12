@@ -15,9 +15,8 @@ Teach Claude to write like *you* — not like a LinkedIn marketer.
 
 ## How It Works
 
-### Initial Setup
-
-1. Copy `templates/voice-model.md` to `~/brain/voice-model.md`
+### Prerequisites:
+1. Copy `templates/voice-model.md` to `~/ceo-brain/voice-model.md`
 2. Collect 10-15 of your best emails (outbound, not replies)
 3. Fill in each section of the template by analyzing your patterns
 
@@ -63,8 +62,8 @@ Cold prospect: Conversational, not corporate
 
 Every month (or when you notice drift):
 1. Collect 5 new emails that represent your current voice
-2. Note any new patterns, phrases, or shifts in tone
-3. Update `~/brain/voice-model.md`
+2. Extract actionable linguistic patterns
+3. Update `~/ceo-brain/voice-model.md`
 4. Remove any patterns you've outgrown
 
 ## Quality Test
@@ -74,8 +73,7 @@ After building your voice model, test it:
 3. If not, identify what's off and add it to the model
 
 ## Example Prompt
-```
-Read my voice model at ~/brain/voice-model.md and draft a follow-up
-email to the Acme team. We discussed pricing last week and I want to
-propose a phased approach.
+```text
+Read my voice model at ~/ceo-brain/voice-model.md and draft a follow-up 
+to Greg about the Q3 projection misses. Do not be overly nice. Use bullet points.
 ```

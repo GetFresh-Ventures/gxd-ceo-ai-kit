@@ -2,7 +2,7 @@
 
 As an executive, you shouldn't be prompting for code snippets or fun facts. You should be using Claude Code to multiply your strategic leverage.
 
-Here is a cheat sheet of high-payoff prompts designed to work with the `~/brain` architecture.
+Here is a cheat sheet of high-payoff prompts designed to work with the `~/ceo-brain` architecture.
 
 ## 1. The Pre-Meeting Intelligence Brief
 *Run this 30 minutes before crucial meetings.*
@@ -22,7 +22,7 @@ Here is a cheat sheet of high-payoff prompts designed to work with the `~/brain`
 ## 4. The Authentic Outreach Sequence
 *Run this when you identify a high-value target.*
 
-> "I need to reach out to [Name] at [Company]. We have a mutual connection in [Mutual Name]. Use the `outreach-sequence` skill to build a 4-touch cadence. Do NOT use standard sales jargon. Reference my `~/brain/voice-model.md` to ensure it sounds like I actually wrote it."
+> "I need to reach out to [Name] at [Company]. We have a mutual connection in [Mutual Name]. Use the `outreach-sequence` skill to build a 4-touch cadence. Do NOT use standard sales jargon. Reference my `~/ceo-brain/voice-model.md` to ensure it sounds like I actually wrote it."
 
 ## 5. The Weekly Synthesis
 *Run this Sunday night or Monday morning.*
@@ -34,4 +34,4 @@ Here is a cheat sheet of high-payoff prompts designed to work with the `~/brain`
 ## Pro-Tips for Prompting
 - **Always set the persona**: Implicitly done by the system, but you can reinforce ("Be brutally honest," "Act like my Chief of Staff").
 - **Provide constraints**: "Keep this to 200 words," "Only give me bullet points."
-- **Reference your brain**: Remind Claude: "Base this on the notes in `~/brain/meetings/`."
+- **Reference your brain**: Remind Claude: "Base this on the notes in `~/ceo-brain/meetings/`."

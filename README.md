@@ -41,17 +41,14 @@ This downloads the entire kit to a hidden folder on your machine. You only do th
 
 ### Step 2: Run the bootstrap
 
-```bash
-cd ~/.gfv_growth_by_design
-./bootstrap.sh
-```
-
-**What this does behind the scenes:**
-- Creates your personal `~/brain` directory (where your voice model, pipeline data, and learnings are stored)
-- Copies starter templates for your voice model, pipeline tracker, and meeting briefs
-- Detects which AI tool you use (Claude Code, Cursor, or other) and wires things up accordingly
-- If you're on Claude Code: installs native `/slash` commands for instant skill access, sets up Dippy (auto-approves safe commands so you never see "Y/n" prompts), and wires session hooks
-- If you're on Cursor: creates `.cursorrules` so the AI reads your operating rules automatically
+1. Clone the repository to `~/.claude/projects/gfv_growth_by_design`
+2. Run `./bootstrap.sh`, which:
+   - Sets up the Claude Code hooks (the startup prompt logic)
+   - Creates your personal `~/ceo-brain` (for personal tasks/voice) and `~/gtm-brain` (for active deals and campaigns)
+   - Symlinks the 49 skills into the Claude Code path
+   - Detects which AI tool you use (Claude Code, Cursor, or other) and wires things up accordingly
+   - If you're on Claude Code: installs native `/slash` commands for instant skill access, sets up Dippy (auto-approves safe commands so you never see "Y/n" prompts), and wires session hooks
+   - If you're on Cursor: creates `.cursorrules` so the AI reads your operating rules automatically
 
 ### Step 3: Start your first session
 
@@ -148,21 +145,23 @@ Workflows combine multiple skills into larger routines. You can run them by name
 
 ## How It Works — The Architecture
 
-### 1. `~/brain` — Your Persistent Local Memory
+### 1. `~/ceo-brain` & `~/gtm-brain` — Your Persistent Local Memory
 
-When you run `bootstrap.sh`, it creates a `~/brain` directory on your machine. This is the AI's long-term memory about you and your company:
+When you run `bootstrap.sh`, it creates a dual-brain directory system on your machine. This is the AI's long-term memory about you and your company:
 
+```text
+~ (Home Directory)
+  ├── ceo-brain/
+  │    ├── voice-model.md (Your linguistic rules)
+  │    ├── team.json (Who reports to you)
+  │    └── meetings/ (Your prep)
+  └── gtm-brain/
+       ├── pipeline.md (Active revenue deals)
+       ├── learnings.md (Experiment results)
+       └── campaigns/ (Ads structure)
 ```
-~/brain/
-├── voice-model.md      ← How you write and speak (anti-patterns, word choices, formality level)
-├── pipeline.md         ← The current state of your deals
-├── learnings.md        ← An iterative log of market feedback and tactical insights
-├── meetings/           ← Pre-meeting and post-meeting intelligence briefs
-├── campaigns/          ← Active outreach campaign context
-└── weekly/             ← Weekly CEO brief archives
-```
 
-**Why this matters:** most AI tools have no memory between sessions. Every new chat starts from zero. With `~/brain`, your AI picks up exactly where you left off — it knows your deals, your voice, and your recent learnings.
+**Why this matters:** most AI tools have no memory between sessions. Every new chat starts from zero. With this system, your AI picks up exactly where you left off.
 
 ### 2. `AGENT.md` — The Operating Rules
 
@@ -190,7 +189,8 @@ Skills follow a strict pattern:
 | Tool | Purpose |
 |------|---------|
 | `ccflare.py` | Executive dashboard showing real-time Claude token usage and cost burn rate (including cache tokens) |
-| `gfv-dream.sh` | Autonomous memory consolidation — scans recent Claude session logs and compresses insights into `~/brain` |
+| `gfv-dedupe.py` | Headless execution wrapper for ML entity resolution, matching disconnected datasets across hubs |
+| `gfv-dream.sh` | Autonomous memory consolidation — scans recent Claude session logs and compresses insights into `~/gtm-brain` and `~/ceo-brain` |
 | `gfv-ralph.sh` | Batch execution loop — process hundreds of URLs or CRM logs fully unattended |
 | `gfv-cost-estimator.sh` | Estimate LLM token costs before feeding large CRM exports or data files |
 | `lint-agent.sh` | Validates `AGENT.md` formatting to prevent silent IDE tooling failures |
@@ -198,7 +198,6 @@ Skills follow a strict pattern:
 | `lint-claude-md.sh` | Validates Claude-specific markdown formatting |
 | `gfv-memento.py` | Context pager — allows agents to compress and save 10k+ line documents without blowing up token history |
 | `gfv-generalist.sh` | Headless execution wrapper — spins complex python scripts out into a background `nohup` process so the agent doesn't paralyze the chat |
-| `gfv-dedupe.py` | Interactive active-learning wrapper for the `dedupe` library to repair Entity Fragmentation in CSVs |
 
 ### 5. `hooks/` — Lifecycle Interceptors
 
@@ -221,7 +220,7 @@ Hooks fire automatically at key moments in your Claude Code session:
 
 ### 7. `templates/` — Starter Files
 
-Pre-built templates that `bootstrap.sh` copies into your `~/brain` directory:
+Pre-built templates that `bootstrap.sh` copies into your `~/ceo-brain` and `~/gtm-brain` directories:
 
 - `voice-model.md` — Blank template for building your writing voice profile
 - `pipeline-report.md` — Template for weekly pipeline snapshots
@@ -415,7 +414,7 @@ gfv_growth_by_design/
 │   ├── meeting-day.md
 │   ├── outreach-cadence.md
 │   └── deal-progression.md
-├── tools/                           ← Background utilities and dashboards
+├── tools/                           ← Python/bash execution utilities
 │   ├── ccflare.py
 │   ├── gfv-dream.sh
 │   ├── gfv-ralph.sh
@@ -429,11 +428,10 @@ gfv_growth_by_design/
 │   ├── prompting-for-executives.md
 │   ├── voice-model-guide.md
 │   └── prompt-eval-guide.md
-└── templates/                       ← Starter files for ~/brain
-    ├── voice-model.md
-    ├── pipeline-report.md
-    ├── meeting-brief.md
-    └── weekly-pulse.md
+├── templates/                       ← Starter files for ~/ceo-brain and ~/gtm-brain
+│   ├── voice-model.md
+│   ├── meeting-brief.md
+│   └── weekly-pulse.md
 ```
 
 ---

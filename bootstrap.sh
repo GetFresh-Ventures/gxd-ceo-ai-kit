@@ -15,8 +15,9 @@ echo "Claude Code, or Gemini) from a blank slate into a personalized, always-on"
 echo "Chief of Staff."
 echo ""
 echo "WHAT THIS INSTALLS AND ENABLES:"
-echo " 1. The GFV Brain (~/brain/): A local, offline directory protecting your"
-echo "    active deals, voice profile, and pipeline from public AI clouds."
+echo " 1. The Dual-Brain System (~/ceo-brain/ and ~/gtm-brain/): Local, offline"
+echo "    directories protecting your personal voice profile and company pipeline"
+echo "    from public AI clouds."
 echo " 2. The 49-Skill Framework: Injects native agent capabilities to rapidly"
 echo "    draft emails, prep for meetings, synthesize CRM data, and audit pipelines."
 echo " 3. The Proactive Intelligence Layer (PIL) Daemon: An always-on background"
@@ -42,34 +43,37 @@ echo ""
 echo "🚀 Initializing Growth by Design kit..."
 
 # Target directories
-BRAIN_DIR="$HOME/brain"
+CEO_BRAIN_DIR="$HOME/ceo-brain"
+GTM_BRAIN_DIR="$HOME/gtm-brain"
 CLAUDE_DIR="$HOME/.claude"
 CLAUDE_HOOKS_DIR="$CLAUDE_DIR/hooks"
 CLAUDE_SKILLS_DIR="$CLAUDE_DIR/skills"
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # 1. Create brain structure
-echo "📁 Creating ~/brain structure..."
-mkdir -p "$BRAIN_DIR/meetings"
-mkdir -p "$BRAIN_DIR/campaigns"
-mkdir -p "$BRAIN_DIR/weekly"
+echo "📁 Creating ~/ceo-brain and ~/gtm-brain structures..."
+mkdir -p "$CEO_BRAIN_DIR/meetings"
+mkdir -p "$CEO_BRAIN_DIR/mementos"
+mkdir -p "$CEO_BRAIN_DIR/weekly"
+mkdir -p "$GTM_BRAIN_DIR/campaigns"
+mkdir -p "$GTM_BRAIN_DIR/pipeline"
 
 # 2. Copy templates if files don't exist
 echo "📄 Setting up templates..."
-if [ ! -f "$BRAIN_DIR/voice-model.md" ]; then
-    cp "$REPO_DIR/templates/voice-model.md" "$BRAIN_DIR/"
-    echo "  → Created voice-model.md"
+if [ ! -f "$CEO_BRAIN_DIR/voice-model.md" ]; then
+    cp "$REPO_DIR/templates/voice-model.md" "$CEO_BRAIN_DIR/"
+    echo "  → Created voice-model.md in ceo-brain"
 fi
 
-if [ ! -f "$BRAIN_DIR/pipeline.md" ]; then
-    cp "$REPO_DIR/templates/pipeline-report.md" "$BRAIN_DIR/pipeline.md"
-    echo "  → Created pipeline.md"
+if [ ! -f "$GTM_BRAIN_DIR/pipeline.md" ]; then
+    cp "$REPO_DIR/templates/pipeline-report.md" "$GTM_BRAIN_DIR/pipeline.md"
+    echo "  → Created pipeline.md in gtm-brain"
 fi
 
-if [ ! -f "$BRAIN_DIR/learnings.md" ]; then
-    echo "# Ongoing Learnings Log" > "$BRAIN_DIR/learnings.md"
-    echo "This file captures tactical marketing/sales feedback over time." >> "$BRAIN_DIR/learnings.md"
-    echo "  → Created learnings.md"
+if [ ! -f "$GTM_BRAIN_DIR/learnings.md" ]; then
+    echo "# Ongoing Learnings Log" > "$GTM_BRAIN_DIR/learnings.md"
+    echo "This file captures tactical marketing/sales feedback over time." >> "$GTM_BRAIN_DIR/learnings.md"
+    echo "  → Created learnings.md in gtm-brain"
 fi
 
 # 3. Agent-Agnostic Context Routing

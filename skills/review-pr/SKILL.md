@@ -18,10 +18,8 @@ Executes a multi-stage review pass against either an active git branch, or a spe
    
    - **Pass 1: Security & Syntax (The Brittle Check)**: Look for exposed API keys (Linear, Supabase, Google Ads), missing closing tags natively in HTML, or malformed JSON payloads.
    - **Pass 2: The Silent Failure Check**: For GTM tracking scripts (like GCLID or GA4 tags), trace the data layer. Is it firing before the DOM loads? Are there race conditions? Will Ad-blockers aggressively block this exact implementation?
-   - **Pass 3: GTM Strategic Intent**: Connect the code back to the Linear issue. Does this diff actually fulfill the commercial goal, or did the developer just superficially fulfill the task?
-
-4. **Output Report:**
-   Write the resulting evaluation locally to `~/brain/pr-review-[timestamp].md`.
+   - **Pass 3: GTM Strategic Intent**: Connect the code back to the Linear issue. Does this diff actually fulfill the commercial goal, or did the developer just superficially2. Provide specific, actionable code reviews for the PR.
+3. Write the resulting evaluation locally to `~/gtm-brain/pr-review-[timestamp].md`.
 
    Using a strict, emotionless, engineering tone (no buzzwords), highlight:
    - **Critical Blockers:** [List of things that MUST be fixed before deploying]
