@@ -29,6 +29,18 @@ This kit is designed specifically for **CEOs and senior executives** in the GFV 
 
 ---
 
+## 🖥 OS Compatibility & Requirements
+
+This toolkit runs natively in your local terminal to protect your data.
+
+- **Mac / Linux:** Fully supported natively via the default Terminal.
+- **Windows:** Supported exclusively via **Windows Subsystem for Linux (WSL2)** or **Git Bash**. You must open your WSL or Git Bash terminal to run the installer, as standard Command Prompt (`cmd.exe`) does not support UNIX symlinks and background daemons out of the box.
+
+### ⚠️ The "Always-On" Infrastructure Notice
+If you utilize the **EngineClaw Autonomous Layer** (the Night Shift workflow that drafts rescue emails at 2:00 AM), your machine **must be awake**. If you close your laptop at night, the background daemon will pause. To truly unlock the "Chief of Staff" autonomous experience, you either need an app keeping your laptop awake (like Amphetamine for Mac), or you can install this kit on an always-on cloud VM (like an AWS EC2 or DigitalOcean Droplet).
+
+---
+
 ## Quick Start (5 Minutes)
 
 ### Step 1: Clone the repo
