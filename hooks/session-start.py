@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Growth by Design — Session Start Hook
+GFV CEO Enablement Kit — Session Start Hook
 Loads company brain context at the beginning of every Claude Code session.
 
 Install: Copy to ~/.claude/hooks/session-start.py

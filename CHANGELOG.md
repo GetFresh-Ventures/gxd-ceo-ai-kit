@@ -2,18 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## 2026-04-12 2:40 PM CT — v1.13.0 — EdgeClaw Autonomous Runtime
+## 2026-04-12 2:40 PM CT — v1.13.0 — EngineClaw Autonomous Runtime
 
 ### Why it matters
-To provide CEOs with true "set and forget" autonomy, this release integrates the OpenBMB EdgeClaw agentic runtime as a native, toggleable option within the installation pipeline. Moving beyond standard interactive Claude Code sessions, EdgeClaw enables persistent, self-driven loops and LLM-as-Judge cost routing. Most importantly, it completely wires into the Dual-Brain Architecture (`~/ceo-brain` and `~/gtm-brain`), ensuring offline local data remains the sole resilient anchor payload across both reactive and proactive execution modes.
+To provide CEOs with true "set and forget" autonomy, this release integrates the EngineClaw agentic runtime (powered by OpenBMB EdgeClaw internals) as a native, toggleable option within the installation pipeline. Moving beyond standard interactive Claude Code sessions, EngineClaw enables persistent, self-driven loops and LLM-as-Judge cost routing. Most importantly, it completely wires into the Dual-Brain Architecture (`~/ceo-brain` and `~/gtm-brain`), ensuring offline local data remains the sole resilient anchor payload across both reactive and proactive execution modes.
 
 ### Added
-- **`bootstrap.sh` Zero-Touch Config:** `bootstrap.sh` now features an interactive toggle to automatically configure the EdgeClaw instance, clone its binaries, and link its state arrays.
-- **Dual-Brain Alignment:** Explicit hardlinking mapping constructed between EdgeClaw's internal workspace cache and the robust `~/gtm-brain` and `~/ceo-brain` models.
+- **`bootstrap.sh` Zero-Touch Config:** `bootstrap.sh` now features an interactive toggle to automatically configure the EngineClaw instance, clone its binaries, and link its state arrays.
+- **Dual-Brain Alignment:** Explicit hardlinking mapping constructed between EngineClaw's internal workspace cache and the robust `~/gtm-brain` and `~/ceo-brain` models.
 
 ### Changed
-- **`README.md`** — Updated documentation scaling EdgeClaw Runtime injection details.
-- **`bootstrap.sh`** — EdgeClaw conditional parsing added to the installer lifecycle.
+- **`README.md`** — Updated documentation scaling EngineClaw Runtime injection details.
+- **`bootstrap.sh`** — EngineClaw conditional parsing added to the installer lifecycle.
 
 
 ## 2026-04-12 2:25 PM PT — v1.12.0 — Dual-Brain Data Segregation

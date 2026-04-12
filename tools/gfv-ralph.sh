@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# GFV Growth by Design - The Ralph Orchestration Loop
+# GFV GFV CEO Enablement Kit - The Ralph Orchestration Loop
 # Inspired by ralph-orchestrator. Allows unattended batch executions of an agent via CLI.
 
 set -e

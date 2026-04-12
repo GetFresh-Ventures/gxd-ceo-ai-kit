@@ -1,4 +1,4 @@
-# Growth by Design
+# GetFresh Ventures (GFV) CEO Enablement Kit
 **Version**: v1.13.0  
 **A GTM Enablement Kit for the AI-Powered Executive**
 
@@ -8,11 +8,11 @@
 
 ## What is this?
 
-Growth by Design is a plug-and-play toolkit that turns any AI coding assistant — Claude Code, Cursor, Gemini (Antigravity), or GitHub Copilot — into a **personalized Chief of Staff** for Go-To-Market execution. 
+This GetFresh Ventures (GFV) CEO Enablement Kit is a plug-and-play toolkit that turns any AI coding assistant — Claude Code, Cursor, Gemini (Antigravity), or GitHub Copilot — into a **personalized Chief of Staff** for Go-To-Market execution. 
 
 Instead of opening your AI and starting from scratch every time — figuring out how to write an email, prep for a meeting, or analyze your pipeline — this kit pre-loads everything. Your voice, your deals, your preferences, your workflows. The AI already knows who you are and how you operate.
 
-**Think of it this way:** right now, your AI assistant is a blank intern on day one. After installing Growth by Design, it's a Chief of Staff who's worked with you for six months.
+**Think of it this way:** right now, your AI assistant is a blank intern on day one. After installing the GFV Enablement Kit, it's a Chief of Staff who's worked with you for six months.
 
 ---
 
@@ -240,7 +240,7 @@ The kit operates under strict mathematical and structural guardrails to prevent 
 
 ### Agent-Agnostic Architecture
 
-Growth by Design is not locked to any single AI tool. The `AGENT.md` core uses a universal `<RULE>` format that works across:
+GFV CEO Enablement Kit is not locked to any single AI tool. The `AGENT.md` core uses a universal `<RULE>` format that works across:
 
 | Tool | How it reads the rules |
 |------|----------------------|
@@ -307,10 +307,10 @@ To add a new workflow:
 
 ## Release History
 
-### What's New in v1.13.0 (EdgeClaw Autonomous Runtime)
-- **Zero-Touch Config:** Provided a built-in toggle in the `bootstrap.sh` script to install the highly autonomous EdgeClaw agentic runtime.
-- **Dual-Brain Alignment:** Ensured the EdgeClaw instance natively wires its memory and contextual workspace into `~/ceo-brain` and `~/gtm-brain` to ensure a unified system of record.
-- **Agentic Capabilities Unlocked:** CEOs can now spin up background cron jobs, let EdgeClaw sub-agents scrape pipelines, and utilize LLM-as-Judge routing for significant token savings.
+### What's New in v1.13.0 (EngineClaw Autonomous Runtime)
+- **Zero-Touch Config:** Provided a built-in toggle in the `bootstrap.sh` script to install the highly autonomous EngineClaw agentic runtime.
+- **Dual-Brain Alignment:** Ensured the EngineClaw instance natively wires its memory and contextual workspace into `~/ceo-brain` and `~/gtm-brain` to ensure a unified system of record.
+- **Agentic Capabilities Unlocked:** CEOs can now spin up background cron jobs, let EngineClaw sub-agents scrape pipelines, and utilize LLM-as-Judge routing for significant token savings.
 
 ### What's New in v1.12.0 (Dual-Brain Data Segregation)
 - **Zero-Touch Configuration**: Introduced `Rule 0` to autonomously boot the 4-phase White-Glove Onboarding Wizard for new CEOs without manual text prompts.

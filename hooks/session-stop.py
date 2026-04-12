@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Growth by Design — Session Stop Hook
+GFV CEO Enablement Kit — Session Stop Hook
 Saves session learnings and context to the brain directory.
 
 Install: Copy to ~/.claude/hooks/session-stop.py

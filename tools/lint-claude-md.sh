@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# GFV Growth by Design - AGENT.md / CLAUDE.md Linter
+# GFV GFV CEO Enablement Kit - AGENT.md / CLAUDE.md Linter
 # Scans for formatting errors and leaked API keys.
 
 set -e
