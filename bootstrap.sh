@@ -5,6 +5,40 @@
 
 set -e
 
+clear
+echo "======================================================================="
+echo "  G R O W T H   B Y   D E S I G N   ——   C E O   I N S T A L L E R"
+echo "======================================================================="
+echo ""
+echo "Welcome. This installer transforms your local AI coding assistant (Cursor,"
+echo "Claude Code, or Gemini) from a blank slate into a personalized, always-on"
+echo "Chief of Staff."
+echo ""
+echo "WHAT THIS INSTALLS AND ENABLES:"
+echo " 1. The GFV Brain (~/brain/): A local, offline directory protecting your"
+echo "    active deals, voice profile, and pipeline from public AI clouds."
+echo " 2. The 49-Skill Framework: Injects native agent capabilities to rapidly"
+echo "    draft emails, prep for meetings, synthesize CRM data, and audit pipelines."
+echo " 3. The Proactive Intelligence Layer (PIL) Daemon: An always-on background"
+echo "    process that silently syncs Linear, HubSpot, and WhatsApp into your"
+echo "    local offline semantic ontology."
+echo " 4. Agent Tooling: Homebrew packages (dippy), NPM registries (ccflare),"
+echo "    and local memory vectors to prevent massive context-window amnesia."
+echo ""
+echo "THE RESULT:"
+echo " Upon completion, you will rarely have to provide background context again."
+echo " Your AI inherently knows your organization, proactively extracts signals,"
+echo " governs your architecture mathematically, and speaks in your voice."
+echo ""
+echo "CRITICAL INFRASTRUCTURE REQUIREMENT:"
+echo " For the PIL to run autonomously and sweep CRM data while you sleep, your"
+echo " machine must remain powered on and connected to the internet (or you must"
+echo " host this kit on an always-on VM/server)."
+echo ""
+echo "======================================================================="
+read -p "Press [Enter] to authorize installation and enable the Executive Kit..."
+echo ""
+
 echo "🚀 Initializing Growth by Design kit..."
 
 # Target directories
