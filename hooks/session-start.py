@@ -64,6 +64,19 @@ def main():
             for brief in briefs:
                 context_parts.append(f"  - {brief.name}")
 
+    # Check for EngineClaw pending approvals (Morning Sync)
+    pending_dir = gtm_brain_dir / "pending_approvals"
+    if pending_dir.exists():
+        drafts = list(pending_dir.glob("*.md")) + list(pending_dir.glob("*.eml"))
+        if drafts:
+            context_parts.append("\n" + "="*50)
+            context_parts.append("🌅 GETFRESH EXECUTIVE MORNING SYNC 🌅")
+            context_parts.append(f"EngineClaw noticed {len(drafts)} stalled deals and drafted rescue emails while you were offline.")
+            context_parts.append("Do you want to review and dispatch them?")
+            context_parts.append("="*50 + "\n")
+            for draft in drafts:
+                context_parts.append(f"  - 📝 {draft.name}")
+
     # Output context
     output = "\n".join(context_parts)
     print(output)

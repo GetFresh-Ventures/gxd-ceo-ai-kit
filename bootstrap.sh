@@ -217,6 +217,10 @@ if [[ "$INSTALL_ENGINECLAW" =~ ^[Yy]$ ]]; then
     ln -sfn "$CEO_BRAIN_DIR" "$ENGINECLAW_STATE/workspace/ceo-brain"
     ln -sfn "$GTM_BRAIN_DIR" "$ENGINECLAW_STATE/workspace/gtm-brain"
     
+    # 🔗 Ensure EngineClaw inherits the Meta-Agentic constraints
+    ln -sfn "$REPO_DIR/AGENT.md" "$ENGINECLAW_STATE/workspace/AGENT.md"
+    ln -sfn "$REPO_DIR/SKILL-AUTHORING-STANDARD.md" "$ENGINECLAW_STATE/workspace/SKILL-AUTHORING-STANDARD.md"
+    
     echo "  → EngineClaw runtime installed."
     echo "  → EngineClaw workspace linked to Dual-Brain architecture (~/ceo-brain and ~/gtm-brain)."
     echo "  → To start the EngineClaw daemon later, run: cd $ENGINECLAW_DIR && node openclaw.mjs gateway run"
