@@ -1,6 +1,6 @@
 # GFV CEO Enablement Kit — Skills Registry
 
-> **48 unique skills** across 6 categories. Updated 2026-04-11.
+> **49 unique skills** across 6 categories. Updated 2026-04-12.
 
 ## How to Use This Registry
 
@@ -26,7 +26,7 @@
 
 ## Categories
 
-### 🎯 Execution Infrastructure (8 skills)
+### 🎯 Execution Infrastructure (9 skills)
 Core operating system — the agent's brain, coordination, and decision-making.
 
 | Skill | Description | Key Pattern |
@@ -39,6 +39,7 @@ Core operating system — the agent's brain, coordination, and decision-making.
 | [`gfv-hooks`](skills/gfv-hooks/) | Event-driven lifecycle hooks with safety gates | Governance without friction |
 | [`agent-protocol`](skills/agent-protocol/) | Inter-agent communication for C-suite skills | Structured delegation |
 | [`context-engine`](skills/context-engine/) | Company context loading for advisory skills | Know before advising |
+| [`dedupe-entities`](skills/dedupe-entities/) | Mathematically resolves duplicate records using ML active linkage | Entity Resolution |
 
 ### 👔 C-Suite Advisory (7 skills)
 Specialized strategic advisory from each leadership perspective.

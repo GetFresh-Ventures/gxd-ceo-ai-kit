@@ -1,5 +1,5 @@
 # Growth by Design
-**Version**: v1.10.0  
+**Version**: v1.11.0  
 **A GTM Enablement Kit for the AI-Powered Executive**
 
 *An exclusive framework for GFV Portfolio CEOs.*
@@ -114,6 +114,7 @@ Once installed, you have access to **48 pre-built skills** and **4 multi-step wo
 | `/launch-strategy` | Product/service launch playbooks with GTM alignment |
 | `/experiment-loop` | Scientific method for business: baseline → one change → measure → keep/discard → repeat |
 | `/strategic-decision` | 5-perspective GO/NO-GO/DEFER framework for major decisions |
+| `/dedupe-entities` | Mathematically resolves duplicate records using machine-learning active linkage |
 | `/gfv-hooks` | Event-driven lifecycle hooks with safety gates |
 
 ### Skills — Technical / Builder
@@ -197,6 +198,7 @@ Skills follow a strict pattern:
 | `lint-claude-md.sh` | Validates Claude-specific markdown formatting |
 | `gfv-memento.py` | Context pager — allows agents to compress and save 10k+ line documents without blowing up token history |
 | `gfv-generalist.sh` | Headless execution wrapper — spins complex python scripts out into a background `nohup` process so the agent doesn't paralyze the chat |
+| `gfv-dedupe.py` | Interactive active-learning wrapper for the `dedupe` library to repair Entity Fragmentation in CSVs |
 
 ### 5. `hooks/` — Lifecycle Interceptors
 
@@ -305,6 +307,11 @@ To add a new workflow:
 ---
 
 ## Release History
+
+### What's New in v1.11.0 (White-Glove Intake & Entity Deduplication)
+- **Zero-Touch Configuration**: Introduced `Rule 0` to autonomously boot the 4-phase White-Glove Onboarding Wizard for new CEOs without manual text prompts.
+- **Entity Resolution**: Added `gfv-dedupe.py` and the `dedupe-entities` skill for resolving fragmented CRM, PandaDoc, and Linear datasets via active-learning ML algorithms.
+- **Meta-Agent Optimization Constraints**: Hardened the authoring standard with Patterns 29, 30, and 31 (The Overfitting Barrier, Specialized Tool Isolation, and Root-Cause Failure Grouping).
 
 ### What's New in v1.10.0 (System Resilience Protocol)
 - **Headless Synthesis Daemon:** Built `pil_morning_digest.py` to allow the OS to update the Supabase Proactive Intelligence Layer from Linear/HubSpot automatically in the background.

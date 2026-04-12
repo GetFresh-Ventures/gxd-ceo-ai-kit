@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-04-12 2:10 PM CT — v1.11.0 — White-Glove Intake & Entity Deduplication
+
+### Why it matters
+This release elevates the CEO Enablement Kit from a developer scaffold to an enterprise-grade "White-Glove" executive experience. It eliminates the manual text configuration prompts and implements a zero-touch agentic boot process that immediately runs a 4-phase ecosystem, delegation, and voice calibration wizard. Additionally, it integrates ML-based record linkage (Dedupe) to eliminate fragmented CRM entity data across the GFV ontology, and solidifies 3 new prompt-engineering constraints to prevent agent overfitting and boilerplate scripting.
+
+### Added
+- **`skills/onboard/SKILL.md`** — Completely rewrote the interactive wizard to extract the CEO's tech stack (Ecosystem Map), reporting structure (Delegation Map), and authenticate voice via URLs, culminating in a demonstration of immediate calendar MCP power.
+- **`AGENT.md`** — Injected "Rule 0: Zero-Touch Boot Setup", enforcing the immediate payload execution of `/onboard` without requiring copied prompt text.
+- **`SKILL-AUTHORING-STANDARD.md`** — Formally codified Pattern 29 (The Overfitting Barrier), Pattern 30 (Specialized Tool Isolation / Anti-Boilerplate), and Pattern 31 (Root-Cause Failure Grouping).
+- **`tools/gfv-dedupe.py` & `skills/dedupe-entities/SKILL.md`** — Added headless Python utility and associated execution skill for interactive active-learning matching of disjointed CRM, PandaDoc, and Linear datasets.
+
+### Removed
+- **`ONBOARDING_PROMPT.md`** — Deleted the legacy, manual copy-paste mechanism for onboarding.
+
+### Changed
+- **`bootstrap.sh`** — Refactored to provide clean, silent initialization parameters rather than outputting manual payload instructions.
+
 ## 2026-04-11 12:10 PM PT — v1.10.0 — System Resilience Protocol
 
 ### Why it matters
