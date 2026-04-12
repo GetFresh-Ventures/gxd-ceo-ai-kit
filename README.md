@@ -1,5 +1,5 @@
 # Growth by Design
-**Version**: v1.12.0  
+**Version**: v1.13.0  
 **A GTM Enablement Kit for the AI-Powered Executive**
 
 *An exclusive framework for GFV Portfolio CEOs.*
@@ -307,7 +307,12 @@ To add a new workflow:
 
 ## Release History
 
-### What's New in v1.11.0 (White-Glove Intake & Entity Deduplication)
+### What's New in v1.13.0 (EdgeClaw Autonomous Runtime)
+- **Zero-Touch Config:** Provided a built-in toggle in the `bootstrap.sh` script to install the highly autonomous EdgeClaw agentic runtime.
+- **Dual-Brain Alignment:** Ensured the EdgeClaw instance natively wires its memory and contextual workspace into `~/ceo-brain` and `~/gtm-brain` to ensure a unified system of record.
+- **Agentic Capabilities Unlocked:** CEOs can now spin up background cron jobs, let EdgeClaw sub-agents scrape pipelines, and utilize LLM-as-Judge routing for significant token savings.
+
+### What's New in v1.12.0 (Dual-Brain Data Segregation)
 - **Zero-Touch Configuration**: Introduced `Rule 0` to autonomously boot the 4-phase White-Glove Onboarding Wizard for new CEOs without manual text prompts.
 - **Entity Resolution**: Added `gfv-dedupe.py` and the `dedupe-entities` skill for resolving fragmented CRM, PandaDoc, and Linear datasets via active-learning ML algorithms.
 - **Meta-Agent Optimization Constraints**: Hardened the authoring standard with Patterns 29, 30, and 31 (The Overfitting Barrier, Specialized Tool Isolation, and Root-Cause Failure Grouping).

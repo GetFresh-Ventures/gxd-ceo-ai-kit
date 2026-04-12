@@ -37,8 +37,37 @@ echo " machine must remain powered on and connected to the internet (or you must
 echo " host this kit on an always-on VM/server)."
 echo ""
 echo "======================================================================="
+echo "  E D G E C L A W   A U T O N O M O U S   R U N T I M E  (O P T I O N A L)"
+echo "======================================================================="
+echo ""
+echo "You can choose to install EdgeClaw, a high-autonomy agentic runtime."
+echo "This replaces standard interactive sessions with an unattended, persistent worker."
+echo ""
+echo "WHAT IT ENABLES:"
+echo " 1. Self-Driven Loops: Background execution, sub-agents, and cron jobs."
+echo " 2. Cost-Aware Routing: LLM-as-Judge redirects simple prompts to cheaper models."
+echo " 3. Deep Memory Engine: Claude Code-like persistent memory architecture."
+echo " 4. Tool Governance: Advanced security sandboxing for autonomous execution."
+echo ""
+echo "WHAT IT TURNS THE AGENT EXPERIENCE INTO:"
+echo " Instead of turn-by-turn chat, you give EdgeClaw an objective ('reconcile"
+echo " HubSpot data every 4 hours') and it loops until finished. It works"
+echo " autonomously in the background while you focus on high-leverage tasks."
+echo ""
+echo "WHAT IT INSTALLS:"
+echo " - Clones OpenBMB/EdgeClaw to ~/edgeclaw-runtime"
+echo " - Installs Node JS dependencies via pnpm"
+echo " - Configures EdgeClaw memory to map directly into your ~/ceo-brain and ~/gtm-brain"
+echo ""
+echo "Always-On Requirement: EdgeClaw needs a running background daemon (gateway run)."
+echo "======================================================================="
+read -p "Install EdgeClaw Autonomous Agent Runtime? [y/N] " INSTALL_EDGECLAW
+INSTALL_EDGECLAW=${INSTALL_EDGECLAW:-n}
+echo ""
+echo "======================================================================="
 read -p "Press [Enter] to authorize installation and enable the Executive Kit..."
 echo ""
+
 
 echo "🚀 Initializing Growth by Design kit..."
 
@@ -162,6 +191,37 @@ else
     echo "  ℹ️  Claude Code directory not found locally; skipping native ~/.claude hooks mapping (Cursor or alternative IDE will read scripts manually according to AGENT.md)"
 fi
 
+# 5. Optional EdgeClaw Integration
+if [[ "$INSTALL_EDGECLAW" =~ ^[Yy]$ ]]; then
+    echo ""
+    echo "🤖 Installing EdgeClaw Autonomous Runtime..."
+    if ! command -v pnpm &> /dev/null; then
+        echo "  ℹ️  Installing pnpm..."
+        npm install -g pnpm || echo "  ⚠️ Failed to install pnpm! Please install it manually."
+    fi
+    
+    EDGECLAW_DIR="$HOME/edgeclaw-runtime"
+    if [ ! -d "$EDGECLAW_DIR" ]; then
+        git clone https://github.com/openbmb/edgeclaw.git "$EDGECLAW_DIR"
+    else
+        echo "  ℹ️  EdgeClaw already exists at $EDGECLAW_DIR, pulling latest..."
+        (cd "$EDGECLAW_DIR" && git pull)
+    fi
+    
+    echo "  📦 Building EdgeClaw (this may take a minute)..."
+    (cd "$EDGECLAW_DIR" && pnpm install && pnpm build)
+    
+    # Map EdgeClaw data into dual-brain to ensure single source of truth
+    EDGECLAW_STATE="$HOME/.edgeclaw"
+    mkdir -p "$EDGECLAW_STATE/workspace"
+    ln -sfn "$CEO_BRAIN_DIR" "$EDGECLAW_STATE/workspace/ceo-brain"
+    ln -sfn "$GTM_BRAIN_DIR" "$EDGECLAW_STATE/workspace/gtm-brain"
+    
+    echo "  → EdgeClaw runtime installed."
+    echo "  → EdgeClaw workspace linked to Dual-Brain architecture (~/ceo-brain and ~/gtm-brain)."
+    echo "  → To start the EdgeClaw daemon later, run: cd $EDGECLAW_DIR && node openclaw.mjs gateway run"
+fi
+
 # 5. Final Instructions
 echo ""
 echo "🎉 Growth by Design Bootstrap Complete!"
@@ -170,5 +230,9 @@ echo "Next Steps:"
 echo "1. Open your terminal and type 'claude' (or open Cursor/Gemini)."
 echo "2. Say 'Hello'. The AI will automatically detect your fresh"
 echo "   system state and guide you through the executive setup."
+if [[ "$INSTALL_EDGECLAW" =~ ^[Yy]$ ]]; then
+echo "3. Try running your EdgeClaw autonomous background worker:"
+echo "   cd ~/edgeclaw-runtime && node openclaw.mjs gateway run"
+fi
 echo "   (No configuration files or prompts to copy/paste required.)"
 echo ""
