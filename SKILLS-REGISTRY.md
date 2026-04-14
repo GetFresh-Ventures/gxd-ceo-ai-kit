@@ -1,6 +1,6 @@
 # GFV CEO Enablement Kit — Skills Registry
 
-> **66 unique skills** across 6 categories. Updated 2026-04-13.
+> **74 unique skills** across 8 categories. Updated 2026-04-14.
 
 ## How to Use This Registry
 
@@ -136,6 +136,27 @@ Infrastructure skills for the technical operator.
 | [`autoresearch`](skills/autoresearch/) | Autonomous skill optimization via repeated scoring | Self-improving skills |
 | [`board-deck-builder`](skills/board-deck-builder/) | Board/investor update decks from live data | Data-driven slides |
 
+
+### 🤖 Agent Intelligence (5 skills)
+Swarm orchestration, memory management, and self-learning patterns derived from ruflo.
+
+| Skill | Description | Key Pattern |
+|-------|-------------|-------------|
+| [`openclaw-orchestrator`](skills/openclaw-orchestrator/) | Queen-led multi-agent coordinator with strategic/tactical/adaptive modes | One brain, many hands |
+| [`pil-memory-bus`](skills/pil-memory-bus/) | 4-tier memory hierarchy with namespace isolation, TTL types, and vector search | Global → Project → Session → Task |
+| [`consensus-reconciler`](skills/consensus-reconciler/) | Byzantine fault tolerance for multi-source data truth resolution | 2/3 supermajority |
+| [`agent-spawner`](skills/agent-spawner/) | Dynamic agent creation with hierarchical anti-drift topology | Hierarchical only |
+| [`sparc-planning`](skills/sparc-planning/) | 5-phase structured planning: Spec → Pseudo → Arch → Refine → Complete | Plan before code |
+
+### 🔒 Safety & Automation (3 skills)
+Quality gates, lifecycle hooks, and security scanning.
+
+| Skill | Description | Key Pattern |
+|-------|-------------|-------------|
+| [`hook-automation`](skills/hook-automation/) | Pre/post task lifecycle hooks for quality gates and trajectory recording | Validate → Execute → Record |
+| [`security-pii-scanner`](skills/security-pii-scanner/) | Automated PII detection and redaction with AIMDS injection defense | Never expose secrets |
+| [`skill-builder`](skills/skill-builder/) | Meta-skill: auto-generates new GFV-compliant skills from requirements | Skills that build skills |
+
 ---
 
 ## Composition Patterns
@@ -153,6 +174,10 @@ Skills are most powerful when composed:
 | **Strategic Decision** | `strategic-decision` → `scenario-war-room` → `decision-logger` |
 | **Document Production** | `doc-coauthoring` → `doc-builder` / `pdf-toolkit` / `spreadsheet-builder` |
 | **Multi-Channel Outreach** | `email-composer` → `sms-outreach` → `slack-connector` → `social-scheduler` |
+| **Swarm Intelligence** | `openclaw-orchestrator` → `agent-spawner` → `consensus-reconciler` → `pil-memory-bus` |
+| **Data Reconciliation** | `consensus-reconciler` → `hook-automation` → `pil-memory-bus` |
+| **New Skill Creation** | `skill-builder` → `hook-automation` → `verify-execution` |
+| **Secure Client Report** | `gfv-report-builder` → `security-pii-scanner` → `hook-automation` → `email-composer` |
 
 ---
 
@@ -166,6 +191,8 @@ Skills are most powerful when composed:
 6. **Simplicity criterion** — Same result + simpler approach = keep simpler
 7. **Voice-native** — Everything sounds like the CEO, not like AI
 8. **Draft Review Before Send** — No outbound communication without CEO approval
+9. **Hierarchical topology only** — No ring/mesh patterns that cause agent drift (from ruflo)
+10. **One brain, many hands** — Orchestrator plans, specialists execute (from ruflo)
 
 ---
 
@@ -181,3 +208,4 @@ Skills are most powerful when composed:
 | [clawchief](https://github.com/snarktank/clawchief) | chief-of-staff v2 (3-layer architecture), post-meeting-brief v2, pipeline-pulse v2 |
 | [claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) | strategic-decision, gfv-hooks, authoring standard patterns 13-15 |
 | [LarryBrain Marketplace](https://larrybrain.com/skills) | 11 skills rewritten (contract-reader, negotiation-advisor, aeo-optimizer, etc.) + 17 enhancements |
+| [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 8 skills (openclaw-orchestrator, pil-memory-bus, consensus-reconciler, agent-spawner, sparc-planning, hook-automation, security-pii-scanner, skill-builder) |

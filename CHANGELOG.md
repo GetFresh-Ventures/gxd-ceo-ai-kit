@@ -2,6 +2,43 @@
 
 All notable changes to the GetFresh CEO Enablement Kit for AI will be documented in this file.
 
+## 2026-04-14 8:20 AM PT — v1.17.0 — Ruflo Swarm Intelligence Integration (74 Skills)
+
+### Why it matters
+Deep-audited 90+ agent skills, 30+ agent definitions, and 21 v3 modules from the [ruvnet/ruflo](https://github.com/ruvnet/ruflo) repository — the most comprehensive open-source agentic orchestration platform available. Extracted 8 high-value patterns and implemented them as production GFV skills, adding multi-agent swarm orchestration, Byzantine consensus for data reconciliation, 4-tier memory hierarchy, SPARC structured planning, lifecycle hooks, PII scanning, dynamic agent spawning, and a meta-skill that builds new skills. This represents the transition from "single-agent" to "multi-agent orchestrated" GTM intelligence.
+
+### Added — 8 New Skills (2 New Categories)
+
+#### 🤖 Agent Intelligence (5 skills)
+| Skill | Source Pattern | What It Does |
+|-------|---------------|-------------|
+| `openclaw-orchestrator` | queen-coordinator + hive-mind | Queen-led coordinator with strategic/tactical/adaptive modes |
+| `pil-memory-bus` | memory-coordinator + agentdb-vector | 4-tier memory hierarchy with TTL types and namespace isolation |
+| `consensus-reconciler` | byzantine-coordinator + consensus | Byzantine fault tolerance for multi-source data truth |
+| `agent-spawner` | swarm-orchestration + swarm-init | Dynamic agent creation with hierarchical anti-drift topology |
+| `sparc-planning` | sparc-methodology | 5-phase planning: Specification → Pseudocode → Architecture → Refinement → Completion |
+
+#### 🔒 Safety & Automation (3 skills)
+| Skill | Source Pattern | What It Does |
+|-------|---------------|-------------|
+| `hook-automation` | hooks-automation + @claude-flow/hooks | Pre/post task lifecycle hooks for quality gates |
+| `security-pii-scanner` | AIMDS + @claude-flow/aidefence | Automated PII detection and redaction |
+| `skill-builder` | skill-builder + template-generator | Meta-skill: auto-generates new GFV-compliant skills |
+
+### Enhanced — Design Principles + Composition Patterns
+- Added 2 new design principles: "Hierarchical topology only" and "One brain, many hands" (from ruflo)
+- Added 4 new composition patterns: Swarm Intelligence, Data Reconciliation, New Skill Creation, Secure Client Report
+- Updated SKILLS-REGISTRY.md to 74 skills across 8 categories (was 66/6)
+
+### Architecture — Anti-Drift Controls
+- **Hierarchical only topology**: No mesh/ring patterns that cause agent divergence
+- **Status heartbeat protocol**: Agents report status every major decision
+- **Output validation**: Coordinator validates every spawned agent's output
+- **Timeout enforcement**: Kill any agent exceeding 2x expected duration
+
+### Audit Report
+Full technical audit of all 90 ruflo skills available in: `ruflo_integration_audit.md`
+
 ## 2026-04-13 8:40 PM PT — v1.16.0 — LarryBrain Marketplace Integration (66 Skills)
 
 ### Why it matters
