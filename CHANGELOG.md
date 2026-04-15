@@ -2,6 +2,38 @@
 
 All notable changes to the GetFresh CEO Enablement Kit for AI will be documented in this file.
 
+## 2026-04-15 9:36 AM PT — v1.23.3 — Beginner Proactive Tip Chains
+
+### Why it matters
+3 skills promoted to Beginner in v1.23.1 lacked the "After This Skill" proactive tip chains that guide CEOs to their next action.
+
+### Fixed
+- **executive-mentor**: Added tip chain → decision-logger, board-deck-builder, email-composer
+- **google-doc-creation**: Added tip chain → sharing, spreadsheet-builder, email-composer
+- **spreadsheet-builder**: Added tip chain → google-doc-creation, board-deck-builder, email-composer
+
+All 18 beginner skills now have proactive tip chains.
+
+### Files Modified
+3 files, +18 lines
+
+---
+
+## 2026-04-15 9:25 AM PT — v1.23.2 — Documentation Accuracy Sweep
+
+### Why it matters
+Third-pass audit found documentation that didn't match reality after the tier list changes.
+
+### Fixed
+- **GETTING-STARTED.md**: Beginner count 15→18, Intermediate 45→46, version updated
+- **README.md**: Architecture diagram team.json→profile.json, tools table adds Tier column
+- **SKILL-AUTHORING-STANDARD.md**: Patterns 21-22 softened from mandating specific tools
+
+### Files Modified
+3 files, +20/-18 lines
+
+---
+
 ## 2026-04-15 9:15 AM PT — v1.23.1 — Tier List Parity + Stale Reference Cleanup
 
 ### Why it matters

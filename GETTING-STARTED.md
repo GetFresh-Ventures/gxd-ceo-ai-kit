@@ -268,5 +268,5 @@ Once you're comfortable with the basics:
 
 ---
 
-*Version 1.23.1 — April 2026*
+*Version 1.23.3 — April 2026*
 *Proprietary Methodology © GetFresh Ventures. All Rights Reserved.*
