@@ -99,6 +99,27 @@ All output follows structured communication standards:
 
 - **skill-name**: Use when [specific scenario]. NOT for [disambiguation].
 - **skill-name**: Use when [specific scenario]. NOT for [disambiguation].
+- **skill-name**: Use when [specific scenario]. NOT for [disambiguation].
+```
+
+---
+
+## Secret Management Gateway
+
+Do NOT rely on bare OS `$ENVIRONMENT_VARIABLES` or direct `op read` calls blindly within your executable skills.
+Every API key, credentials payload, or database string must be retrieved via the centralized authentication gateway.
+
+> **Why?** Bare strings crash the terminal if an auth token expires midway through a 20-minute DAG pipeline. The gateway structurally protects the execution.
+
+**Implementation Example:**
+```bash
+# BAD (Fragile)
+export API_KEY=$(op read "op://Machine One/HubSpot/credential")
+curl -H "Authorization: Bearer $API_KEY"
+
+# GOOD (Bulletproof)
+API_KEY=$(python3 tools/gfv-auth.py HUBSPOT_API_KEY --op "op://Machine One/HubSpot/credential")
+if [ $? -ne 0 ]; then exit 1; fi
 ```
 
 ---

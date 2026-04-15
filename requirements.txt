@@ -1,3 +1,4 @@
 requests
 pyyaml
 portalocker
+pytest>=7.0.0

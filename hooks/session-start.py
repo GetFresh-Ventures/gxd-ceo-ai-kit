@@ -89,6 +89,25 @@ def main():
     level = prefs.get("level", "unknown")
     name = profile.get("name", "")
 
+    # 1. Boot Telemetry
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    telemetry_script = os.path.join(os.path.dirname(script_dir), "tools", "gfv-telemetry.py")
+    session_id = datetime.now().strftime("sess_%Y%m%d_%H%M%S")
+    
+    # Save the session ID so stop hook can reference it
+    session_file = ceo_brain_dir / ".current_session_id"
+    if ceo_brain_dir.exists():
+        session_file.write_text(session_id)
+        
+    if os.path.exists(telemetry_script):
+        try:
+            subprocess.Popen(
+                [sys.executable, telemetry_script, "start", "--session", session_id, "--level", level],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+            )
+        except Exception:
+            pass
+
     context_parts = []
     context_parts.append(f"# Session Context — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     if name:

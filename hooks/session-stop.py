@@ -13,6 +13,7 @@ import sys
 import json
 from pathlib import Path
 from datetime import datetime
+import subprocess
 
 import portalocker
 
@@ -25,8 +26,6 @@ def load_preferences():
     if prefs_file.exists():
         try:
             return json.loads(prefs_file.read_text(encoding="utf-8"))
-        except (json.JSONDecodeError, OSError):
-            pass
     # Defaults if no preferences file exists
     return {
         "level": "beginner",
@@ -42,6 +41,24 @@ def main():
     gtm_brain_dir = GTM_BRAIN_DIR
     prefs = load_preferences()
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+    # Read session ID for Telemetry
+    session_id = "unknown"
+    session_file = ceo_brain_dir / ".current_session_id"
+    if session_file.exists():
+        session_id = session_file.read_text().strip()
+
+    # 1. Close Telemetry
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    telemetry_script = os.path.join(os.path.dirname(script_dir), "tools", "gfv-telemetry.py")
+    if os.path.exists(telemetry_script):
+        try:
+            subprocess.Popen(
+                [sys.executable, telemetry_script, "stop", "--session", session_id, "--status", "completed"],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+            )
+        except Exception:
+            pass
 
     # Ensure directories exist
     if not gtm_brain_dir.exists():
@@ -93,6 +110,23 @@ def main():
     if prefs.get("dream_mode", False):
         dream_flag = ceo_brain_dir / ".dream-pending"
         dream_flag.write_text(f"pending_since: {timestamp}\n", encoding="utf-8")
+
+    # 5. Native Brain Version Control (Rollbacks)
+    try:
+        git_dir = ceo_brain_dir / ".git"
+        if not git_dir.exists():
+            subprocess.run(["git", "init"], cwd=str(ceo_brain_dir), capture_output=True)
+            gitignore_path = ceo_brain_dir / ".gitignore"
+            if not gitignore_path.exists():
+                gitignore_path.write_text(".DS_Store\n__pycache__\n", encoding="utf-8")
+        
+        subprocess.run(["git", "add", "."], cwd=str(ceo_brain_dir), capture_output=True)
+        subprocess.run(
+            ["git", "commit", "-m", f"chore(memory): auto-backup session state {timestamp}"],
+            cwd=str(ceo_brain_dir), capture_output=True
+        )
+    except Exception:
+        pass
 
     # Output confirmation
     level = prefs.get("level", "unknown")
