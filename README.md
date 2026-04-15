@@ -295,8 +295,9 @@ Hooks fire automatically at key moments in your Claude Code session:
 | Hook | What it does |
 |------|-------------|
 | `session-start.py` | Runs at session start — loads your brain context and recent state |
-| `session-stop.py` | Runs at session end — persists state changes back to your brain |
+| `session-stop.py` | Runs at session end — safely persists state changes via OS file locking |
 | `pre-send-review.py` | Intercepts outbound messages for safety review before sending |
+| `task_manager.py` | Dynamically intercepts and gates tasks requiring executive approval (`requires_human_approval: true`) |
 
 ### 6. `guides/` — Best Practices Documentation
 
@@ -318,8 +319,10 @@ Pre-built templates that `bootstrap.sh` copies into your `~/ceo-brain` and `~/gt
 
 ### 8. Security & Governance (`SKILL-AUTHORING-STANDARD.md`)
 
-The kit operates under strict mathematical and structural guardrails to prevent hallucination and prompt-injection attacks:
-- **Subagent Verification Protocol (Patterns 23-26):** Agents are strictly banned from verifying their own execution. The Primary Orchestrator must spawn isolated subagents to independently verify changes or review code.
+The kit operates under strict mathematical and structural guardrails to prevent hallucination, data corruption, and prompt-injection attacks:
+- **Human-in-the-Loop Circuit Breakers:** Any skill marked with `requires_human_approval: true` is intercepted by the `task_manager.py` hook, forcing a hard halt until the CEO explicitly overrides it. Ensures high-risk automations (pricing, outbound, contracts) never run autonomously.
+- **Verification Gates Protocol:** Agents are strictly banned from verifying their own execution. The Primary Orchestrator must spawn isolated subagents to independently verify changes or review code before marking a task as cleared.
+- **Cross-Platform Operation Locks:** All file I/O operations utilize zero-collision `fcntl` level OS locking to prevent document corruption during DAG multi-agent execution.
 - **Structural Map Priority (Pattern 27):** Forbids dumping large files (500+ lines) directly into the agent's context window. The agent must sequentially execute `Index -> Outline -> Unfold` to preserve reasoning capability.
 - **Untrusted DOM Paranoia (Pattern 28):** The Primary Orchestrator is banned from directly parsing unverified remote DOMs/UIs. All external data scraping is shunted to sandboxed subagents to mitigate adversarial prompt injection.
 
