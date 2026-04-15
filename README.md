@@ -390,4 +390,11 @@ To add a new workflow:
 
 ## Release History
 
-For historical release notes (v1.0.0 - v1.18.0), please see [CHANGELOG.md](CHANGELOG.md).
+### What's New in v1.28.0 (Enterprise Hardening)
+- **Human-in-the-Loop Circuit Breakers:** `task_manager.py` dynamically intercepts tasks requiring executive approval. Modified `deal-review` and `hubspot-architect` to test this standard via `requires_human_approval: true` frontmatter tags.
+- **Verification Gates:** Standardized the `create-skill` template to mandate programmatic self-verification before any agent marks a task complete.
+- **IDE Native Integration:** `bootstrap.sh` and `bootstrap.ps1` now automatically generate `.cursorrules` and `.windsurfrules` files to unify the terminal and IDE experience.
+- **Cross-Platform OS Locks:** Replaced unsafe basic text appends with `fcntl` OS-level file locking blocks in `task_manager.py`, `session-stop.py`, and `gfv-memento.py`. Supports massive swarm parallelism without corruption.
+- **Environment Constant Centralization:** Purged all hardcoded string paths (e.g. `~/ceo-brain`) from the hook architecture, replacing them with portable `os.environ` endpoints (`GFV_CEO_BRAIN` and `GFV_GTM_BRAIN`).
+
+For historical release notes (v1.0.0 - v1.27.0), please see [CHANGELOG.md](CHANGELOG.md).
