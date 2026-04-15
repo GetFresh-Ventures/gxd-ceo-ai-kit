@@ -15,7 +15,7 @@ If you're a founder or CEO, your power is in your authenticity, brevity, and dir
    - A cold outreach that actually got a reply
    - An internal memo to your team
    - A firm but polite pushback
-3. Open `templates/voice-model.md` and save a copy to `~/brain/voice-model.md`.
+3. Open `templates/voice-model.md` and save a copy to `~/ceo-brain/voice-model.md`.
 4. Analyze your sent emails and fill in the blanks.
 
 ### What to Look For:
@@ -38,7 +38,7 @@ What are the verbal tics you actually use?
 How do you actually end emails? It's rarely "Sincerely."
 
 ## Testing the Model
-Once deployed to `~/brain/voice-model.md`, test it:
+Once deployed to `~/ceo-brain/voice-model.md`, test it:
 
 > "Read my voice model. Draft an email to Ryan at Acme saying I reviewed their proposal, the timeline works, but we need to talk about the Year 2 pricing. Keep it to my usual length."
 

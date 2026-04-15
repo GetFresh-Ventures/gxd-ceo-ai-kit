@@ -303,11 +303,11 @@ if not any(h.get('matcher') == 'Bash' for h in data['hooks']['PreToolUse']):
     echo "  → Hooks symlinked to ~/.claude/hooks"
 
     # Skills — filter by tier
-    BEGINNER_SKILLS="email-composer meeting-prep post-meeting-brief deal-review pipeline-pulse weekly-ceo-brief voice-model doc-builder pdf-toolkit contract-reader onboard chief-of-staff decision-logger audio-briefing support-triage"
+    BEGINNER_SKILLS="email-composer meeting-prep post-meeting-brief deal-review pipeline-pulse weekly-ceo-brief voice-model doc-builder pdf-toolkit contract-reader onboard chief-of-staff decision-logger audio-briefing support-triage executive-mentor spreadsheet-builder google-doc-creation"
     
-    INTERMEDIATE_SKILLS="content-strategy seo-growth social-engine copy-master conversion-optimizer outreach-sequence sales-enablement fundraise ceo-advisor cfo-advisor cmo-advisor coo-advisor cro-advisor competitive-intel board-deck-builder founder-coach executive-mentor financial-analyst scenario-war-room hubspot-architect notion-manager slack-connector audio-briefing news-digest negotiation-advisor doc-coauthoring spreadsheet-builder google-doc-creation change-management launch-strategy context-prime"
+    INTERMEDIATE_SKILLS="content-strategy seo-growth social-engine copy-master conversion-optimizer outreach-sequence sales-enablement fundraise ceo-advisor cfo-advisor cmo-advisor coo-advisor cro-advisor competitive-intel board-deck-builder founder-coach financial-analyst scenario-war-room hubspot-architect notion-manager slack-connector news-digest negotiation-advisor doc-coauthoring change-management launch-strategy context-prime voice-synth"
     
-    ADVANCED_SKILLS="social-scheduler ugc-video voice-synth larry-loop aeo-optimizer sms-outreach domain-intel geopolitical-monitor agent-orchestrator agent-protocol context-engine experiment-loop verify-execution create-prd create-skill commit-fast review-pr analyze-issue feature-architect autoresearch cron-scheduler scheduling-infra dedupe-entities gfv-hooks project-release strategic-decision automation-recommender"
+    ADVANCED_SKILLS="social-scheduler ugc-video larry-loop aeo-optimizer sms-outreach domain-intel geopolitical-monitor agent-orchestrator agent-protocol context-engine experiment-loop verify-execution create-prd create-skill commit-fast review-pr analyze-issue feature-architect autoresearch cron-scheduler scheduling-infra dedupe-entities gfv-hooks project-release strategic-decision automation-recommender"
     
     for skill_dir in "$REPO_DIR/skills/"*; do
         if [ -d "$skill_dir" ]; then

@@ -166,9 +166,9 @@ if (Test-Path (Join-Path $REPO_DIR "AGENT.md")) {
 Write-Host "🪝 Setting up Claude Code hooks and skills..." -ForegroundColor Green
 
 # Define tier skill sets (matches bootstrap.sh exactly)
-$BEGINNER_SKILLS = "email-composer meeting-prep post-meeting-brief weekly-ceo-brief deal-review pipeline-pulse audio-briefing doc-builder chief-of-staff executive-mentor contract-reader pdf-toolkit spreadsheet-builder google-doc-creation"
+$BEGINNER_SKILLS = "email-composer meeting-prep post-meeting-brief deal-review pipeline-pulse weekly-ceo-brief voice-model doc-builder pdf-toolkit contract-reader onboard chief-of-staff decision-logger audio-briefing support-triage executive-mentor spreadsheet-builder google-doc-creation"
 
-$INTERMEDIATE_SKILLS = "content-strategy seo-growth social-engine copy-master conversion-optimizer outreach-sequence sales-enablement fundraise ceo-advisor cfo-advisor cmo-advisor coo-advisor cro-advisor competitive-intel board-deck-builder founder-coach change-management scenario-war-room hubspot-architect decision-logger negotiation-advisor financial-analyst news-digest support-triage slack-connector notion-manager doc-coauthoring context-prime launch-strategy voice-model voice-synth onboard"
+$INTERMEDIATE_SKILLS = "content-strategy seo-growth social-engine copy-master conversion-optimizer outreach-sequence sales-enablement fundraise ceo-advisor cfo-advisor cmo-advisor coo-advisor cro-advisor competitive-intel board-deck-builder founder-coach financial-analyst scenario-war-room hubspot-architect notion-manager slack-connector news-digest negotiation-advisor doc-coauthoring change-management launch-strategy context-prime voice-synth"
 
 $ADVANCED_SKILLS = "social-scheduler ugc-video larry-loop aeo-optimizer sms-outreach domain-intel geopolitical-monitor agent-orchestrator agent-protocol context-engine experiment-loop verify-execution create-prd create-skill commit-fast review-pr analyze-issue feature-architect autoresearch cron-scheduler scheduling-infra dedupe-entities gfv-hooks project-release strategic-decision automation-recommender"
 

@@ -210,18 +210,20 @@ Skills trigger on natural language. Examples:
 
 ## Tools (10)
 
-| Tool | Purpose |
-|------|---------|
-| `ccflare.py` | Claude token cost calculator and estimator |
-| `gfv-audit.sh` | Audit Claude session logs for patterns and learnings |
-| `gfv-cost-estimator.sh` | Estimate API costs for planned operations |
-| `gfv-dedupe.py` | Deduplicate entities across data sources |
-| `gfv-dream.sh` | Background memory consolidation (inspired by OpenClaude) |
-| `gfv-generalist.sh` | General-purpose agent launcher |
-| `gfv-memento.py` | Memory persistence and retrieval |
-| `gfv-ralph.sh` | Rapid agent launch helper |
-| `lint-agent.sh` | Lint AGENT.md and skill files for common issues |
-| `lint-claude-md.sh` | Validate CLAUDE.md configuration |
+These utilities ship with the kit for power users. Most CEOs never need to run them directly — skills call them automatically when needed.
+
+| Tool | Purpose | Who Uses It |
+|------|---------|-------------|
+| `ccflare.py` | Claude token cost calculator and burn rate dashboard | All tiers |
+| `gfv-audit.sh` | Audit Claude session logs for patterns and learnings | Advanced |
+| `gfv-cost-estimator.sh` | Estimate API costs before feeding large files | Advanced |
+| `gfv-dedupe.py` | Deduplicate entities across CRM/data sources | Advanced |
+| `gfv-dream.sh` | Background memory consolidation (auto-run by hooks) | Advanced |
+| `gfv-generalist.sh` | Offload long-running tasks to background threads | Advanced |
+| `gfv-memento.py` | Compress large documents to prevent context overflow | Advanced |
+| `gfv-ralph.sh` | Batch processing loop for repetitive operations | Advanced |
+| `lint-agent.sh` | Validate AGENT.md formatting | Developers |
+| `lint-claude-md.sh` | Validate CLAUDE.md configuration | Developers |
 
 ## Hooks (5)
 

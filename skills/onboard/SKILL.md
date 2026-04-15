@@ -117,7 +117,7 @@ Every level gets voice calibration — it's the #1 value driver.
 
 *After receiving input:*
 1. Parse names and domains
-2. Write to `~/ceo-brain/team.json`:
+2. Write to `~/ceo-brain/profile.json` (merge with existing profile):
 
 ```json
 {
