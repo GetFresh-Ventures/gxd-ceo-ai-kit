@@ -5,6 +5,7 @@ short_description: "Pipeline review — flag stale deals, find gaps"
 metadata:
   version: 2.0.0
   category: revenue-enablement
+  requires_human_approval: true
   origin: GFV v1 + clawchief auto-resolver + autoagent failure taxonomy
   triggers:
     - pipeline review

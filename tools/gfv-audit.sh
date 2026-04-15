@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 #
 # gfv-audit.sh
 # Extract and format bash command history generated directly by the AI (Claude Code).

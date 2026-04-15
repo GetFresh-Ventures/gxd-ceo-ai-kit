@@ -67,6 +67,8 @@ metadata:
   version: 1.0.0
   category: [category]       # See categories below
   tier: [beginner|intermediate|advanced]
+  requires_human_approval: false # Set to true for destructive actions or API writes
+  rbac_level: all            # [all|manager|ceo]
   triggers:
     - exact phrase 1
     - exact phrase 2
@@ -112,6 +114,9 @@ Every skill MUST have these sections:
 
 ## Step N: [Final Action]
 [How to finalize and deliver the output]
+
+### Verification Gate (Mandatory)
+[Define the exact test, command, or visual check the AI must perform to verify success before telling the user the task is complete. E.g., `git diff`, running a script, or checking terminal output. Do not assume success.]
 
 ## Output Format
 [Exact markdown template of what the skill produces]

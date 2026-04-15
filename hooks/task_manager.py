@@ -30,6 +30,11 @@ import os
 import sys
 from datetime import datetime, timezone
 
+try:
+    import fcntl
+except ImportError:
+    fcntl = None
+
 DEFAULT_PIPELINE = ["code-agent", "test-agent", "docs-agent", "monitor-bot"]
 TASKS_DIR = os.environ.get("TEAM_TASKS_DIR", os.path.join(os.path.expanduser("~"), "gtm-brain", "team-tasks"))
 
@@ -42,20 +47,45 @@ def task_file(project: str) -> str:
     return os.path.join(TASKS_DIR, f"{project}.json")
 
 
+def check_human_approval(task_id: str) -> bool:
+    """Check if the given task_id maps to a skill that requires human approval."""
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    repo_dir = os.path.dirname(script_dir)
+    skill_path = os.path.join(repo_dir, "skills", task_id, "SKILL.md")
+    if os.path.exists(skill_path):
+        with open(skill_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+            if content.startswith("---"):
+                end_idx = content.find("---", 3)
+                if end_idx != -1:
+                    frontmatter = content[3:end_idx]
+                    if "requires_human_approval: true" in frontmatter:
+                        return True
+    return False
+
+
 def load_project(project: str) -> dict:
     path = task_file(project)
     if not os.path.exists(path):
         print(f"Error: project '{project}' not found at {path}", file=sys.stderr)
         sys.exit(1)
-    with open(path) as f:
-        return json.load(f)
+    with open(path, "r", encoding="utf-8") as f:
+        if fcntl: fcntl.flock(f.fileno(), fcntl.LOCK_SH)
+        try:
+            return json.load(f)
+        finally:
+            if fcntl: fcntl.flock(f.fileno(), fcntl.LOCK_UN)
 
 
 def save_project(project: str, data: dict):
     path = task_file(project)
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    with open(path, "w", encoding="utf-8") as f:
+        if fcntl: fcntl.flock(f.fileno(), fcntl.LOCK_EX)
+        try:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+        finally:
+            if fcntl: fcntl.flock(f.fileno(), fcntl.LOCK_UN)
 
 
 def make_stage(agent_id: str, task: str = "", depends_on: list = None) -> dict:
@@ -724,13 +754,18 @@ def cmd_next(args):
         return
 
     stage = data["stages"].get(current, {})
+    agent_id = stage.get("agent", current)
     result = {
         "stage": current,
-        "agent": stage.get("agent", current),
+        "agent": agent_id,
         "task": stage.get("task", ""),
         "status": stage.get("status", "pending"),
         "workspace": data.get("workspace", ""),
     }
+
+    if check_human_approval(agent_id):
+        approval_warning = "\n\n⚠️ CRITICAL STOP: This skill has 'requires_human_approval: true'. You MUST ask the user for explicit permission before executing any commands or API calls."
+        result["task"] += approval_warning
 
     if args.json:
         print(json.dumps(result, indent=2, ensure_ascii=False))
@@ -777,14 +812,20 @@ def cmd_ready(args):
             if dep_task.get("output"):
                 dep_outputs[d] = dep_task["output"]
 
+        agent_id = task.get("agent", tid)
         entry = {
             "taskId": tid,
-            "agent": task.get("agent", tid),
+            "agent": agent_id,
             "task": task.get("task", ""),
             "dependsOn": deps,
             "depOutputs": dep_outputs,
             "workspace": data.get("workspace", ""),
         }
+        
+        if check_human_approval(agent_id):
+            approval_warning = "\n\n⚠️ CRITICAL STOP: This skill has 'requires_human_approval: true'. You MUST ask the user for explicit permission before executing any commands or API calls."
+            entry["task"] += approval_warning
+            
         results.append(entry)
 
     if getattr(args, "json", False):

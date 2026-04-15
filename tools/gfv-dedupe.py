@@ -35,7 +35,7 @@ def preProcess(column):
 
 def readData(filename, fields):
     data_d = {}
-    with open(filename, 'r') as f:
+    with open(filename, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row_id, row in enumerate(reader):
             clean_row = {}
@@ -89,7 +89,7 @@ def main():
     
     print(f"Found {len(clustered_dupes)} duplicate clusters. Writing output to {args.output}...")
     
-    with open(args.input, 'r') as f_in, open(args.output, 'w') as f_out:
+    with open(args.input, 'r', encoding='utf-8') as f_in, open(args.output, 'w', encoding='utf-8') as f_out:
         reader = csv.DictReader(f_in)
         writer = csv.writer(f_out)
         writer.writerow(reader.fieldnames + ['GFV_Cluster_ID', 'Confidence_Score'])

@@ -175,11 +175,25 @@ if (!(Test-Path (Join-Path $GTM_BRAIN_DIR "learnings.md"))) {
 # ─────────────────────────────────────────────────────────
 Write-Host "🤖 Applying multi-agent configuration mapping..." -ForegroundColor Green
 if (Test-Path (Join-Path $REPO_DIR "AGENT.md")) {
-    Copy-Item -Path (Join-Path $REPO_DIR "AGENT.md") -Destination (Join-Path $REPO_DIR ".cursorrules") -Force
-    Write-Host "  → Copied AGENT.md to .cursorrules"
     Copy-Item -Path (Join-Path $REPO_DIR "AGENT.md") -Destination (Join-Path $REPO_DIR "CLAUDE.md") -Force
     Write-Host "  → Copied AGENT.md to CLAUDE.md"
 }
+
+$ruleContent = @"
+# GetFresh CEO Enablement Kit
+You are an Executive AI Assistant operating within the GFV Kit.
+
+CRITICAL:
+1. Access the shared executive brain at ~\ceo-brain\profile.json and ~\ceo-brain\voice-model.md for context before generating external communications.
+2. For specialized tasks, reference the .agents\skills\ directory.
+3. Never bypass explicit 'requires_human_approval' flags.
+"@
+
+Set-Content -Path (Join-Path $REPO_DIR ".cursorrules") -Value $ruleContent -Encoding UTF8
+Write-Host "  → Generated native .cursorrules integration"
+
+Set-Content -Path (Join-Path $REPO_DIR ".windsurfrules") -Value $ruleContent -Encoding UTF8
+Write-Host "  → Generated native .windsurfrules integration"
 
 # ─────────────────────────────────────────────────────────
 # 5. Tier-Appropriate Skill Installation

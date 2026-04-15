@@ -2,6 +2,7 @@
 name: hubspot-architect
 description: "Build HubSpot CRM integrations, data pipelines, and sync workflows. Use when the user needs to set up HubSpot, create custom properties, build deal pipelines, or sync data between HubSpot and other systems."
 short_description: "Build HubSpot CRM integrations and pipelines"
+requires_human_approval: true
 ---
 
 # HubSpot Architect

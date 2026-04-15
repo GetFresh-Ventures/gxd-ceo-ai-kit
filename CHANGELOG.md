@@ -2,6 +2,27 @@
 
 All notable changes to the GetFresh CEO Enablement Kit for AI will be documented in this file.
 
+## 2026-04-15 11:15 AM PT — v1.28.0 — Enterprise Hardening (Circuit Breakers & Concurrency)
+
+### Why it matters
+The CEO Enablement Kit is now fully enterprise-hardened. This release introduces Human-in-the-Loop circuit breakers to prevent autonomous agents from running high-risk tasks without approval, explicitly implements OS-level file locking to prevent data corruption during multi-agent DAG parallel executions, and automatically provisions IDE-native context rules across Mac and Windows. 
+
+### Added
+- **Human-in-the-Loop Circuit Breakers**: `task_manager.py` dynamically intercepts tasks requiring executive approval. Modified `deal-review` and `hubspot-architect` to test this standard via `requires_human_approval: true` frontmatter tags.
+- **Verification Gates**: Standardized the `create-skill` template to mandate programmatic self-verification before any agent marks a task complete.
+- **IDE Native Integration**: `bootstrap.sh` and `bootstrap.ps1` now automatically generate `.cursorrules` and `.windsurfrules` files to unify the terminal and IDE experience.
+
+### Changed
+- **Cross-Platform OS Locks**: Replaced unsafe basic text appends with `fcntl` OS-level file locking blocks in `task_manager.py`, `session-stop.py`, and `gfv-memento.py`. Supports massive swarm parallelism without corruption.
+- **Environment Constant Centralization**: Purged all hardcoded string paths (e.g. `~/ceo-brain`) from the hook architecture, replacing them with portable `os.environ` endpoints (`GFV_CEO_BRAIN` and `GFV_GTM_BRAIN`).
+- **UTF-8 Encoding Parity**: Swept all python hooks (`session-stop.py`, `gfv-dedupe.py`, `gfv-memento.py`) ensuring `encoding="utf-8"` is explicitly utilized to prevent string mutation crashes on Windows variants.
+- **Bash Failsafes**: Bound all global bash utilities (`gfv-audit.sh`, `gfv-cost-estimator.sh`, `gfv-generalist.sh`, `lint-agent.sh`) with strict `set -e` traps.
+
+### Stats
+14 files changed, +120/-50 lines.
+
+---
+
 ## 2026-04-15 10:28 AM PT — v1.27.0 — Tip Chains + Upgrade Path
 
 ### Why it matters

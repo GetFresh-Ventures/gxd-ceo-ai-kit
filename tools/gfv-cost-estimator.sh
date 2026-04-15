@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 # GFV Cost Estimator
 # Usage: ./gfv-cost-estimator.sh <file_or_directory>

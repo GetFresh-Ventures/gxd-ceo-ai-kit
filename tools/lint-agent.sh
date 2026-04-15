@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 # lint-agent.sh
 # Validates the AGENT.md file structure to prevent silent failures in Claude agent instructions.
 # Captures common issues:

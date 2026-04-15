@@ -14,10 +14,13 @@ import json
 from pathlib import Path
 from datetime import datetime
 
+CEO_BRAIN_DIR = Path(os.environ.get("GFV_CEO_BRAIN", Path.home() / "ceo-brain"))
+GTM_BRAIN_DIR = Path(os.environ.get("GFV_GTM_BRAIN", Path.home() / "gtm-brain"))
+
 
 def load_preferences():
     """Load user preferences from ~/ceo-brain/preferences.json"""
-    prefs_file = Path.home() / "ceo-brain" / "preferences.json"
+    prefs_file = CEO_BRAIN_DIR / "preferences.json"
     if prefs_file.exists():
         try:
             return json.loads(prefs_file.read_text())
@@ -34,7 +37,7 @@ def load_preferences():
 
 def load_profile():
     """Load user profile from ~/ceo-brain/profile.json"""
-    profile_file = Path.home() / "ceo-brain" / "profile.json"
+    profile_file = CEO_BRAIN_DIR / "profile.json"
     if profile_file.exists():
         try:
             return json.loads(profile_file.read_text())
@@ -44,8 +47,8 @@ def load_profile():
 
 
 def main():
-    ceo_brain_dir = Path.home() / "ceo-brain"
-    gtm_brain_dir = Path.home() / "gtm-brain"
+    ceo_brain_dir = CEO_BRAIN_DIR
+    gtm_brain_dir = GTM_BRAIN_DIR
 
     if not ceo_brain_dir.exists() and not gtm_brain_dir.exists():
         print("⚠️  No executive brain directory found. Run bootstrap.sh or /onboard first.", file=sys.stderr)

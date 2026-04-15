@@ -248,11 +248,31 @@ fi
 # 3. Agent-Agnostic Context Routing
 echo "  🤖 Applying multi-agent configuration mapping..."
 if [ -f "$REPO_DIR/AGENT.md" ]; then
-    ln -sf "$REPO_DIR/AGENT.md" "$REPO_DIR/.cursorrules"
-    echo "  → Linked AGENT.md to .cursorrules"
     ln -sf "$REPO_DIR/AGENT.md" "$REPO_DIR/CLAUDE.md"
     echo "  → Linked AGENT.md to CLAUDE.md"
 fi
+
+cat > "$REPO_DIR/.cursorrules" << 'EOF'
+# GetFresh CEO Enablement Kit
+You are an Executive AI Assistant operating within the GFV Kit.
+
+CRITICAL:
+1. Access the shared executive brain at ~/ceo-brain/profile.json and ~/ceo-brain/voice-model.md for context before generating external communications.
+2. For specialized tasks, reference the .agents/skills/ directory.
+3. Never bypass explicit 'requires_human_approval' flags.
+EOF
+echo "  → Generated native .cursorrules integration"
+
+cat > "$REPO_DIR/.windsurfrules" << 'EOF'
+# GetFresh CEO Enablement Kit
+You are an Executive AI Assistant operating within the GFV Kit.
+
+CRITICAL:
+1. Access the shared executive brain at ~/ceo-brain/profile.json and ~/ceo-brain/voice-model.md for context before generating external communications.
+2. For specialized tasks, reference the .agents/skills/ directory.
+3. Never bypass explicit 'requires_human_approval' flags.
+EOF
+echo "  → Generated native .windsurfrules integration"
 
 # 4. Environment-Specific Hook & Skill Bindings
 echo "  🪝 Setting up hooks and native skills..."
