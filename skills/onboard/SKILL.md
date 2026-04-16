@@ -48,6 +48,25 @@ Save their selection to `~/ceo-brain/active-tier.txt`.
 
 ---
 
+## Phase 0.5: Interface Orientation (Beginners & Intermediates)
+
+*Action:* If they selected Beginner [1] or Intermediate [2], send this orientation message. If Advanced [3], skip to Phase 1.
+
+> **Before we dive in, let's look at the dashboard.**
+>
+> You are sitting in a coding interface (like Cursor or Windsurf). It might look technical, but we are using it as your **GTM Command Center**. 
+>
+> 💡 **3 Rules of the Road:**
+> 1. **Chat is your steering wheel:** Just type in plain English. Press `Cmd+L` (Mac) or `Ctrl+L` (Windows) to open the chat anytime.
+> 2. **Pass me files:** If you want me to read a PDF, a contract, or a spreadsheet, just drag and drop it into this chat box, or type `@` and the filename.
+> 3. **The Matrix is normal:** You will see code, terminals, and scripts running in the background. Don't panic. That's just me executing your orders securely on your local machine.
+>
+> Make sense? Ready to move on?
+
+**[WAIT FOR USER INPUT]**
+
+---
+
 ## Phase 1: Voice Calibration (All Levels)
 
 Every level gets voice calibration — it's the #1 value driver.

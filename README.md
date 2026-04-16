@@ -41,6 +41,18 @@ This kit enables the proprietary **Growth by Design (GxD)** architecture directl
 
 **You do NOT need to be technical.** The setup takes 60 seconds and builds visual interfaces automatically.
 
+### For Non-Technical Executives: Why an IDE?
+If you have never written a line of code, you might be asking: *Why an IDE (Cursor, Windsurf) instead of a standard SaaS web app like ChatGPT?*
+
+**1. Ultimate Context (No Copy-Pasting)**
+A SaaS app lives in your browser; it cannot inherently scan your local files. An IDE lets you safely drag-and-drop massive PDF contracts, complex Excel pipelines, and entire folders into your workspace. The AI can read *everything* in one shot.
+
+**2. Zero SaaS Telemetry (Total Privacy)**
+When you upload financial documents to a web wrapper, you surrender data custody. Running this Executive Kit locally inside an IDE ensures that your data stays strictly on your machine and communicates *only* via secured API endpoints you control.
+
+**3. Direct Execution Power**
+An IDE doesn't just read data; it acts. Instead of giving you a summary, your AI Chief of Staff can physically generate PowerPoint presentations, slice pipeline data, and reorganize files natively on your hard drive structure.
+
 ---
 
 ## 🖥 OS Compatibility & Requirements
