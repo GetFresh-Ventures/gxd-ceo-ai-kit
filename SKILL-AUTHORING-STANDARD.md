@@ -163,10 +163,22 @@ Most skills have 2-3 natural entry points.
 | Operations | Design process | Optimize process | Scale process |
 | Marketing | Build campaign | Analyze performance | Competitive response |
 
-### Pattern 4: Related Skills Navigation
+### Pattern 4: Headless Swarm Dispatch
+For long-running execution workloads (crawling URLs, massive API syncs, rendering text-to-speech), do NOT block the main terminal interface. Dispatch a background agent so the CEO Terminal remains free.
+
+**Implementation Example:**
+```bash
+# BAD (Terminal locks up for 20 minutes)
+claude -p "Audit these 100 urls and summarize" > audit.md
+
+# GOOD (Instant handoff to Swarm)
+SPAWN_ID=$(python3 tools/gfv-spawn.py run --task "Audit these 100 urls and summarize" --persona "Data Engineer")
+echo "Worker dispatched via $SPAWN_ID"
+```
+### Pattern 5: Related Skills Navigation
 Every skill ends with a curated list of related skills with WHEN/NOT disambiguation.
 
-### Pattern 5: Reference Separation
+### Pattern 6: Reference Separation
 ```
 skill-name/
 ├── SKILL.md              # ≤10KB — what to do, how to decide, when to act
@@ -177,7 +189,7 @@ skill-name/
     └── [verb]_[noun].py
 ```
 
-### Pattern 6: Proactive Triggers
+### Pattern 7: Proactive Triggers
 4-6 triggers per skill. Each: specific condition + business consequence.
 
 ### Pattern 7: Output Artifacts Table

@@ -215,12 +215,14 @@ These utilities ship with the kit for power users. Most CEOs never need to run t
 | Tool | Purpose | Who Uses It |
 |------|---------|-------------|
 | `ccflare.py` | Claude token cost calculator and burn rate dashboard | All tiers |
-| `gfv-audit.sh` | Audit Claude session logs for patterns and learnings | Advanced |
-| `gfv-cost-estimator.sh` | Estimate API costs before feeding large files | Advanced |
+| `gfv-audit.py` | Audit Claude session logs for patterns and learnings | Advanced |
+| `gfv-cost-estimator.py` | Estimate API costs before feeding large files | Advanced |
 | `gfv-dedupe.py` | Deduplicate entities across CRM/data sources | Advanced |
-| `gfv-dream.sh` | Background memory consolidation (auto-run by hooks) | Advanced |
-| `gfv-generalist.sh` | Offload long-running tasks to background threads | Advanced |
+| `gfv-dream.py` | Background memory consolidation (auto-run by hooks) | Advanced |
+| `gfv-spawn.py` | Headless Swarm Dispatcher for long-running detached agents | Advanced |
 | `gfv-memento.py` | Compress large documents to prevent context overflow | Advanced |
+| `gfv-telemetry.py` | Logs execution metrics to local SQLite database | Advanced |
+| `gfv-auth.py` | Intercepts validation for 1Password/ENV integration | Advanced |
 | `gfv-ralph.sh` | Batch processing loop for repetitive operations | Advanced |
 | `lint-agent.sh` | Validate AGENT.md formatting | Developers |
 | `lint-claude-md.sh` | Validate CLAUDE.md configuration | Developers |

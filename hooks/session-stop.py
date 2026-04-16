@@ -128,6 +128,17 @@ def main():
     except Exception:
         pass
 
+    # 6. Rebuild Local Brain Search Index
+    brain_search_script = os.path.join(os.path.dirname(script_dir), "tools", "gfv-brain-search.py")
+    if os.path.exists(brain_search_script):
+        try:
+            subprocess.Popen(
+                [sys.executable, brain_search_script, "ingest"],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+            )
+        except Exception:
+            pass
+
     # Output confirmation
     level = prefs.get("level", "unknown")
     print(f"✅ Session saved ({level} mode) — {timestamp}")
