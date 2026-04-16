@@ -112,6 +112,7 @@ echo ""
 if $QUICK_MODE; then
     USER_NAME="CEO"
     USER_COMPANY="My Company"
+    USER_IDE_EXPERTISE=2
     USER_CRM="none"
     USER_AGENT="claude"
     INSTALL_ENGINECLAW="n"
@@ -123,6 +124,18 @@ else
 
     read -p "  What company do you run? " USER_COMPANY
     USER_COMPANY=${USER_COMPANY:-"My Company"}
+
+    echo ""
+    echo "  What is your comfort level with coding interfaces (IDEs) like Cursor?"
+    echo "  [1] Beginner (I need tutorials)"
+    echo "  [2] Intermediate (I know the basics)"
+    echo "  [3] Advanced (Skip the tutorials)"
+    read -p "  Select level [1, 2, or 3]: " USER_IDE_EXPERTISE
+    USER_IDE_EXPERTISE=${USER_IDE_EXPERTISE:-1}
+
+    if [[ ! "$USER_IDE_EXPERTISE" =~ ^[123]$ ]]; then
+        USER_IDE_EXPERTISE=1
+    fi
 
     if [[ "$USER_TIER" -ge 2 ]]; then
         # Intermediate + Advanced get CRM question
@@ -216,6 +229,7 @@ cat > "$CEO_BRAIN_DIR/profile.json" << EOF
   "name": "$USER_NAME",
   "company": "$USER_COMPANY",
   "tier": $USER_TIER,
+  "ide_expertise": $USER_IDE_EXPERTISE,
   "tier_name": "${TIER_NAMES[$USER_TIER]}",
   "crm": "${USER_CRM:-none}",
   "agent": "${USER_AGENT:-claude}",

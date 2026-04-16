@@ -50,7 +50,7 @@ Save their selection to `~/ceo-brain/active-tier.txt`.
 
 ## Phase 0.5: Interface Orientation (Beginners & Intermediates)
 
-*Action:* If they selected Beginner [1] or Intermediate [2], send this orientation message. If Advanced [3], skip to Phase 1.
+*Action:* Read `~/ceo-brain/profile.json`. If `ide_expertise` is 1 or 2, send this orientation message. If `ide_expertise` is 3, skip to Phase 1.
 
 > **Before we dive in, let's look at the dashboard.**
 >
