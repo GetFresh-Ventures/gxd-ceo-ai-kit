@@ -36,7 +36,7 @@ Any agent can query another using:
 ```
 [INVOKE:cfo|What's the burn rate impact of hiring 3 field techs in Q3?]
 [INVOKE:cro|What does our pipeline look like for the next 90 days?]
-[INVOKE:cmo|What's our CAC by channel for the Utah market?]
+[INVOKE:cmo|What's our CAC by channel for the primary market?]
 ```
 
 **Valid roles:** `ceo`, `cfo`, `cro`, `cmo`, `coo`, `founder-coach`, `executive-mentor`
@@ -68,7 +68,7 @@ Supporting data:
   - Field Service Platform data shows avg tech generates $15K/mo revenue after 30-day ramp
   - Current pipeline supports the capacity (CRO confirmed 40+ open leads/month)
 Confidence: 🟡 medium
-Caveat: Assumes Utah market demand holds steady through summer; ramp could be longer for HVAC-only techs.
+Caveat: Assumes primary market demand holds steady through summer; ramp could be longer for HVAC-only techs.
 [/RESPONSE]
 ```
 

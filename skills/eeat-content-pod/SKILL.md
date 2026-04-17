@@ -20,8 +20,8 @@ A 4-agent orchestration strategy designed to build **Generative Engine Optimized
 ## Quick Start
 Just say any of these:
 - "Run the content pod on this competitor's article"
-- "Rewrite our HVAC pricing page using the latest ServiceTitan data"
-- "Draft a new service page for Plumbing repair in Utah, use local context"
+- "Rewrite our HVAC pricing page using the latest field service platform data"
+- "Draft a new service page for Plumbing repair in [City], use local context"
 
 ## Architecture: The 4-Agent Pod
 

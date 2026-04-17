@@ -213,7 +213,7 @@ Highest-signal competitive data. Most companies do it too rarely.
 Competitors: local HVAC/plumbing companies, national franchises (Service Experts, ARS), digital-first (Comfort Systems)
 - Track Google Ads positioning (Ad Library)
 - Monitor Google Business Profile reviews
-- Watch for new LSA entrants in Utah/Iowa markets
+- Watch for new LSA entrants in your active markets
 - Field Service Platform market reports for regional benchmarking
 
 ### SaaS / AI-Native (Portfolio Co B, pipeline companies)

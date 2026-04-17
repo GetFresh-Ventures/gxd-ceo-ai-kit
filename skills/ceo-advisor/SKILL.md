@@ -45,7 +45,7 @@ Evaluate a new client, partnership, or portfolio add — does it fit the GFV the
 
 | Entity | Type | Stage | Key Systems |
 |--------|------|-------|-------------|
-| **Portfolio Co A** | Home services (HVAC, Plumbing) | Active — scaling Utah + Des Moines | Field Service Platform, Google Ads, GA4, GSC, WordPress |
+| **Portfolio Co A** | Home services (HVAC, Plumbing) | Active — scaling multi-market | Field Service Platform, Google Ads, GA4, GSC, WordPress |
 | **Portfolio Co B** | SaaS / Professional services | Active — SEO remediation, WordPress optimization | GSC, GA4, SEMrush, Cloudflare, WordPress |
 | **Portfolio Co C** | Home services prospect | Engagement phase | HubSpot, Fathom |
 | **GFV Consulting Pipeline** | GTM consulting deals | Ongoing — HubSpot pipeline | HubSpot, PandaDoc, QuickBooks |

@@ -58,7 +58,7 @@ This kit enables the proprietary **Growth by Design (GxD)** architecture directl
        │         └─────────────┘
  ┌─────┴──────────────────────────────────┐
  │  Data Integrations & Web Protocols     │
- │  Linear · HubSpot · Slack · ServiceTitan│
+ │  Linear · HubSpot · Slack · FSM        │
  │  Google Ads · SEMrush · Analytics       │
  └────────────────────────────────────────┘
 ```
@@ -102,10 +102,10 @@ All work is tiered based on your operational autonomy constraint inside `profile
 |----------|------|
 | **Linear** | Project ops, sprint tracking, and blocked issue routing |
 | **HubSpot** | CRM data, deal extraction, and sequence alignment |
-| **ServiceTitan** | Dispatch mapping, tech routing, revenue tracking |
+| **Field Service Platform** | Dispatch mapping, tech routing, revenue tracking |
 | **Slack** | Team communications, crisis monitoring, and auto-dispatch |
 | **Google Ads** | PPC campaign structure, ROAS checking, landing pages |
-| **CAAI** | Proprietary GetFresh centralized intelligence model |
+| **QuickBooks** | Invoicing, expense tracking, financial reporting |
 
 ---
 

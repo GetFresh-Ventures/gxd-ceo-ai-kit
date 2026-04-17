@@ -83,7 +83,7 @@ After building your voice model, test it:
 ## Example Prompt
 ```text
 Read my voice model at ~/ceo-brain/voice-model.md and draft a follow-up 
-to Greg about the Q3 projection misses. Do not be overly nice. Use bullet points.
+to the client about the Q3 projection misses. Do not be overly nice. Use bullet points.
 ```
 
 ## Live Integration Hooks
