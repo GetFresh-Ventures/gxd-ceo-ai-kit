@@ -200,9 +200,27 @@ echo "=== 10. Installer parity ==="
 SH_COUNT=$(grep -c "$SKILL_NAME" bootstrap.sh)
 PS1_COUNT=$(grep -c "$SKILL_NAME" bootstrap.ps1)
 [ "$SH_COUNT" -eq "$PS1_COUNT" ] && echo "✅ PASS (both: $SH_COUNT)" || echo "❌ FAIL (sh=$SH_COUNT, ps1=$PS1_COUNT)"
+
+echo "=== 11. Full doc coverage (all skills, not just new) ==="
+FULL_MISS=0
+for d in skills/*/; do
+    sn=$(basename "$d")
+    grep -q "$sn" AGENT-GUIDE.md || { echo "❌ AGENT-GUIDE missing: $sn"; FULL_MISS=$((FULL_MISS+1)); }
+    grep -q "$sn" SKILLS-REGISTRY.md || { echo "❌ REGISTRY missing: $sn"; FULL_MISS=$((FULL_MISS+1)); }
+    grep -q "$sn" README.md || { echo "❌ README missing: $sn"; FULL_MISS=$((FULL_MISS+1)); }
+done
+[ "$FULL_MISS" -eq 0 ] && echo "✅ PASS (all skills in all docs)" || echo "❌ FAIL ($FULL_MISS gaps)"
+
+echo "=== 12. Skill count consistency ==="
+DISK=$(find skills/ -name "SKILL.md" | wc -l | tr -d ' ')
+GUIDE=$(grep -oE 'All [0-9]+ skills' AGENT-GUIDE.md | grep -oE '[0-9]+')
+REG=$(head -3 SKILLS-REGISTRY.md | grep -oE '[0-9]+')
+GS=$(grep -oE '[0-9]+ pre-built skills' GETTING-STARTED.md | grep -oE '[0-9]+')
+echo "  Disk=$DISK | AGENT-GUIDE=$GUIDE | REGISTRY=$REG | GETTING-STARTED=$GS"
+[ "$DISK" = "$GUIDE" ] && [ "$DISK" = "$REG" ] && [ "$DISK" = "$GS" ] && echo "✅ PASS" || echo "❌ MISMATCH"
 ```
 
-**All 10 checks must pass.** If any fail, fix before committing.
+**All 12 checks must pass.** If any fail, fix before committing.
 
 ---
 

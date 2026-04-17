@@ -131,7 +131,8 @@ Skills trigger on natural language. Examples:
 | `social-engine` | Create platform-native content for LinkedIn, X, Instagram, newsletters |
 | `social-scheduler` | Cross-post and schedule content across 28+ social channels |
 | `copy-master` | High-conversion copywriting — headlines, CTAs, landing page copy |
-| `aeo-optimizer` | Answer Engine Optimization for AI search visibility (Perplexity, ChatGPT) |
+| `ai-search-optimizer` | Answer Engine Optimization for AI search visibility (Perplexity, ChatGPT) |
+| `eeat-content-pod` | 4-agent orchestration pod (Recon, Context, Writer, Publisher) for verified content |
 | `larry-loop` | Autonomous content validation — distribution, indexing, and performance |
 | `conversion-optimizer` | Optimize forms, signup flows, landing pages, and onboarding funnels |
 | `ugc-video` | Script-to-video production pipeline with AI talking heads |
@@ -169,13 +170,14 @@ Skills trigger on natural language. Examples:
 | `analyze-issue` | Systematic 4-phase debugging — reproduce, trace, hypothesize, fix |
 | `commit-fast` | Auto-generate semantic commits from diffs with conventional commit format |
 | `context-prime` | Load full project context — architecture, deps, tests, git state |
-| `create-prd` | Convert rough ideas into structured 6-section Product Requirements Docs |
+| `product-spec` | Convert rough ideas into structured 6-section Product Requirements Docs |
 | `create-skill` | Meta-skill for authoring new skills with quality validation |
 | `verify-execution` | Runtime verification through observation, not just diff-reading |
 | `feature-architect` | Guided feature development with codebase understanding |
 | `domain-intel` | WHOIS, DNS, SSL, and tech stack detection for any domain |
 | `dedupe-entities` | Mathematically resolve duplicate entities in CSV datasets |
 | `agent-orchestrator` | Multi-agent dispatch and coordination for parallel workloads |
+| `automation-recommender` | Identify repetitive workflows and recommend skill automation |
 | `import-skill` | Import external repos/skills — rewrite, register, and verify all touchpoints |
 
 ---
