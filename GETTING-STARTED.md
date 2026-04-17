@@ -75,7 +75,7 @@ cd ~\\Documents\\GTM-Enablement-Kit
 |-------|----------|-------------|
 | **Beginner** | New to AI assistants | 18 core skills, cross-session memory, auto-approve, proactive tips, plain-English mode |
 | **Intermediate** ★ | Regular AI users | 46 skills + CRM integration, feedback loops, weekly learning capture |
-| **Advanced** | Power users | All 74 skills + Dream Mode, background automation, self-improving skills |
+| **Advanced** | Power users | All 75 skills + Dream Mode, background automation, self-improving skills |
 
 > **Not sure?** Pick **Intermediate**. You can change your level anytime by re-running the installer.
 
@@ -147,7 +147,7 @@ The AI checks pipeline state, pending approvals, meeting schedule, and surfaces 
 
 ## Understanding Your Skill Library
 
-You have access to **74 pre-built skills** organized into 8 categories. You don't need to memorize them — just describe what you need and the AI will route to the right skill automatically.
+You have access to **75 pre-built skills** organized into 8 categories. You don't need to memorize them — just describe what you need and the AI will route to the right skill automatically.
 
 ### Most-Used Skills for Executives
 

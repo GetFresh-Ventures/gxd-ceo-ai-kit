@@ -1,6 +1,6 @@
 # GFV GTM Enablement Kit — Skills Registry
 
-> **74 unique skills** across 8 categories. Updated 2026-04-17.
+> **75 unique skills** across 8 categories. Updated 2026-04-17.
 
 ## How to Use This Registry
 
@@ -142,6 +142,7 @@ Infrastructure skills for the technical operator.
 | [`import-skill`](skills/import-skill/) | Import external repos/skills into the kit — rewrite, register, and patch all touchpoints | Zero-stone intake |
 | [`feature-architect`](skills/feature-architect/) | Guided feature development with codebase understanding and architecture focus | Architect first |
 | [`hubspot-architect`](skills/hubspot-architect/) | HubSpot architecture for syncing, integrating, and data pipelines | CRM engineering |
+| [`dev-browser`](skills/dev-browser/) | Sandboxed browser automation with persistent Playwright pages via CLI | Headless-first |
 
 
 ### 🤖 Agent Intelligence (1 skill)
@@ -171,6 +172,7 @@ Skills are most powerful when composed:
 | **New Skill Creation** | `create-skill` → `verify-execution` |
 | **External Import** | `import-skill` → `verify-execution` → `project-release` |
 | **Feature Build** | `feature-architect` → `agent-orchestrator` → `verify-execution` |
+| **Browser Automation** | `dev-browser` → `spreadsheet-builder` / `competitive-intel` |
 
 ---
 
@@ -202,3 +204,4 @@ Skills are most powerful when composed:
 | [claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) | strategic-decision, gfv-hooks, authoring standard patterns 13-15 |
 | [LarryBrain Marketplace](https://larrybrain.com/skills) | 11 skills rewritten (contract-reader, negotiation-advisor, ai-search-optimizer, etc.) + 17 enhancements |
 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | Architectural patterns (hierarchical topology, memory tiers, consensus concepts) — skills were planned but not shipped |
+| [SawyerHood/dev-browser](https://github.com/SawyerHood/dev-browser) | dev-browser (rewritten from 20-line stub to full GFV skill) |

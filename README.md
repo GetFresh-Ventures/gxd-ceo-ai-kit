@@ -12,7 +12,7 @@ A plug-and-play **Edge-Native Go-to-Market Operating System** that turns Claude 
 
 This kit enables the proprietary **Growth by Design (GxD)** architecture directly within your local environment. 
 
-**Runtime:** Local / Edge-Compute · 74+ Domain Skills · SQLite FTS5 Memory Caching
+**Runtime:** Local / Edge-Compute · 75+ Domain Skills · SQLite FTS5 Memory Caching
 
 **The Brand (GxD)**: Growth by Design is the architecture of predictable revenue, uniting Marketing, Sales, and RevOps data into a single, unified ontology.
 
@@ -47,7 +47,7 @@ This kit enables the proprietary **Growth by Design (GxD)** architecture directl
        │              │                 │
        ▼              ▼                 ▼
 ┌──────────────┐ ┌─────────────┐ ┌──────────────────────┐
-│  74 Domain   │ │ Background  │ │ Local CEO Brain      │
+│  75 Domain   │ │ Background  │ │ Local CEO Brain      │
 │  Skills      │ │ Telemetry   │ │ (SQLite FTS5 Edge)   │
 │  (C-Suite,   │ │ (Python)    │ │ Unified Ontology     │
 │   Ops, Dev)  │ └──────┬──────┘ └──────────────────────┘
@@ -80,7 +80,7 @@ Local memory ensures contexts survive beyond a single terminal session.
 - Background hooks run `session-start` and `session-stop` automatically.
 
 ### The Skills Layer
-Over 74 discrete `.md` instruction files acting as programmatic apps. When you say "Run the weekly pipeline brief", the agent dynamically retrieves the `weekly-pipeline-brief` skill and follows its deep operational playbook step-by-step.
+Over 75 discrete `.md` instruction files acting as programmatic apps. When you say "Run the weekly pipeline brief", the agent dynamically retrieves the `weekly-pipeline-brief` skill and follows its deep operational playbook step-by-step.
 
 ---
 
@@ -134,7 +134,7 @@ gfv_growth_by_design/
 ├── CHANGELOG.md               # Version release history
 ├── SKILLS-REGISTRY.md         # Full index of all capabilities
 ├── SKILL-AUTHORING-STANDARD.md# Architecture rules for new skills
-├── skills/                    # 74+ Executable Domain Skills
+├── skills/                    # 75+ Executable Domain Skills
 │   ├── ceo-advisor/
 │   ├── pipeline-pulse/
 │   ├── eeat-content-pod/      # Example: 4-agent orchestration
@@ -251,7 +251,7 @@ Marketing, content, and growth optimization.
 | [`voice-synth`](skills/voice-synth/) | AI voice synthesis for narration, podcasts, and audio content | Sound human anywhere |
 | [`geopolitical-monitor`](skills/geopolitical-monitor/) | Global intelligence with country instability scoring | International risk radar |
 
-### 🛠️ Developer & DevOps (13 skills)
+### 🛠️ Developer & DevOps (14 skills)
 Infrastructure skills for the technical operator.
 
 | Skill | Description | Key Pattern |
@@ -269,6 +269,7 @@ Infrastructure skills for the technical operator.
 | [`import-skill`](skills/import-skill/) | Import external repos/skills into the kit — rewrite, register, verify all touchpoints | Zero-stone intake |
 | [`feature-architect`](skills/feature-architect/) | Guided feature development with codebase understanding and architecture focus | Architect first |
 | [`hubspot-architect`](skills/hubspot-architect/) | HubSpot architecture for syncing, integrating, and data pipelines | CRM engineering |
+| [`dev-browser`](skills/dev-browser/) | Sandboxed browser automation with persistent Playwright pages via CLI | Headless-first |
 
 
 ### 🤖 Agent Intelligence (1 skill)
