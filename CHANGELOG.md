@@ -2,6 +2,45 @@
 
 All notable changes to the GetFresh GTM Enablement Kit for AI will be documented in this file.
 
+## 2026-04-17 7:07 PM PT — v1.33.0 — Kit Integrity Hardening + Skill Imports
+
+### Why it matters
+This release is a comprehensive integrity hardening milestone. A 6-pass end-to-end audit across all 75 skills, documentation, and infrastructure scripts purged every instance of client-specific data (ServiceTitan, Aprio, Golden Rule PHC), geographic leaks (Utah, Iowa, Des Moines), personal identifiers, and legacy proprietary system references (PIL, Supabase, CAAI, ccflare) that had leaked into the product codebase during operational skill authoring. The kit now ships as a clean, fully agnostic GFV product — ready for any executive deployment without modification. Additionally, two new skills were imported: `import-skill` (deterministic external skill intake) and `dev-browser` (Playwright-based browser automation).
+
+### Added
+- **`skills/import-skill/`** — Deterministic external skill intake with 10-point verification protocol. Ensures any skill imported from GitHub, npm, or raw sources is fully GFV-compliant before registration.
+- **`skills/dev-browser/`** — Playwright-based browser automation skill for headless testing, scraping, and UI validation. Includes screen capture, form fill, and navigation capabilities.
+
+### Changed
+- **`README.md`** — Added getfreshventures.com URL to header and footer. Clarified this is a GFV product powered by the Growth by Design (GxD) model. Replaced client-specific core integrations with kit-native systems (Linear, HubSpot, Slack, Google Ads, GA4, QuickBooks).
+- **`AGENT-GUIDE.md`** — Fixed 4 stale skill name references that pointed to non-existent skill directories.
+- **Installer parity** — Both `bootstrap.sh` and `bootstrap.ps1` now register all 75 skills (18 Beginner + 28 Intermediate + 29 Advanced) with identical tier assignments.
+
+### Fixed — 6-Pass Integrity Audit (41 files, 853 insertions)
+- **Pass 1 (14 files):** Purged all `PIL`, `Proactive Intelligence`, `pil-server` references from skill author tags and content.
+- **Pass 2 (14 files):** Removed `Supabase` backend references, `gfv_memory.db`, `pil_morning_digest.py`, and `entity_embeddings` table names.
+- **Pass 3 (2 files):** Removed `ccflare` hardcoded examples and depersonalized `Diraj` name references in `import-skill`.
+- **Pass 4 (6 files):** Purged `ServiceTitan`, `CAAI`, `Utah`, `Iowa`, `Des Moines` geography, and client contact name `Greg` from examples.
+- **Pass 5 (12 files):** Purged all `Field Service Platform` aliases (the ServiceTitan rename). Added GFV website URL branding.
+- **Pass 6 (1 file):** Removed final `PIL` reference in `tools/gfv-brain-search.py` docstring and `aprio` client example query.
+
+### Files Modified
+- README.md, AGENT-GUIDE.md, SKILL-AUTHORING-STANDARD.md, CHANGELOG.md
+- bootstrap.sh, bootstrap.ps1
+- tools/gfv-brain-search.py
+- skills/import-skill/SKILL.md, skills/dev-browser/SKILL.md (new)
+- skills/eeat-content-pod/SKILL.md, skills/agent-protocol/SKILL.md
+- skills/competitive-intel/SKILL.md, skills/ceo-advisor/SKILL.md
+- skills/cro-advisor/SKILL.md, skills/coo-advisor/SKILL.md
+- skills/voice-model/SKILL.md, skills/copy-master/SKILL.md
+- skills/context-engine/SKILL.md, skills/chief-of-staff/SKILL.md
+- skills/strategic-decision/SKILL.md, skills/automation-recommender/SKILL.md
+- skills/decision-logger/SKILL.md, skills/project-release/SKILL.md
+- skills/scenario-war-room/SKILL.md, skills/larry-loop/SKILL.md
+- skills/board-deck-builder/SKILL.md, skills/night_shift.md
+- 41 files total across 6 audit passes
+
+
 ## 2026-04-16 11:16 PM PT — v1.32.2 — Unbiased Orchestration & Tool Bug Fixes
 
 ### Why it matters
