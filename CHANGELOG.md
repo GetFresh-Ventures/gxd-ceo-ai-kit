@@ -2,6 +2,43 @@
 
 All notable changes to the GetFresh GTM Enablement Kit for AI will be documented in this file.
 
+## 2026-04-17 8:29 PM PT — v1.34.0 — External Skill Consolidation (13 Repos → 80 Skills)
+
+### Why it matters
+This release completes a comprehensive audit and consolidation of 13 external open-source SEO and marketing repositories into the kit. Instead of blindly importing, we deep-mined each repo for non-redundant tactical methodologies and folded them into existing skills — the domain-consolidation model. All 80 skills now pass the 12-point `import-skill` verification pipeline (file integrity, installer parity, doc coverage, proprietary leak scan, quality bar).
+
+### Added
+- **`skills/paid-ads-strategy/`** — PPC campaign strategy, bidding, audience targeting, and ROAS optimization across Google Ads, Meta, LinkedIn. Source: kostja94/marketing-skills.
+- **`skills/partnership-marketing/`** — Co-marketing, affiliate programs, technology partnerships, and partner ecosystem development. Source: kostja94/marketing-skills.
+- **`skills/programmatic-seo/`** — Template-based SEO pages at scale: location pages, comparison pages, integration pages, data-driven landing pages. Source: kostja94/marketing-skills.
+- **`skills/entity-optimizer/`** — Entity-first SEO for Knowledge Graph presence, entity linking, Knowledge Panel optimization, and semantic entity relationships. Source: aaron-he-zhu/seo-geo-claude-skills.
+
+### Enhanced (Methodology Imports from External Repos)
+- **`ai-search-optimizer`** (+228 lines) — Added Princeton GEO 9 Optimization Methods with exact % boosts (Citations +40%, Statistics +37%, Keyword Stuffing -10%), AI platform ranking factor weights for ChatGPT/Perplexity/Google AI/Copilot, Query Fanout competitive analysis workflow, 230-rule audit coverage taxonomy, AEO 100-point scoring, robots.txt AI crawler rules, llms.txt standard, and GEO drift tracking.
+- **`seo-growth`** (+52 lines) — Added P0/P1/P2 priority classification for technical SEO checks, AI bot access as P1, Bing indexing for Copilot, IndexNow protocol, GSC cannibalization detection, striking distance keywords, Z-score anomaly detection, and opportunity matrix.
+- **`eeat-content-pod`** (+59 lines) — Added E-E-A-T weighted scoring framework (Dec 2025 update), industry impact data, YMYL topic standards, and CORE-EEAT publish-readiness veto checks.
+- **`seo-audit`** (+54 lines) — Added 100-point content quality scoring checklist across 7 categories (title, meta, headings, depth, intent, technical, readability).
+- **`content-strategy`** (+42 lines) — Added content decay lifecycle management with detection triggers, triage matrix, refresh templates, and Google freshness signals.
+
+### Source Attribution
+| Source Repo | What We Took |
+|-------------|-------------|
+| kostja94/marketing-skills | 3 new skills (paid-ads, partnerships, pSEO) |
+| aaron-he-zhu/seo-geo-claude-skills | 1 new skill (entity-optimizer), GEO drift, content decay, EEAT veto |
+| ReScienceLab/opc-skills | Princeton GEO methods, AI platform ranking factors, P0/P1/P2 system |
+| brightdata/geo-ai-agent | Query Fanout 6-step competitive workflow |
+| squirrelscan/squirrelscan | 21-category, 230-rule audit taxonomy |
+| addyosmani/agentic-seo | AEO scoring, llms.txt, Featured Snippet rules |
+| Bhanunamikaze/Agentic-SEO-Skill | E-E-A-T framework, Dec 2025 impact data |
+| gbessoni/seobuild-onpage | 100-point content quality checklist |
+| saurabhsharma2u/search-console-mcp | GSC intelligence analysis methods |
+| JeffLi1993/seo-audit-skill | Deterministic audit checklist patterns |
+
+### Verified
+- 80/80 skills pass 12-point pipeline (file, name, bootstrap.sh, bootstrap.ps1, registry, agent-guide, README, leak scan, quality bar, parity, doc coverage, count consistency)
+- Installer parity: bootstrap.sh = bootstrap.ps1 = 80 skills
+- Doc counts: Disk=80, AGENT-GUIDE=80, REGISTRY=80, GETTING-STARTED=80
+
 ## 2026-04-17 7:07 PM PT — v1.33.0 — Kit Integrity Hardening + Skill Imports
 
 ### Why it matters

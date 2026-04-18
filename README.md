@@ -2,7 +2,7 @@
 
 **Edge-Native Go-to-Market Operating System that turns any coding assistant into a personalized Chief of Staff.**
 
-[![Version](https://img.shields.io/badge/version-1.33.0-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases) · [getfreshventures.com](https://getfreshventures.com)
+[![Version](https://img.shields.io/badge/version-1.34.0-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases) · [getfreshventures.com](https://getfreshventures.com)
 
 ---
 
@@ -20,9 +20,10 @@ This kit enables the proprietary **Growth by Design (GxD)** architecture directl
 
 ---
 
-## What's New in v1.32.2
-- **Unbiased Architecture & Bug Fixes**: Permanently decoupled legacy proprietary pipelines (`claude-mem`, `ccflare`, `claude_memory.py`) from macOS boots, and patched a catastrophic path hallucination across 72 skills.
-- **E-E-A-T Content Pod**: Integrated a new 4-agent orchestration wrapper (`eeat-content-pod`) into the native deployment loop.
+## What's New in v1.34.0
+- **13-Repo Consolidation**: Deep-mined 13 external SEO/marketing repos, integrating non-redundant methodologies into 5 existing skills and adding 4 new skills (80 total).
+- **Princeton GEO Framework**: Added the 9 Optimization Methods with exact visibility % boosts, AI platform ranking factor weights for ChatGPT/Perplexity/Google AI/Copilot.
+- **Full Pipeline Verification**: All 80 skills pass 12-point `import-skill` pipeline — installer parity, proprietary leak scan, doc coverage, quality bar.
 
 ---
 
@@ -47,7 +48,7 @@ This kit enables the proprietary **Growth by Design (GxD)** architecture directl
        │              │                 │
        ▼              ▼                 ▼
 ┌──────────────┐ ┌─────────────┐ ┌──────────────────────┐
-│  75 Domain   │ │ Background  │ │ Local CEO Brain      │
+│  80 Domain   │ │ Background  │ │ Local CEO Brain      │
 │  Skills      │ │ Telemetry   │ │ (SQLite FTS5 Edge)   │
 │  (C-Suite,   │ │ (Python)    │ │ Unified Ontology     │
 │   Ops, Dev)  │ └──────┬──────┘ └──────────────────────┘
@@ -134,7 +135,7 @@ gfv_growth_by_design/
 ├── CHANGELOG.md               # Version release history
 ├── SKILLS-REGISTRY.md         # Full index of all capabilities
 ├── SKILL-AUTHORING-STANDARD.md# Architecture rules for new skills
-├── skills/                    # 75+ Executable Domain Skills
+├── skills/                    # 80 Executable Domain Skills
 │   ├── ceo-advisor/
 │   ├── pipeline-pulse/
 │   ├── eeat-content-pod/      # Example: 4-agent orchestration
