@@ -110,8 +110,9 @@ Skills trigger on natural language. Examples:
 
 | Skill | What it does |
 |-------|-------------|
-| `pipeline-pulse` | Active pipeline management — flag stale deals, missing next steps, risk signals |
-| `deal-review` | Deep-dive on a specific deal — timeline, stakeholders, probability assessment |
+| `revenue-command` | Master Command Center for pipeline management, CRM, and deal execution |
+| `pipeline-pulse` | (Alias for revenue-command) Active pipeline management |
+| `deal-review` | (Alias for revenue-command) Deep-dive on a specific deal |
 | `cro-advisor` | Revenue strategy — forecasting, sales model design, quota planning |
 | `sales-enablement` | Create pitch decks, one-pagers, objection handlers, competitor battlecards |
 | `outreach-sequence` | Design multi-touch outreach with follow-up cadence and voice-matched copy |
@@ -126,6 +127,7 @@ Skills trigger on natural language. Examples:
 
 | Skill | What it does |
 |-------|-------------|
+| `content-intelligence` | Master Command Center for brand voice, copywriting, and narrative logic |
 | `content-strategy` | Plan topic pillars, content calendar, and distribution strategy |
 | `seo-growth` | Technical SEO audit, on-page optimization, schema markup, site structure |
 | `seo-audit` | Deterministic single-page SEO audits with Python scripts + HTML reports |
@@ -149,7 +151,8 @@ Skills trigger on natural language. Examples:
 
 | Skill | What it does |
 |-------|-------------|
-| `ceo-advisor` | Strategic portfolio oversight — thesis tracking, resource allocation, board prep |
+| `strategic-advisory` | Master Command Center for executive decision support and C-suite modeling |
+| `ceo-advisor` | (Alias for strategic-advisory) Strategic portfolio oversight |
 | `cfo-advisor` | Financial modeling, unit economics, cash flow management, fundraise timing |
 | `cmo-advisor` | Brand positioning, growth model design, channel strategy, marketing ROI |
 | `coo-advisor` | Process design, OKR execution, operational efficiency, team structure |
@@ -157,7 +160,7 @@ Skills trigger on natural language. Examples:
 | `scenario-war-room` | Cross-functional what-if modeling for cascading multi-variable decisions |
 | `board-deck-builder` | Assemble board/investor update decks from live data |
 | `executive-mentor` | Adversarial thinking partner — stress-test plans, probe blind spots |
-| `founder-coach` | Personal leadership development, archetype mapping, feedback processing |
+| `founder-coach` | (Alias for strategic-advisory) Personal leadership development |
 | `change-management` | ADKAR model rollouts for organizational changes |
 | `strategic-decision` | Multi-framework decision analysis (Porter, SWOT, Eisenhower) |
 | `experiment-loop` | Scientific method for CEO initiatives — hypothesis, test, measure, iterate |

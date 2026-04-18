@@ -2,7 +2,7 @@
 
 **Edge-Native Go-to-Market Operating System that turns any coding assistant into a personalized Chief of Staff.**
 
-[![Version](https://img.shields.io/badge/version-1.34.0-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases) · [getfreshventures.com](https://getfreshventures.com)
+[![Version](https://img.shields.io/badge/version-1.35.0-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases) · [getfreshventures.com](https://getfreshventures.com)
 
 ---
 
@@ -17,6 +17,13 @@ This kit enables the proprietary **Growth by Design (GxD)** architecture directl
 **The Brand (GxD)**: Growth by Design is the architecture of predictable revenue, uniting Marketing, Sales, and RevOps data into a single, unified ontology.
 
 **The Solution**: An Edge-Native intelligence layer that installs directly onto your laptop. It removes the friction between strategic planning and agentic execution, allowing you to orchestrate complex GTM strategies autonomously.
+
+---
+
+## What's New in v1.35.0
+- **Master Command Centers**: Fundamentally reorganized the architecture around 4 central command hubs: Chief of Staff, Revenue Command, Strategic Advisory, and Content Intelligence.
+- **Legacy Aliasing**: Implemented a symlink-style alias layer in the bootstrap scripts, mapping legacy atomized skills like `/deal-review` to their new primary Command Centers.
+- **Data-First Mandates**: Upgraded core skills (`ugc-video`, `negotiation-advisor`) to natively query HubSpot, Fathom, and linear via API for verified context before rendering output.
 
 ---
 

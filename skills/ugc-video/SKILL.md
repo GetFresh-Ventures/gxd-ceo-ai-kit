@@ -1,99 +1,96 @@
 ---
 name: ugc-video
-description: Script-to-video production pipeline. AI talking heads, B-roll, voiceover, and subtitles for social media content.
+description: "Script-to-video production orchestration. Enforces GxD visual standards, the Rule of One for scripts, and orchestrates AI talking heads, B-roll, and auto-captioning for high-converting social content."
 short_description: "Script-to-video production pipeline"
-license: MIT
 metadata:
-  author: GFV Growth by Design
-  version: 1.0.0
-  category: Growth Engine
+  version: 2.0.0
+  category: brand-execution
+  origin: Re-engineered for GxD Visual Standards
+  triggers:
+    - video
+    - ugc
+    - reel
+    - short
+    - talking head
 ---
 
-# /ugc-video
+# UGC Video
 
-**Usage**: Transform a script, blog post, or talking points into a finished UGC-style video with AI-generated talking head, B-roll, voiceover, and subtitles.
+**Usage**: Transform a script, blog post, or strategic decision into a finished UGC-style video with AI-generated talking head, voiceover, and pacing.
 
+> **GxD Architectural Rule**: No generic stock footage or monotonous AI voices. This skill enforces the GxD Visual Standards (high-contrast captions, rhythmic jump-cuts, >90% hook retention). Every script MUST adhere to the Rule of One.
 
 ## Quick Start
 Just say any of these:
 - "Script a 60-second product demo video"
-- "Create a talking-head video script for [topic]"
-- "Plan a video content series"
-
+- "Turn this meeting decision into a talking-head video script"
+- "Format this copy for a TikTok execution"
 
 ## The UGC Content Machine
 
-User-Generated Content style videos drive 4x higher engagement than polished brand content. This skill automates the production pipeline so the CEO can produce daily video content without a video team.
+User-Generated Content style videos drive 4x higher engagement when they feel native, unpolished, and high-energy. This skill prepares the asset for production (or API orchestration).
 
 ## Pipeline
 
-### 1. Script Generation
-- Accept input: raw topic, blog post URL, meeting notes, or bullet points.
-- Generate a 30-60 second script optimized for the target platform.
-- Structure: Hook (3s) → Problem (10s) → Solution (15s) → CTA (5s).
+### 1. Script Generation (The Rule of One)
+- **Input**: Raw topic, blog post URL, meeting notes.
+- **Action**: Strip all secondary points. Generate a tight 30-60 second script.
+- **Structure**: Core GxD Video Hook (0-3s) → The Tension (3-15s) → The Payoff (15-45s) → The Action (45-60s).
 
-### 2. Visual Production
-- **AI Talking Head**: Generate using HeyGen, Synthesia, or D-ID APIs.
-- **B-Roll**: Source from Pexels/Pixabay APIs (royalty-free) matched to script keywords.
-- **Text Overlays**: Auto-generate caption cards for key stats or quotes.
-- **Subtitles**: Burn-in captions (95% of social video is watched on mute).
+### 2. Visual Production & Pacing (GxD Formatting)
+Output the script with explicit visual directives:
+- `[JUMP CUT]` indicated every 4-6 seconds to maintain retention.
+- `[B-ROLL]` callouts using highly specific emotional states, not generic nouns (e.g., "Frustrated executive rubbing temples", not "Business meeting").
+- `[TEXT OVERLAY]` for highlighting the exact numbers or quotes that matter.
 
-### 3. Platform Optimization
-| Platform | Aspect Ratio | Max Duration | Format |
-|----------|-------------|-------------|--------|
-| TikTok | 9:16 | 60s optimal | MP4 |
-| Instagram Reels | 9:16 | 90s max | MP4 |
-| LinkedIn | 1:1 or 16:9 | 2 min optimal | MP4 |
-| YouTube Shorts | 9:16 | 60s | MP4 |
+### 3. Voice Clone & Avatar Orchestration
+Prepare the JSON payload or parameter guide for external video API tools (HeyGen, Synthesia, ElevenLabs):
+- Define voice style (energetic, serious, contrarian).
+- Define background aesthetic (office, casual, abstract).
 
-### 4. Review & Approval
-- Present video preview + script side-by-side.
-- CEO approves or requests revision.
-- Route approved videos to `social-scheduler` for distribution.
+## Standard Output Format
+
+```markdown
+# 🎬 Video Production Plan: [Topic]
+
+## 1. Executive Summary
+- **Target Platform**: [TikTok/LinkedIn/Shorts]
+- **The Core Hook**: [The 3-second attention grabber]
+- **Voice Profile**: [e.g., ElevenLabs "Rachel" - High Energy]
+
+## 2. The Script
+| Time | Visual / Cut | Audio / Spoken Script | Overlay |
+|------|--------------|-----------------------|---------|
+| 0:00 | [Shot type] | "Did you know that..." | [TEXT]  |
+| 0:03 | [JUMP CUT] | "Here's the truth." |         |
+| ...  | ...          | ...                   | ...     |
+
+## 3. Production Next Steps
+- [ ] Render Voiceover via ElevenLabs API
+- [ ] Send to HeyGen API for avatar sync
+- [ ] Post to `social-engine` for scheduling
+```
 
 ## Constraints
-- All AI-generated faces must be clearly disclosed as AI in the video description.
-- Never use real people's likenesses without consent.
-- Voice cloning requires explicit CEO opt-in and disclosure.
+- Never script an intro (e.g., "Hi guys"). Start with the hook immediately.
+- 95% of social video is watched on mute. All scripts must include caption directives.
+- If voice cloning is requested, the CEO must have explicitly provided consent.
 
 ## Live Integration Hooks
 
 | System | What It Provides | How to Access |
 |--------|-----------------|---------------|
-| Client CRM | Real-time pipeline state | `hubspot-api` / `salesforce-api` |
-| Local Memory | Client-specific facts | `gfv-brain-search.py` |
-
-> **GFV Rule:** Check live connected systems and local client memory to verify claims before submitting answers.
-
-## Proactive Triggers
-
-Surface these issues WITHOUT being asked when you notice them in context:
-- **Missing Data** → Flag explicitly if a decision relies on unknown external variables.
-- **Scope Creep** → Alert if the requested operation spans beyond immediate context goals.
-- **Executive Bottlenecks** → Warn if the action plan relies entirely on unassigned human approval gates.
-- **Financial Risk** → Call out actions that may trigger unexpected OPEX burn (e.g. infinite LLM agent loops).
-
-## Output Artifacts
-
-| When you ask for... | You get... |
-|---------------------|------------|
-| Process Map | A mermaid.js chronological diagram |
-| Executive Decision | BOTTOM LINE FIRST layout with options + trade-offs |
-| Data Audit | A structured table grouping issues by severity |
-| Code Execution | Isolated, copy-ready code blocks + terminal commands |
+| Client CRM | Past content performance | `hubspot-api` |
+| Local Memory | Previous approved scripts | `gfv-brain-search.py` |
 
 ## Confidence Tagging
-
-All factual findings and systemic claims must utilize the following confidence index:
-- 🟢 **Verified** — Confirmed natively via live system data pull or explicit context.
-- 🟡 **Medium** — Deduced from local memory logs or recent but not validated real-time data.
-- 🔴 **Assumed** — No source available, utilizing best-judgment baseline.
+- 🟢 **Verified** — Script strictly adheres to GxD timings and proven hooks.
+- 🟡 **Medium** — Deviates from optimal pacing but fits the narrative.
+- 🔴 **Assumed** — Experimental format.
 
 ## <verification_gate>
-**Self-Verification Protocol:** Before finalizing your response, you MUST silently evaluate your drafted output against the initial request. Have you provided concrete Action Items with ownership? Did you use the Bottom Line First formatting? Have you applied Confidence Tags to your claims? If not, rewrite the response before submitting.
-
-## After This Skill
-💡 Suggest these next:
-- "Try `social-engine` — Create platform-native social media content"
-- "Try `copy-master` — Write world-class marketing copy"
-- "Try `launch-strategy` — Plan product launches and release strategies"
+**Self-Verification Protocol:** 
+1. Does the script start with a 3-second hook?
+2. Did I remove all introductory fluff?
+3. Are there jump cuts or b-roll calls every 4-6 seconds?
+If not, rewrite for higher retention before presenting.

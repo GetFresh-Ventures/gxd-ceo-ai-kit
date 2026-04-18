@@ -1,99 +1,81 @@
 ---
 name: geopolitical-monitor
-description: Global intelligence pipeline with country instability scoring, geopolitical risk tracking, and supply chain impact analysis for international business.
+description: "Data-first global intelligence pipeline. Queries external instability APIs and cross-references them against active CRM pipelines to identify specific at-risk revenue."
 short_description: "Global intelligence and risk monitoring"
-license: MIT
 metadata:
-  author: GFV Growth by Design
-  version: 1.0.0
-  category: Infrastructure
+  version: 2.0.0
+  category: risk-management
+  origin: Re-engineered for data-first API querying
+  triggers:
+    - geopolitical
+    - global risk
+    - country risk
+    - instability
 ---
 
-# /geopolitical-monitor
+# Geopolitical Monitor
 
 **Usage**: For CEOs with international exposure — track geopolitical events that could impact supply chains, market expansion plans, or client operations.
 
+> **GxD Architectural Rule**: This skill is DATA-FIRST. Before reporting on geopolitical status, it MUST query live data endpoints (e.g., Perplexity/Firecrawl for recent news, or specific instability indicator APIs) AND cross-reference the affected region against active CRM deals. 
 
 ## Quick Start
 Just say any of these:
-- "What's the risk level in [country]?"
-- "Monitor supply chain risks in [region]"
-- "Brief me on geopolitical events affecting [industry]"
+- "What's the risk level for our deals in [country]?"
+- "Brief me on geopolitical events affecting [industry] in [region]"
 
+## Execution Flow
 
-## Intelligence Pipeline
+1. **Live Data Acquisition**: Query external search APIs (e.g. `firecrawl-web-search`, or Perplexity) for confirmed regulatory changes, sanctions, tariffs, or political instability in the target region within the last 7 days.
+2. **CRM Cross-Reference**: Query `hubspot-api` filtering by properties related to the affected country/region to identify active pipeline at risk.
+3. **Instability Scoring (1-10)**: Assign a rigid numerical score based on the severity of the exact events found.
+4. **BLF Reporting**: Output the Bottom Line First report identifying exact revenue at risk with recommended actions.
 
-### 1. Source Ingestion
-- Pull from verified news sources (Reuters, AP, BBC World, Financial Times).
-- Filter exclusively for: regulatory changes, sanctions, tariffs, political instability, currency events, natural disasters.
-- Ignore: opinion pieces, entertainment, sports.
+## 🛑 Hard Gates (DO NOT EXECUTE WITHOUT CHECKING)
+- **No Hallucination**: Are you citing a specific search result or news API? If not, stop and run the search query first.
+- **Pipeline Tie-In**: Did you search HubSpot for matching country/region data?
+- **Action Bias**: Did you draft an action plan to mitigate the specific risks identified?
 
-### 2. Country Instability Index
-Score each country on a 1-10 instability scale based on:
-- Political stability (elections, coups, protests)
-- Economic indicators (currency volatility, inflation)
-- Regulatory changes (sanctions, trade restrictions)
-- Security events (conflict, terrorism)
+## Standard Output Format
 
-### 3. Pipeline Impact Mapping
-Cross-reference geopolitical events against:
-- Active deals in the CRM (which clients operate in affected regions?)
-- Supply chain dependencies
-- Expansion plans under evaluation
+```markdown
+# 🌍 Global Risk Brief: [Region/Country]
 
-### 4. Executive Alert System
-- 🔴 **CRITICAL**: Sanctions affecting active client, tariff impacting pricing
-- 🟡 **MONITOR**: Political instability in expansion target market
-- 🟢 **AWARE**: Background regulatory changes in secondary markets
+## 1. Executive Summary (BLF)
+- **Instability Score**: [X/10] (🟢 Stable / 🟡 Monitor / 🔴 Critical)
+- **Pipeline Value At Risk**: $[Total Value] in HubSpot
+- **Primary Threat**: [Single greatest geopolitical dynamic]
 
-## Output
-Weekly 1-page global risk brief:
+## 2. API Validated Events (Last 7 Days)
+- [Event 1] - [Source]
+- [Event 2] - [Source]
+
+## 3. Impact Matrix
+| Active Deal | Region | Risk Vector | Mitigation Action |
+|-------------|--------|-------------|-------------------|
+| [Deal Name] | [City] | [Tariff/etc]| [Action required] |
+
+## 4. Next Steps
+- [ ] [Mitigation Action 1] (Say "Execute" to run)
+- [ ] [Mitigation Action 2]
 ```
-[REGION] | [EVENT] | [INSTABILITY: X/10] | [PIPELINE IMPACT: Deal Name / None]
-```
-
-## Constraints
-- Source verification: minimum 2 independent sources before elevating any alert.
-- Never speculate on geopolitical outcomes. Report facts, flag implications.
 
 ## Live Integration Hooks
 
 | System | What It Provides | How to Access |
 |--------|-----------------|---------------|
-| Client CRM | Real-time pipeline state | `hubspot-api` / `salesforce-api` |
-| Local Memory | Client-specific facts | `gfv-brain-search.py` |
-
-> **GFV Rule:** Check live connected systems and local client memory to verify claims before submitting answers.
-
-## Proactive Triggers
-
-Surface these issues WITHOUT being asked when you notice them in context:
-- **Missing Data** → Flag explicitly if a decision relies on unknown external variables.
-- **Scope Creep** → Alert if the requested operation spans beyond immediate context goals.
-- **Executive Bottlenecks** → Warn if the action plan relies entirely on unassigned human approval gates.
-- **Financial Risk** → Call out actions that may trigger unexpected OPEX burn (e.g. infinite LLM agent loops).
-
-## Output Artifacts
-
-| When you ask for... | You get... |
-|---------------------|------------|
-| Process Map | A mermaid.js chronological diagram |
-| Executive Decision | BOTTOM LINE FIRST layout with options + trade-offs |
-| Data Audit | A structured table grouping issues by severity |
-| Code Execution | Isolated, copy-ready code blocks + terminal commands |
+| HubSpot | Active pipeline in affected regions | `hubspot-api` |
+| Web Search | Real-time global event data | `firecrawl-web-search` / Search API |
+| Local Memory | Previous risk assessments | `gfv-brain-search.py` |
 
 ## Confidence Tagging
-
-All factual findings and systemic claims must utilize the following confidence index:
-- 🟢 **Verified** — Confirmed natively via live system data pull or explicit context.
-- 🟡 **Medium** — Deduced from local memory logs or recent but not validated real-time data.
-- 🔴 **Assumed** — No source available, utilizing best-judgment baseline.
+- 🟢 **Verified** — Validated via Reuters/AP/FT and cross-matched in CRM.
+- 🟡 **Medium** — Event is verified, but CRM impact is unconfirmed.
+- 🔴 **Assumed** — Theoretical projection; high risk of inaccuracy.
 
 ## <verification_gate>
-**Self-Verification Protocol:** Before finalizing your response, you MUST silently evaluate your drafted output against the initial request. Have you provided concrete Action Items with ownership? Did you use the Bottom Line First formatting? Have you applied Confidence Tags to your claims? If not, rewrite the response before submitting.
-
-## After This Skill
-💡 Suggest these next:
-- "Try `news-digest` — Extract intelligence from news and feeds"
-- "Try `scenario-war-room` — What-if modeling for strategic decisions"
-- "Try `ceo-advisor` — Strategic leadership and portfolio guidance"
+**Self-Verification Protocol:** 
+1. Did I actually run a search tool to get real news data?
+2. Did I actually check the CRM for pipeline overlap?
+3. Is my output strictly formatted as BLF?
+If not, rewrite and re-run.

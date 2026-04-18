@@ -2,6 +2,33 @@
 
 All notable changes to the GetFresh GTM Enablement Kit for AI will be documented in this file.
 
+## 2026-04-17 9:57 PM PT — v1.35.0 — CEO Command Center Master Re-Architecture
+
+### Why it matters
+This release fundamentally reorganizes the GTM Enablement Kit around 4 primary "Master Command Centers": **Chief of Staff**, **Revenue Command**, **Strategic Advisory**, and **Content Intelligence**. The fragmented micro-skills have been rationalized and mapped through alias layers in the bootstrap scripts so that users have a unified interface without breaking older workflows. Key skills like `ugc-video` and `negotiation-advisor` have been rewritten to firmly enforce a data-first approach (pulling live Fathom/HubSpot transcript and funnel data).
+
+### Added
+- **`skills/revenue-command/`** — Master Command Center for pipeline management, combining the functionality of `pipeline-pulse` and `deal-review`.
+- **`skills/strategic-advisory/`** — Master Command Center for executive decision support, combining `ceo-advisor` and `founder-coach`.
+- **`skills/content-intelligence/`** — Master Command Center for brand voice and narrative logic, augmenting content creation workflows.
+
+### Changed
+- **`skills/ugc-video/SKILL.md`** — Rewritten to enforce GxD visual standards, jump-cut pacing, caption directives, and data-first logic.
+- **`skills/negotiation-advisor/SKILL.md`** — Upgraded to pull actual Fathom call transcripts and HubSpot email threads via integrated API hooks rather than providing theoretical advice.
+- **`skills/geopolitical-monitor/SKILL.md`** — Migrated to the new data-first API querying standard.
+- **`bootstrap.sh`** and **`bootstrap.ps1`** — Implemented semantic legacy aliasing so commands like `/deal-review` now safely map to the enhanced `/revenue-command` capabilities. Registered the 3 new massive hub skills.
+- **`AGENT-GUIDE.md`** and **`SKILLS-REGISTRY.md`** — Updated documentation fully displaying the Master Command Centers tiering and aliases.
+
+### Removed
+- **`skills/founder-coach/SKILL.md`** — Defunct and fully consolidated under `strategic-advisory`.
+
+### Files Modified
+- CHANGELOG.md, README.md, AGENT-GUIDE.md, SKILLS-REGISTRY.md
+- bootstrap.sh, bootstrap.ps1
+- skills/ugc-video/SKILL.md, skills/negotiation-advisor/SKILL.md, skills/geopolitical-monitor/SKILL.md
+- skills/founder-coach/SKILL.md
+- skills/revenue-command/SKILL.md, skills/strategic-advisory/SKILL.md, skills/content-intelligence/SKILL.md
+
 ## 2026-04-17 8:29 PM PT — v1.34.0 — External Skill Consolidation (13 Repos → 80 Skills)
 
 ### Why it matters

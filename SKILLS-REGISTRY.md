@@ -52,13 +52,14 @@ Specialized strategic advisory from each leadership perspective.
 
 | Skill | Description | Key Pattern |
 |-------|-------------|-------------|
-| [`ceo-advisor`](skills/ceo-advisor/) | Strategic leadership: portfolio oversight, GTM, talent | The buck stops here |
+| [`strategic-advisory`](skills/strategic-advisory/) | Master Command Center for executive decision support | Data-driven modeling |
+| [`ceo-advisor`](skills/ceo-advisor/) | (Alias for strategic-advisory) Strategic leadership | The buck stops here |
 | [`cfo-advisor`](skills/cfo-advisor/) | Financial modeling, unit economics, fundraising | Show me the numbers |
 | [`cmo-advisor`](skills/cmo-advisor/) | Brand positioning, growth models, marketing budget | Market-facing strategy |
 | [`coo-advisor`](skills/coo-advisor/) | Process design, OKR execution, operational cadence | Run-rate excellence |
 | [`cro-advisor`](skills/cro-advisor/) | Revenue forecasting, sales model, pricing strategy | Revenue engine |
 | [`executive-mentor`](skills/executive-mentor/) | Adversarial thinking partner — stress-tests plans | Your brutal board prep |
-| [`founder-coach`](skills/founder-coach/) | Personal leadership, delegation, archetype identification | CEO as a human |
+| [`founder-coach`](skills/founder-coach/) | (Alias for strategic-advisory) Personal leadership | CEO as a human |
 | [`negotiation-advisor`](skills/negotiation-advisor/) | BATNA analysis, concession architecture, and tactical deal scripts | Close the deal |
 
 ### 💰 Revenue Enablement (8 skills)
@@ -66,8 +67,9 @@ Everything that directly generates or accelerates revenue.
 
 | Skill | Description | Key Pattern |
 |-------|-------------|-------------|
-| [`pipeline-pulse`](skills/pipeline-pulse/) | Active pipeline management with resolve-first bias | Act, don't report |
-| [`deal-review`](skills/deal-review/) | Honest CRM review: flags stale deals, missing next steps | No happy ears |
+| [`revenue-command`](skills/revenue-command/) | Master Command Center for pipeline, CRM, and deal execution | Resolve, don't report |
+| [`pipeline-pulse`](skills/pipeline-pulse/) | (Alias for revenue-command) Active pipeline management | Act, don't report |
+| [`deal-review`](skills/deal-review/) | (Alias for revenue-command) Honest CRM review | No happy ears |
 | [`sales-enablement`](skills/sales-enablement/) | Pitch decks, objection docs, demo scripts, playbooks | Arm the reps |
 | [`fundraise`](skills/fundraise/) | Investor materials + outreach with SSoT consistency | All numbers agree |
 | [`outreach-sequence`](skills/outreach-sequence/) | Multi-touch prospecting sequences | Persistent, not annoying |
@@ -110,6 +112,7 @@ Marketing, content, and growth optimization.
 
 | Skill | Description | Key Pattern |
 |-------|-------------|-------------|
+| [`content-intelligence`](skills/content-intelligence/) | Master Command Center for brand voice and narrative logic | AI doesn't write for me |
 | [`content-strategy`](skills/content-strategy/) | Pillars, calendars, buyer-stage keywords with A/B hook testing | System, not posts |
 | [`social-engine`](skills/social-engine/) | Platform-native content with analytics dashboard and posting intelligence | No AI slop |
 | [`larry-loop`](skills/larry-loop/) | Algorithmic content loop with winner scoring and cross-platform migration | System over Creativity |

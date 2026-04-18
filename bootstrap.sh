@@ -388,7 +388,7 @@ if not any(h.get('matcher') == 'Bash' for h in data['hooks']['PreToolUse']):
     # Skills — filter by tier
     BEGINNER_SKILLS="email-composer meeting-prep post-meeting-brief deal-review pipeline-pulse weekly-ceo-brief voice-model doc-builder pdf-toolkit contract-reader onboard chief-of-staff decision-logger audio-briefing support-triage executive-mentor spreadsheet-builder google-doc-creation"
     
-    INTERMEDIATE_SKILLS="content-strategy seo-growth seo-audit social-engine copy-master conversion-optimizer outreach-sequence sales-enablement fundraise ceo-advisor cfo-advisor cmo-advisor coo-advisor cro-advisor competitive-intel board-deck-builder founder-coach financial-analyst scenario-war-room hubspot-architect notion-manager slack-connector news-digest negotiation-advisor doc-coauthoring change-management launch-strategy context-prime voice-synth paid-ads-strategy partnership-marketing"
+    INTERMEDIATE_SKILLS="content-strategy seo-growth seo-audit social-engine copy-master conversion-optimizer outreach-sequence sales-enablement fundraise ceo-advisor cfo-advisor cmo-advisor coo-advisor cro-advisor competitive-intel board-deck-builder financial-analyst scenario-war-room hubspot-architect notion-manager slack-connector news-digest negotiation-advisor doc-coauthoring change-management launch-strategy context-prime voice-synth paid-ads-strategy partnership-marketing revenue-command strategic-advisory content-intelligence"
     
     ADVANCED_SKILLS="social-scheduler ugc-video larry-loop ai-search-optimizer sms-outreach domain-intel geopolitical-monitor agent-orchestrator agent-protocol context-engine experiment-loop verify-execution product-spec create-skill commit-fast review-pr analyze-issue feature-architect autoresearch cron-scheduler scheduling-infra dedupe-entities gfv-hooks project-release strategic-decision automation-recommender eeat-content-pod import-skill dev-browser programmatic-seo entity-optimizer"
     
@@ -412,6 +412,14 @@ if not any(h.get('matcher') == 'Bash' for h in data['hooks']['PreToolUse']):
             fi
         fi
     done
+    
+    # -----------------------------------------------------
+    # Map Legacy Micro-Skills to the new Command Centers
+    # -----------------------------------------------------
+    ln -sfn "$CLAUDE_SKILLS_DIR/revenue-command" "$CLAUDE_SKILLS_DIR/pipeline-pulse"
+    ln -sfn "$CLAUDE_SKILLS_DIR/revenue-command" "$CLAUDE_SKILLS_DIR/deal-review"
+    ln -sfn "$CLAUDE_SKILLS_DIR/strategic-advisory" "$CLAUDE_SKILLS_DIR/founder-coach"
+    ln -sfn "$CLAUDE_SKILLS_DIR/strategic-advisory" "$CLAUDE_SKILLS_DIR/ceo-advisor"
     
     INSTALLED_COUNT=$(ls -d "$CLAUDE_SKILLS_DIR"/*/ 2>/dev/null | wc -l | tr -d ' ')
     echo "  → Registered $INSTALLED_COUNT skills as /slash commands"

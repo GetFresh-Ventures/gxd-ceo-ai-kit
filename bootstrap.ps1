@@ -229,7 +229,7 @@ Write-Host "🪝 Setting up Claude Code hooks and skills..." -ForegroundColor Gr
 # Define tier skill sets (matches bootstrap.sh exactly)
 $BEGINNER_SKILLS = "email-composer meeting-prep post-meeting-brief deal-review pipeline-pulse weekly-ceo-brief voice-model doc-builder pdf-toolkit contract-reader onboard chief-of-staff decision-logger audio-briefing support-triage executive-mentor spreadsheet-builder google-doc-creation"
 
-$INTERMEDIATE_SKILLS = "content-strategy seo-growth seo-audit social-engine copy-master conversion-optimizer outreach-sequence sales-enablement fundraise ceo-advisor cfo-advisor cmo-advisor coo-advisor cro-advisor competitive-intel board-deck-builder founder-coach financial-analyst scenario-war-room hubspot-architect notion-manager slack-connector news-digest negotiation-advisor doc-coauthoring change-management launch-strategy context-prime voice-synth paid-ads-strategy partnership-marketing"
+$INTERMEDIATE_SKILLS = "content-strategy seo-growth seo-audit social-engine copy-master conversion-optimizer outreach-sequence sales-enablement fundraise ceo-advisor cfo-advisor cmo-advisor coo-advisor cro-advisor competitive-intel board-deck-builder financial-analyst scenario-war-room hubspot-architect notion-manager slack-connector news-digest negotiation-advisor doc-coauthoring change-management launch-strategy context-prime voice-synth paid-ads-strategy partnership-marketing revenue-command strategic-advisory content-intelligence"
 
 $ADVANCED_SKILLS = "social-scheduler ugc-video larry-loop ai-search-optimizer sms-outreach domain-intel geopolitical-monitor agent-orchestrator agent-protocol context-engine experiment-loop verify-execution product-spec create-skill commit-fast review-pr analyze-issue feature-architect autoresearch cron-scheduler scheduling-infra dedupe-entities gfv-hooks project-release strategic-decision automation-recommender eeat-content-pod import-skill dev-browser programmatic-seo entity-optimizer"
 
@@ -265,6 +265,19 @@ if ((Get-Command "claude" -ErrorAction SilentlyContinue) -or (Test-Path $CLAUDE_
             $installedCount++
         }
     }
+    
+    # -----------------------------------------------------
+    # Map Legacy Micro-Skills to the new Command Centers
+    # -----------------------------------------------------
+    if (Test-Path "$CLAUDE_SKILLS_DIR\pipeline-pulse") { Remove-Item -Path "$CLAUDE_SKILLS_DIR\pipeline-pulse" -Force -Recurse -ErrorAction SilentlyContinue }
+    if (Test-Path "$CLAUDE_SKILLS_DIR\deal-review") { Remove-Item -Path "$CLAUDE_SKILLS_DIR\deal-review" -Force -Recurse -ErrorAction SilentlyContinue }
+    if (Test-Path "$CLAUDE_SKILLS_DIR\founder-coach") { Remove-Item -Path "$CLAUDE_SKILLS_DIR\founder-coach" -Force -Recurse -ErrorAction SilentlyContinue }
+    if (Test-Path "$CLAUDE_SKILLS_DIR\ceo-advisor") { Remove-Item -Path "$CLAUDE_SKILLS_DIR\ceo-advisor" -Force -Recurse -ErrorAction SilentlyContinue }
+    New-Item -ItemType Junction -Path "$CLAUDE_SKILLS_DIR\pipeline-pulse" -Value "$CLAUDE_SKILLS_DIR\revenue-command" | Out-Null
+    New-Item -ItemType Junction -Path "$CLAUDE_SKILLS_DIR\deal-review" -Value "$CLAUDE_SKILLS_DIR\revenue-command" | Out-Null
+    New-Item -ItemType Junction -Path "$CLAUDE_SKILLS_DIR\founder-coach" -Value "$CLAUDE_SKILLS_DIR\strategic-advisory" | Out-Null
+    New-Item -ItemType Junction -Path "$CLAUDE_SKILLS_DIR\ceo-advisor" -Value "$CLAUDE_SKILLS_DIR\strategic-advisory" | Out-Null
+
     Write-Host "  → Installed $installedCount skills for $tierName tier"
 
     # Removed deprecated global ccflare and claude-mem installations to comply with unbiased architecture.

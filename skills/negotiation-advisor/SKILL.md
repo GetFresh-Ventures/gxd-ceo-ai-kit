@@ -1,112 +1,91 @@
 ---
 name: negotiation-advisor
-description: Battle-tested negotiation frameworks for deal closers. Preparation, BATNA analysis, concession strategy, and real-time tactical guidance.
+description: "Data-driven negotiation orchestration. Analyzes Fathom meeting transcripts and email threads to map counter-party leverage, objections, and sentiment before generating a negotiation battle card."
 short_description: "Battle-tested negotiation frameworks"
-license: MIT
 metadata:
-  author: GFV Growth by Design
-  version: 1.0.0
-  category: C-Suite Advisory
+  version: 2.0.0
+  category: risk-management
+  origin: Re-engineered for Fathom transcript and Email analysis
+  triggers:
+    - negotiation
+    - deal prep
+    - batna
+    - contract terms
+    - leverage
 ---
 
-# /negotiation-advisor
+# Negotiation Advisor
 
 **Usage**: Invoke before or during any high-stakes negotiation — vendor contracts, partnership terms, salary discussions, M&A terms, investor negotiations.
 
+> **GxD Architectural Rule**: This skill is DATA-FIRST. Before dispensing theoretical negotiation advice, it MUST query `fathom-api` for recent transcripts OR read the provided email chains to extract the counter-party's actual words, stated objections, and sentiment.
 
 ## Quick Start
 Just say any of these:
-- "Prep me for a salary negotiation with [name]"
-- "What's my BATNA for this deal?"
-- "Help me negotiate this vendor contract"
-
+- "Analyze my last Fathom call with [Name] and build a negotiation battle card."
+- "Read this email thread. What is their likely BATNA?"
+- "Prep me for the final pricing call with [Client]."
 
 ## The Negotiation Operating System
 
-### Phase 1: Preparation Brief (Pre-Meeting)
-Before any negotiation, the agent builds an intelligence dossier:
-- **Your BATNA** (Best Alternative to Negotiated Agreement): What happens if you walk away?
-- **Their BATNA**: What's their alternative? Research via CRM, LinkedIn, and public data.
-- **ZOPA** (Zone of Possible Agreement): The overlap between your floor and their ceiling.
-- **Anchoring Strategy**: Who should make the first offer? At what number? Data-backed.
+### Phase 1: Intelligence Extraction (Data Grounding)
+The agent will parse transcripts/emails for:
+- **Stated Limitations**: Mentions of budget cuts, timelines, or board constraints.
+- **Micro-Commitments**: Things they already agreed to in earlier calls.
+- **Sentiment Shifts**: Tone changes when specific terms (timeline, price, scope) were discussed.
 
-### Phase 2: Concession Architecture
-Design a structured give-and-take plan BEFORE the meeting:
+### Phase 2: Structural Analysis 
+Using the extracted text, the agent models:
+- **Your BATNA** (Best Alternative to Negotiated Agreement).
+- **Their BATNA** (Deduced from their timeline urgency or listed objections).
+- **ZOPA** (Zone of Possible Agreement).
+
+### Phase 3: Concession Architecture
+Design a structured give-and-take plan:
 - **Must-Haves**: Non-negotiable items (rank-ordered).
-- **Nice-to-Haves**: Items you can trade as concessions.
-- **Throwaway Items**: Items you include specifically to concede (creates reciprocity).
-- **Concession Ladder**: Pre-planned sequence of concessions, each smaller than the last (signals firmness).
+- **Trade-offs**: Items you can concede to win Must-Haves.
+- **Concession Ladder**: Pre-planned sequence of concessions.
 
-### Phase 3: Tactical Playbook
-Real-time tactics matched to common scenarios:
+## Standard Output Format
 
-| Scenario | Tactic | Script |
-|----------|--------|--------|
-| They anchor aggressively low | **Flinch + Reframe** | "That's quite far from market. Here's what comparable deals look like..." |
-| They say "take it or leave it" | **Bracket + Deadline Test** | "I understand your position. Let's explore what flexibility exists on [secondary term]..." |
-| Negotiation stalls | **Expand the Pie** | "What if we restructured the payment terms? That might unlock value for both sides..." |
-| They use good cop / bad cop | **Call It Out** | "I appreciate both perspectives. Let's focus on what works for both organizations..." |
-| You have weak leverage | **Defer to Authority** | "I'd love to agree today, but my board requires [X]. Let me take this back..." |
+```markdown
+# ♟️ Negotiation Battle Card: [Counter-party Name]
 
-### Phase 4: Post-Negotiation Capture
-- Extract agreed terms into a structured summary.
-- Flag any verbal commitments that need written confirmation.
-- Generate follow-up email confirming key terms (route through `email-composer` with voice model).
-- Log outcome in `decision-logger` for pattern analysis over time.
+## 1. Intelligence Summary (Fathom/Email Data)
+- **Their Urgency**: [High/Med/Low] - *Proof: "They said they need this by Q3."*
+- **Their Primary Objection**: [Exact quote from transcript]
 
-## Output Format
-The advisor produces a 1-page **Negotiation Battle Card** with:
-1. BATNA comparison table
-2. Concession ladder (pre-planned)
-3. Opening position + fallback positions
-4. Tactical scripts for likely objections
-5. Walk-away threshold clearly stated
+## 2. Structural Leverage (BLF)
+- **Our BATNA**: [What we do if we walk away]
+- **Their BATNA**: [What they do if they walk away]
+- **Who has the power?**: [Clear assessment]
 
-## Troubleshooting
+## 3. The Playbook
+- **The Opening Anchor**: [Exact script to say when you start]
+- **If they push on price**: [Script: e.g., "We can adjust price if we adjust scope. Which module should we drop?"]
+- **If they threaten to walk**: [Script using Fathom data: "You mentioned last week this is a board priority..."]
 
-| Problem | Fix |
-|---------|-----|
-| Other party won't budge | Find their hidden interests — they may value something you can easily give |
-| Prep feels insufficient | Research their recent wins, losses, and public statements before the call |
+## 4. Next Actions
+- [ ] Review contract terms via [link]
+- [ ] Say "Draft email" to send the initial terms
+```
 
 ## Live Integration Hooks
 
 | System | What It Provides | How to Access |
 |--------|-----------------|---------------|
-| Client CRM | Real-time pipeline state | `hubspot-api` / `salesforce-api` |
-| Local Memory | Client-specific facts | `gfv-brain-search.py` |
-
-> **GFV Rule:** Check live connected systems and local client memory to verify claims before submitting answers.
-
-## Proactive Triggers
-
-Surface these issues WITHOUT being asked when you notice them in context:
-- **Missing Data** → Flag explicitly if a decision relies on unknown external variables.
-- **Scope Creep** → Alert if the requested operation spans beyond immediate context goals.
-- **Executive Bottlenecks** → Warn if the action plan relies entirely on unassigned human approval gates.
-- **Financial Risk** → Call out actions that may trigger unexpected OPEX burn (e.g. infinite LLM agent loops).
-
-## Output Artifacts
-
-| When you ask for... | You get... |
-|---------------------|------------|
-| Process Map | A mermaid.js chronological diagram |
-| Executive Decision | BOTTOM LINE FIRST layout with options + trade-offs |
-| Data Audit | A structured table grouping issues by severity |
-| Code Execution | Isolated, copy-ready code blocks + terminal commands |
+| Fathom | Recent call transcripts | `fathom-api` |
+| HubSpot | Email threads, deal timeline | `hubspot-api` |
+| Local Brain | Client context | `gfv-brain-search.py` |
 
 ## Confidence Tagging
-
-All factual findings and systemic claims must utilize the following confidence index:
-- 🟢 **Verified** — Confirmed natively via live system data pull or explicit context.
-- 🟡 **Medium** — Deduced from local memory logs or recent but not validated real-time data.
-- 🔴 **Assumed** — No source available, utilizing best-judgment baseline.
+- 🟢 **Verified** — Directly cites quotes from the counter-party's transcripts or emails.
+- 🟡 **Medium** — Deduced from behavioral clues in the CRM.
+- 🔴 **Assumed** — Theoretical projection; high risk.
 
 ## <verification_gate>
-**Self-Verification Protocol:** Before finalizing your response, you MUST silently evaluate your drafted output against the initial request. Have you provided concrete Action Items with ownership? Did you use the Bottom Line First formatting? Have you applied Confidence Tags to your claims? If not, rewrite the response before submitting.
-
-## After This Skill
-💡 Suggest these next:
-- "Try `deal-review` — Pipeline review — flag stale deals, find gaps"
-- "Try `contract-reader` — Summarize contracts in plain English"
-- "Try `executive-mentor` — Adversarial thinking partner for founders"
+**Self-Verification Protocol:** 
+1. Did I read a Fathom transcript or Email thread BEFORE answering?
+2. Did I quote the counter-party's actual words?
+3. Did I provide exact scripts for the negotiation?
+If not, rewrite in adherence to the Data-First rule.
