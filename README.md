@@ -2,7 +2,7 @@
 
 **Edge-Native Go-to-Market Operating System that turns any coding assistant into a personalized Chief of Staff.**
 
-[![Version](https://img.shields.io/badge/version-1.35.0-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases) · [getfreshventures.com](https://getfreshventures.com)
+[![Version](https://img.shields.io/badge/version-1.36.0-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases) · [getfreshventures.com](https://getfreshventures.com)
 
 ---
 
@@ -17,6 +17,13 @@ This kit enables the proprietary **Growth by Design (GxD)** architecture directl
 **The Brand (GxD)**: Growth by Design is the architecture of predictable revenue, uniting Marketing, Sales, and RevOps data into a single, unified ontology.
 
 **The Solution**: An Edge-Native intelligence layer that installs directly onto your laptop. It removes the friction between strategic planning and agentic execution, allowing you to orchestrate complex GTM strategies autonomously.
+
+---
+
+## What's New in v1.36.0 (ElizaOS Architecture)
+- **Executive Character Schema**: Engineered `executive-profile.json` to centrally enforce structural brand voice across all generated artifacts.
+- **Implicit Context Engine**: Installed `linear_provider.py` which intercepts the bootload sequence (`session-start.py`) to async inject live Linear pipeline awareness before prompt execution.
+- **iMessage Portation**: Replicated ElizaOS `plugin-bluebubbles` integration natively into `chief-of-staff` to command loop iOS communication streams.
 
 ---
 

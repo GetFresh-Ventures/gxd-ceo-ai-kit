@@ -2,6 +2,19 @@
 
 All notable changes to the GetFresh GTM Enablement Kit for AI will be documented in this file.
 
+## 2026-04-18 1:12 PM CT — v1.36.0 — ElizaOS Architectural Integration
+
+### Added
+- **`templates/executive-profile.json`** — Implemented the "Character" abstraction logic explicitly from ElizaOS. Deployed the central JSON schema allowing programmatic brand voice control.
+- **`tools/providers/linear_provider.py`** — Added the "Implicit Provider" pattern. The environment automatically pre-fetches and injects explicit Linear CRM pipeline context directly into the prompt without tool calls.
+- **`tools/imessage_bluebubbles.py`** — Integrated a direct port of the `plugin-bluebubbles` ElizaOS integration to interact directly with internal iOS ecosystems for automated SMS interception. (Resolves GFV-609)
+
+### Changed
+- **`bootstrap.sh`** — Modified the initialization hook to permanently copy and persist `templates/executive-profile.json` into the local workspace `~/ceo-brain` profile.
+- **`hooks/session-start.py`** — Shifted the pre-flight check logic to natively call `linear_provider.py` at boot to establish immediate business realities. (Resolves GFV-608)
+- **`skills/chief-of-staff/SKILL.md`** — Updated the `Morning Sweep` loop to recognize and prioritize recent BlueBubbles events.
+- **`skills/content-intelligence/SKILL.md`** — Redefined to fully ingest the external JSON-linked character schema standard instead of local markdown instructions. (Resolves GFV-607)
+
 ## 2026-04-17 9:57 PM PT — v1.35.0 — CEO Command Center Master Re-Architecture
 
 ### Why it matters

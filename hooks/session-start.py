@@ -164,6 +164,23 @@ def main():
                 if line.strip():
                     context_parts.append(f"  {line}")
 
+    # ElizaOS Provider Pattern Injection
+    # Synchronously but safely fetch live reality without tool-call latency
+    provider_script = os.path.join(script_dir, "..", "tools", "providers", "linear_provider.py")
+    if os.path.exists(provider_script):
+        try:
+            # We enforce a strict timeout so the boot isn't blocked
+            result = subprocess.run(
+                [sys.executable, provider_script],
+                capture_output=True,
+                text=True,
+                timeout=2.0
+            )
+            if result.stdout:
+                context_parts.append("\n" + result.stdout.strip())
+        except Exception:
+            pass
+
     # Check for meeting briefs
     meetings_dir = ceo_brain_dir / "meetings"
     if meetings_dir.exists():

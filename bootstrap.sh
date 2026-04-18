@@ -278,6 +278,11 @@ if [ ! -f "$CEO_BRAIN_DIR/voice-model.md" ]; then
     echo "  → Created voice-model.md in ceo-brain"
 fi
 
+if [ ! -f "$CEO_BRAIN_DIR/executive-profile.json" ]; then
+    cp "$REPO_DIR/templates/executive-profile.json" "$CEO_BRAIN_DIR/"
+    echo "  → Created executive-profile.json in ceo-brain"
+fi
+
 if [ ! -f "$GTM_BRAIN_DIR/pipeline.md" ]; then
     cp "$REPO_DIR/templates/pipeline-report.md" "$GTM_BRAIN_DIR/pipeline.md"
     echo "  → Created pipeline.md in gtm-brain"

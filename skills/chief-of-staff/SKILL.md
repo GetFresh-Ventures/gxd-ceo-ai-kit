@@ -24,7 +24,7 @@ Your always-on daily orchestration heartbeat. This command center pulls your cal
 ## Sub-Modes
 
 1. **The Morning Sweep (News & Inbox)**
-   - *Action*: Pulls Linear tasks due today, unread high-priority emails/Slack DMs, and relevant market news. Generates one single `morning_digest.md`.
+   - *Action*: Pulls Linear tasks due today, unread high-priority emails/Slack DMs, unread iMessages (BlueBubbles), and relevant market news. Generates one single `morning_digest.md`.
    - *Trigger*: "Morning sweep" or "What's going on today?"
 
 2. **Meeting Preparation**
@@ -88,6 +88,7 @@ Your always-on daily orchestration heartbeat. This command center pulls your cal
 | Google Calendar | Schedule & participants | native calendar tools |
 | Linear | Task execution state | `linear-api-access` |
 | HubSpot | Relationship state | `hubspot-api` |
+| BlueBubbles | High-Priority SMS/iMessage | `imessage_bluebubbles.py` |
 
 ## Confidence Tagging
 - 🟢 **Verified** — Live schedule/data pulled directly via API.

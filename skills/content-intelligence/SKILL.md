@@ -31,7 +31,7 @@ Content Intelligence dynamically routes your request to one of three internal en
 
 2. **Executive Outbound (Email Composer)**
    - *Focus*: High-stakes outreach, board updates, cold emails.
-   - *Action*: Reads `voice-model.md` and past communications to mimic your distinct syntax, sentence length, and formatting preferences. Drafts for approval—never auto-sends.
+   - *Action*: Reads `executive-profile.json` to load Character context (bio, lore, tone, topics) and past communications to mimic your distinct syntax, sentence length, and formatting preferences. Drafts for approval—never auto-sends.
 
 3. **Social Orchestrator**
    - *Focus*: LinkedIn, Twitter/X, Reddit, Industry Forums.
@@ -40,7 +40,7 @@ Content Intelligence dynamically routes your request to one of three internal en
 ---
 
 ## 🛑 Hard Gates (DO NOT EXECUTE WITHOUT CHECKING)
-- **Voice Match**: Did you load the executive `voice-model.md` from the local brain before drafting?
+- **Voice Match**: Did you load the executive `executive-profile.json` (and falling back to `voice-model.md`) from the local brain before drafting?
 - **The Rule of One**: Does this copy try to say more than one main thing? If yes, cut it.
 - **Draft-Only Protocol**: Did you clearly label the output as a `[DRAFT]` requiring authorization?
 
@@ -87,7 +87,7 @@ Surface these issues WITHOUT being asked when you notice them in context:
 
 | System | What It Provides | How to Access |
 |--------|-----------------|---------------|
-| Local CEO Brain | Voice models, past approved drafts | `gfv-brain-search.py` |
+| Local CEO Brain | Voice models, character schema (executive-profile.json) | `gfv-brain-search.py` |
 | HubSpot API | Recipient context, previous touches | `hubspot-api` |
 | X/LinkedIn APIs | Platform format strictures | Native MCPs |
 
