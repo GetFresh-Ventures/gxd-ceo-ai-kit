@@ -289,3 +289,13 @@ To use the Google Ads API for programmatic changes (offline conversion import, a
 | Utah-Plumbing-Search | `goldenrulephc.com/location-utah-urgent-repair-plumbing-ppc/?loc=UT` |
 | Utah-HVAC-Search | `goldenrulephc.com/hvac-replacement-salt-lake-city/?loc=UT` (Replacement) / `goldenrulephc.com/heating-cooling/?loc=UT` (Generic repair) |
 | Utah-WH-Search | `goldenrulephc.com/utah-water-heater-repair-ppc/?loc=UT` |
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

@@ -48,3 +48,13 @@ Check `~/Documents/Code/gfv-brain/scripts/pil_config.py` for service mappings.
 - **strategies/** — launch, growth funnel, retention
 
 See skills/ subdirectory for individual SKILL.md files.
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

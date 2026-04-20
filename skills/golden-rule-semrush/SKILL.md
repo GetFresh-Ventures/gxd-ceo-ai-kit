@@ -205,3 +205,13 @@ gr_semrush_tracking_history(campaign_id="<id>")
 - **`display_limit`** defaults vary — always set explicitly (10-50 for most queries)
 - **SSE parsing:** API returns `data: {json}` format — split on `"data: "` and parse the last chunk
 - **Rate limits:** SEMrush API has daily limits — batch queries, don't repeat unnecessarily
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

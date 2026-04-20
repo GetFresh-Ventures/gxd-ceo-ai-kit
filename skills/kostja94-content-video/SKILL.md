@@ -111,3 +111,13 @@ Achieves 70%+ completion for algorithmic boost. Frameworks: Hook-Value-CTA, AIDA
 - **content-marketing**: Video as content format; repurposing
 - **youtube-seo**: YouTube SEO, description, thumbnail (platform skill)
 - **video-optimization**: Website video SEO; VideoObject; video sitemap; Google prioritizes YouTube
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

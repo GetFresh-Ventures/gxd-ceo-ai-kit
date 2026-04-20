@@ -378,3 +378,13 @@ After restructure, these are the target ranges. Use to evaluate whether a new ma
 - **Seasonal transition** — Add pre-season keywords 4–6 weeks before demand change
 - **Poor performance** — If CPA > $120 or CTR < 2%, run full Phase 1–5 audit
 - **Campaign expansion** — Adding new service lines (Electrical, Roofing, etc.) — follow same category framework
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

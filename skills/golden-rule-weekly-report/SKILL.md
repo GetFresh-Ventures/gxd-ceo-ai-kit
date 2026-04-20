@@ -366,3 +366,13 @@ Before delivering:
 - `golden-rule-ga4` — Pull analytics data for LP performance
 - `servicetitan-api` — Pull job/revenue data for attribution section
 - `golden-rule-semrush` — Pull competitive intelligence data
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

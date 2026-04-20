@@ -1,4 +1,6 @@
 ---
+name: mktg-community-marketing
+description: Skill for mktg-community-marketing
 
 ---
 
@@ -171,3 +173,13 @@ Always be specific. Generic advice ("be consistent," "provide value") is not use
 - **social-content**: For content creation across social platforms
 - **customer-research**: For understanding your community members' needs and language
 
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

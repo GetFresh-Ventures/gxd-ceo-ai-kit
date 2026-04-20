@@ -42,7 +42,7 @@ Compare traffic across arbitrary date periods for any GA4 property with normaliz
 ### Basic Syntax
 
 ```bash
-python3 .agents/skills/ga4-traffic-comparison/scripts/ga4_compare.py <PROPERTY_ID> \
+[STUB AVOIDED] Execute ga4_compare.py via available MCP/agent tools rather than a missing local script <PROPERTY_ID> \
   --periods "Label1:YYYY-MM-DD:YYYY-MM-DD" \
             "Label2:YYYY-MM-DD:YYYY-MM-DD"
 ```
@@ -62,7 +62,7 @@ Each period is a colon-delimited string: `Name:StartDate:EndDate`
 ### 1. Before/After Client Engagement (Aprio)
 
 ```bash
-python3 .agents/skills/ga4-traffic-comparison/scripts/ga4_compare.py 373880369 \
+[STUB AVOIDED] Execute ga4_compare.py via available MCP/agent tools rather than a missing local script 373880369 \
   --periods "Pre-GFV:2026-03-10:2026-04-09" \
             "Post-GFV:2026-04-10:2026-04-18"
 ```
@@ -70,7 +70,7 @@ python3 .agents/skills/ga4-traffic-comparison/scripts/ga4_compare.py 373880369 \
 ### 2. Week-over-Week
 
 ```bash
-python3 .agents/skills/ga4-traffic-comparison/scripts/ga4_compare.py 373880369 \
+[STUB AVOIDED] Execute ga4_compare.py via available MCP/agent tools rather than a missing local script 373880369 \
   --periods "Last Week:2026-04-07:2026-04-13" \
             "This Week:2026-04-14:2026-04-18"
 ```
@@ -78,7 +78,7 @@ python3 .agents/skills/ga4-traffic-comparison/scripts/ga4_compare.py 373880369 \
 ### 3. Three-Period Trend (Pre → Week 1 → Latest)
 
 ```bash
-python3 .agents/skills/ga4-traffic-comparison/scripts/ga4_compare.py 373880369 \
+[STUB AVOIDED] Execute ga4_compare.py via available MCP/agent tools rather than a missing local script 373880369 \
   --periods "Pre-GFV:2026-03-10:2026-04-09" \
             "Week 1:2026-04-10:2026-04-16" \
             "Last 48h:2026-04-17:2026-04-18"
@@ -87,7 +87,7 @@ python3 .agents/skills/ga4-traffic-comparison/scripts/ga4_compare.py 373880369 \
 ### 4. Golden Rule Weekly Check
 
 ```bash
-python3 .agents/skills/ga4-traffic-comparison/scripts/ga4_compare.py 319584840 \
+[STUB AVOIDED] Execute ga4_compare.py via available MCP/agent tools rather than a missing local script 319584840 \
   --periods "Previous:2026-04-05:2026-04-11" \
             "Current:2026-04-12:2026-04-18"
 ```
@@ -95,7 +95,7 @@ python3 .agents/skills/ga4-traffic-comparison/scripts/ga4_compare.py 319584840 \
 ### 5. JSON Output (for dashboards/artifacts)
 
 ```bash
-python3 .agents/skills/ga4-traffic-comparison/scripts/ga4_compare.py 373880369 \
+[STUB AVOIDED] Execute ga4_compare.py via available MCP/agent tools rather than a missing local script 373880369 \
   --json \
   --periods "Pre:2026-03-10:2026-04-09" \
             "Post:2026-04-10:2026-04-18"
@@ -104,7 +104,7 @@ python3 .agents/skills/ga4-traffic-comparison/scripts/ga4_compare.py 373880369 \
 ### 6. Custom SA Path
 
 ```bash
-python3 .agents/skills/ga4-traffic-comparison/scripts/ga4_compare.py 373880369 \
+[STUB AVOIDED] Execute ga4_compare.py via available MCP/agent tools rather than a missing local script 373880369 \
   --sa /path/to/other_service_account.json \
   --periods "Before:2026-01-01:2026-01-31" \
             "After:2026-02-01:2026-02-28"
@@ -167,3 +167,13 @@ The script prints:
 | `--periods` | (required) | 2+ periods as `Name:Start:End` |
 | `--json` | off | Output JSON instead of table |
 | `--no-channels` | off | Skip channel breakdown |
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

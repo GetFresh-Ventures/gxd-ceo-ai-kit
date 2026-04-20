@@ -811,3 +811,13 @@ See `scripts/update_wh_page_v3.py` for the complete reference implementation. Ke
 - [Google Quality Score](https://support.google.com/google-ads/answer/6167118)
 - [Google E-E-A-T Guidelines](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
 - [Lighthouse Scoring](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring/)
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

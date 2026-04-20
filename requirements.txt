@@ -1,3 +1,5 @@
 requests
 pyyaml
+websocket-client
+websockets
 pytest>=7.0.0

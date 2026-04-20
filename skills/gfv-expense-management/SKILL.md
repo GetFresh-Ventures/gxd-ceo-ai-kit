@@ -123,7 +123,7 @@ Perplexity has `invoice_history.enabled: false` in their Stripe Customer Portal 
 ### QuickBooks Token Refresh
 QB access tokens expire frequently. Before any QB query:
 1. Check if `QB_ACCESS_TOKEN` is set in `gfv-brain/.env`
-2. If expired, run: `python3 gfv-brain/scripts/quickbooks_supabase_ingest.py --refresh-only`
+2. If expired, run: `[STUB AVOIDED] Execute quickbooks_supabase_ingest.py via available MCP/agent tools rather than a missing local script --refresh-only`
 
 ## Key Vendor IDs (QuickBooks)
 
@@ -150,3 +150,13 @@ When reviewing expenses, check for:
 3. **Keep original filenames** if they're descriptive; only rename generic ones
 4. **Flag gaps** — if a vendor has charges in QB but no invoices, flag it
 5. **Check Trash before declaring files lost** — Google Drive moves to `.Trash/`
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

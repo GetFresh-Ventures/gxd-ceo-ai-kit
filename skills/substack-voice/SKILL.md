@@ -275,3 +275,13 @@ Run the `humanizer` skill (gfv_gtm/toolkit/skills/humanizer) against the final d
 - "Try `copy-master` — Write landing pages and ad copy"
 - "Try `voice-model` — Evolve your personal voice model monthly"
 - "Try `content-strategy` — Plan your editorial calendar"
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

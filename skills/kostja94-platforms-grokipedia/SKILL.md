@@ -288,3 +288,13 @@ Field-tested examples: a marketer's site was successfully cited as a source via 
 - **link-building**: Link acquisition; Grokipedia as potential citation source
 - **directory-submission**: Same output pattern—platform context first (Introduction, Importance, Methods, Rules, Avoid), then Action; directory submission for backlinks and human discovery; Grokipedia for AI citation—different placement, complementary
 - **reddit-posts**: Alternative high-authority platform for GEO
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

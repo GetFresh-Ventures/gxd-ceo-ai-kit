@@ -378,3 +378,13 @@ Over time, your playbook becomes a library of proven growth patterns specific to
 - **page-cro**: For generating test ideas based on CRO principles
 - **analytics-tracking**: For setting up test measurement
 - **copywriting**: For creating variant copy
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

@@ -107,3 +107,13 @@ When assigned to audit or fix an LSA account:
 3. **Linear Sync:** Use the Linear API (`mcp_linear-mcp-server`) or GraphQL queries to create specific, actionable tickets for the client for things requiring manual UI clicks (e.g., "Rate Stale Leads", "Update Weekend Hours").
 4. **Technical Fixes:** Handle the technical routing and landing page fixes autonomously (deploy pages, set up CSS suppression, verify with `curl`).
 5. **Monitor Protocol:** Track lead velocity daily for 7 days post-fix. Ensure CPL (Cost Per Lead) drops as impression share increases to normal levels.
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

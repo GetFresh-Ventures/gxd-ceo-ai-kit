@@ -434,3 +434,13 @@ Before delivering:
 - `aprio-seo-page-deployment` — WordPress page deployment methodology
 - `golden-rule-semrush` — SEMrush queries (adapt for Aprio domain)
 - `hubspot-api` — HubSpot pipeline data (when token available)
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

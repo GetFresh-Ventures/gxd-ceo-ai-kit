@@ -79,3 +79,13 @@ When republishing: Set canonical to your original URL in Medium settings. Preven
 - **article-page-generator**: Article structure for republish
 - **link-building**: Medium as backlink source
 - **grokipedia-recommendations**: GEO; AI search visibility
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

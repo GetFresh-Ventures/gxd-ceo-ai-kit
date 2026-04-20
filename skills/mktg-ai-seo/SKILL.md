@@ -1,4 +1,6 @@
 ---
+name: mktg-ai-seo
+description: Skill for mktg-ai-seo
 
 ---
 
@@ -434,3 +436,13 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md).
 - **programmatic-seo**: For building SEO pages at scale
 - **copywriting**: For writing content that's both human-readable and AI-extractable
 
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

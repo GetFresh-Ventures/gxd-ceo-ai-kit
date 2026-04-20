@@ -178,3 +178,13 @@ Identify:
 - **brand-visual-generator**: Typography, colors, imagery tone; visual consistency
 - **video-marketing**: Video thumbnails; video as visual format
 - **video-optimization**: Video SEO; VideoObject; video sitemap; YouTube prioritization
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

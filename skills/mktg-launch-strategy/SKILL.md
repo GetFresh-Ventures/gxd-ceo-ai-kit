@@ -1,4 +1,6 @@
 ---
+name: mktg-launch-strategy
+description: Skill for mktg-launch-strategy
 
 ---
 
@@ -359,3 +361,13 @@ Even small changelog updates remind customers your product is evolving. This bui
 - **programmatic-seo**: For comparison pages mentioned in post-launch
 - **sales-enablement**: For launch sales collateral and enablement materials
 
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

@@ -91,3 +91,13 @@ When generating TikTok content, provide:
 - **tiktok-ads**: Paid promotion on TikTok; In-Feed, Spark Ads (boost organic); video specs and captions align with organic content
 - **influencer-marketing**: TikTok is key influencer platform
 - **twitter-x-posts**: Cross-posting short-form video
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

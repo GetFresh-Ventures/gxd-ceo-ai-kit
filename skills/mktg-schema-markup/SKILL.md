@@ -1,4 +1,6 @@
 ---
+name: mktg-schema-markup
+description: Skill for mktg-schema-markup
 
 ---
 
@@ -188,3 +190,13 @@ You can combine multiple schema types on one page using `@graph`:
 - **programmatic-seo**: For templated schema at scale
 - **site-architecture**: For breadcrumb structure and navigation schema planning
 
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

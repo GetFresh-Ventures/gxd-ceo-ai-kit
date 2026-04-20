@@ -1,4 +1,6 @@
 ---
+name: mktg-customer-research
+description: Skill for mktg-customer-research
 
 ---
 
@@ -274,3 +276,13 @@ Don't ask all five at once — lead with #1 and #2, then follow up as needed.
 | Writing cold email using research on pain/trigger | `cold-email` |
 | Planning content based on discovered topics | `content-strategy` |
 
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

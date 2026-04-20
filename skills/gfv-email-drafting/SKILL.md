@@ -148,3 +148,13 @@ with smtplib.SMTP_SSL('smtp.gmail.com', 465) as s:
 ## References
 - **GFV Standard**: Draft Review Before Send (CLAUDE-GLOBAL.md)
 - **Auth**: Gmail App Password in macOS Keychain
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

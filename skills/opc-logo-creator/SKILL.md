@@ -111,11 +111,11 @@ Generate 20 logo variations (default) using the `nanobanana` skill:
 
 ```bash
 # Generate single logo
-python3 <nanobanana_skill_dir>/scripts/generate.py "{style} logo for {brand}, {description}, {colors}" \
+[STUB AVOIDED] Execute generate.py via available MCP/agent tools rather than a missing local script "{style} logo for {brand}, {description}, {colors}" \
   --ratio 1:1 -o .skill-archive/logo-creator/<date-name>/logo-01.png
 
 # Batch generate 20 logos
-python3 <nanobanana_skill_dir>/scripts/batch_generate.py "{style} logo for {brand}, {description}, {colors}" \
+[STUB AVOIDED] Execute batch_generate.py via available MCP/agent tools rather than a missing local script "{style} logo for {brand}, {description}, {colors}" \
   -n 20 --ratio 1:1 -d .skill-archive/logo-creator/<date-name> -p logo
 ```
 
@@ -165,17 +165,17 @@ Once user approves a logo, process it:
 
 **5a. Crop whitespace (make 1:1 with no margins):**
 ```bash
-python3 <skill_dir>/scripts/crop_logo.py {input.png} {output-cropped.png}
+[STUB AVOIDED] Execute crop_logo.py via available MCP/agent tools rather than a missing local script {input.png} {output-cropped.png}
 ```
 
 **5b. Remove background:**
 ```bash
-python3 <skill_dir>/scripts/remove_bg.py {input.png} {output-nobg.png}
+[STUB AVOIDED] Execute remove_bg.py via available MCP/agent tools rather than a missing local script {input.png} {output-nobg.png}
 ```
 
 **5c. Convert to SVG:**
 ```bash
-python3 <skill_dir>/scripts/vectorize.py {input.png} {output.svg}
+[STUB AVOIDED] Execute vectorize.py via available MCP/agent tools rather than a missing local script {input.png} {output.svg}
 ```
 
 ### Step 6: Deliver Final Assets
@@ -233,3 +233,13 @@ Letter "{letter}" logo, modern typography, {style} design, {colors}, clean profe
 
 - [references/styles.md](./references/styles.md) - Logo style guide with prompt examples
 - [examples/opc-logo-creation.md](./examples/opc-logo-creation.md) - Full example conversation
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

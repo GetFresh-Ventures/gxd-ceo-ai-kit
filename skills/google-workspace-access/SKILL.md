@@ -143,3 +143,13 @@ Used specifically for `embed_helper.py` (3072-dim embeddings require AI Studio, 
 - **SA File**: `~/.config/gfv/gfv_service_account.json`
 - **ADC File**: `~/.config/gcloud/application_default_credentials.json`
 - **Auth Helper**: `~/Documents/Code/gfv-brain/scripts/vertex_auth.py`
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

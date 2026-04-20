@@ -180,3 +180,13 @@ wait
 2. **`(not set)` source/medium** — Majority of conversions have `(not set)` attribution = unattributed. This improves once GA4 ↔ Google Ads link has Editor access.
 3. **52% unattributed Utah calls** — Need Greg's 15-number call tracking mapping list (GFV-187).
 4. **GTM v92 is LIVE** — 55 tags, 27 triggers, 39 variables deployed. `phone_call_click` and `form_submission` events are configured but need verification via Tag Assistant.
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

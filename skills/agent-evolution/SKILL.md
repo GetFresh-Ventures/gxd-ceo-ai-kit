@@ -34,3 +34,13 @@ python3 /Users/dirajgoel/Documents/Code/gfv-brain/scripts/rl_trainer.py start \
   --dataset "/Users/dirajgoel/Documents/Code/gfv-brain/logs/rl_failures.jsonl"
 ```
 *(Warning: Requires heavy compute. Ensure you are not running within standard business hours unless explicitly authorized by the CEO).*
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

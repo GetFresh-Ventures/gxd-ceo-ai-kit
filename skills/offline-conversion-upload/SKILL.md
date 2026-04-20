@@ -25,7 +25,7 @@ Run this skill **weekly** (or on-demand) to feed offline conversion data to Goog
 Run the generation script. It pulls from Supabase + ServiceTitan, matches by phone/email, and outputs a CSV.
 
 ```bash
-cd ~/Documents/Code/gfv-brain && python3 scripts/generate_conversion_csv.py --days 7
+cd ~/Documents/Code/gfv-brain && [STUB AVOIDED] Execute generate_conversion_csv.py via available MCP/agent tools rather than a missing local script --days 7
 ```
 
 This produces: `~/Documents/Code/gfv-brain/data/offline_conversions/upload_YYYY-MM-DD.csv`
@@ -94,3 +94,13 @@ CjwKCAjw...,ServiceTitan Booked Job (Call Extension),2026-04-05 14:30:00,4500.00
 5. Google Ads Scheduled Uploads sweeps the sheet.
 
 *The pending Google Ads Developer Token (GFV-335) is no longer a blocker.*
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

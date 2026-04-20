@@ -49,22 +49,22 @@ pip install google-genai pillow
 
 ### Generate an image:
 ```bash
-python3 <skill_dir>/scripts/generate.py "a cute robot mascot, pixel art style" -o robot.png
+[STUB AVOIDED] Execute generate.py via available MCP/agent tools rather than a missing local script "a cute robot mascot, pixel art style" -o robot.png
 ```
 
 ### Edit an existing image:
 ```bash
-python3 <skill_dir>/scripts/generate.py "make the background blue" -i input.jpg -o output.png
+[STUB AVOIDED] Execute generate.py via available MCP/agent tools rather than a missing local script "make the background blue" -i input.jpg -o output.png
 ```
 
 ### Generate with specific aspect ratio:
 ```bash
-python3 <skill_dir>/scripts/generate.py "cinematic landscape" --ratio 21:9 -o landscape.png
+[STUB AVOIDED] Execute generate.py via available MCP/agent tools rather than a missing local script "cinematic landscape" --ratio 21:9 -o landscape.png
 ```
 
 ### Generate high-resolution 4K image:
 ```bash
-python3 <skill_dir>/scripts/generate.py "professional product photo" --size 4K -o product.png
+[STUB AVOIDED] Execute generate.py via available MCP/agent tools rather than a missing local script "professional product photo" --size 4K -o product.png
 ```
 
 ## Script Reference
@@ -117,7 +117,7 @@ Options:
 
 **Example:**
 ```bash
-python3 <skill_dir>/scripts/batch_generate.py "pixel art logo" -n 20 -d ./logos -p logo
+[STUB AVOIDED] Execute batch_generate.py via available MCP/agent tools rather than a missing local script "pixel art logo" -n 20 -d ./logos -p logo
 ```
 
 ## Python API
@@ -226,3 +226,13 @@ soft focus background, 35mm film photography style"
 
 - [references/prompts.md](./references/prompts.md) - Prompt examples by category
 - [examples/](./examples/) - Example usage scripts
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

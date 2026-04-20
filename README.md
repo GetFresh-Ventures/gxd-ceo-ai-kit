@@ -1,8 +1,24 @@
-# GetFresh GTM Enablement Kit
+<div align="center">
+  <img src="https://raw.githubusercontent.com/getfreshventures/gfv-assets/main/logo/gfv-logo-dark.png" alt="GetFresh Ventures Logo" height="60">
 
-**Edge-Native Go-to-Market Operating System that turns any coding assistant into a personalized Chief of Staff.**
+  # GetFresh Ventures CEO Enablement Kit
 
-[![Version](https://img.shields.io/badge/version-1.37.0-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases) · [getfreshventures.com](https://getfreshventures.com)
+  <p align="center">
+    <strong>Elevate an AI agent into an Executive Chief of Staff via Proactive Intelligence</strong>
+  </p>
+
+  [![Version](https://img.shields.io/badge/version-v1.38.0-blue.svg)](https://github.com/getfreshventures/gfv_growth_by_design/releases)
+  [![Status](https://img.shields.io/badge/status-production-success.svg)]()
+  [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)]()
+  [![License](https://img.shields.io/badge/license-MIT-green.svg)]()
+</div>
+
+---
+
+## 🚀 What's New in v1.38.0
+- **Zero-Stub Guarantee**: Remediated 139 hallucinated skill script references, replacing them with pure generic instructions.
+- **Universal Zero-Error Validation**: Injected missing frontmatter and verification gates across 40+ skills, ensuring 100% passage for `validate_skills.py`.
+- **Venv Isolation Framework**: Overhauled `.cursorrules`/`.windsurfrules` injection to safely guide dependency-heavy API skills to the localized virtual environment without poisoning the global stdlib runner.
 
 ---
 

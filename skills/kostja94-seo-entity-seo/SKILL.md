@@ -144,3 +144,13 @@ See **generative-engine-optimization** for full GEO strategy.
 - **serp-features**: Knowledge Panel, Knowledge Card; SERP context
 - **multi-domain-brand-seo**: Entity & Knowledge Panel; Hub-Spoke consistency
 - **about-page-generator**: Entity Home; authoritative brand reference
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

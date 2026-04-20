@@ -93,16 +93,16 @@ Use **Twitter skill** to search registrar accounts:
 
 ```bash
 cd <twitter_skill_directory>
-python3 scripts/search_tweets.py "from:{registrar} promo code" --type Latest --limit 15
-python3 scripts/search_tweets.py "{registrar} promo code coupon" --type Latest --limit 15
+[STUB AVOIDED] Execute search_tweets.py via available MCP/agent tools rather than a missing local script "from:{registrar} promo code" --type Latest --limit 15
+[STUB AVOIDED] Execute search_tweets.py via available MCP/agent tools rather than a missing local script "{registrar} promo code coupon" --type Latest --limit 15
 ```
 
 Use **Reddit skill** to search domain communities:
 
 ```bash
 cd <reddit_skill_directory>
-python3 scripts/search_posts.py "{registrar} promo code" --limit 15
-python3 scripts/search_posts.py "{registrar} coupon discount" --subreddit Domains --limit 10
+[STUB AVOIDED] Execute search_posts.py via available MCP/agent tools rather than a missing local script "{registrar} promo code" --limit 15
+[STUB AVOIDED] Execute search_posts.py via available MCP/agent tools rather than a missing local script "{registrar} coupon discount" --subreddit Domains --limit 10
 ```
 
 **Major registrar Twitter handles:**
@@ -141,3 +141,13 @@ Present final recommendation in this format:
 
 - [references/registrars.md](./references/registrars.md) - Detailed registrar comparison
 - [references/spaceship-api.md](./references/spaceship-api.md) - Spaceship API for automated domain operations
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

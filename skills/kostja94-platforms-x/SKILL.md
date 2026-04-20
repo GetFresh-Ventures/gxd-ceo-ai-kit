@@ -171,3 +171,13 @@ When generating X copy, provide:
 - **programmatic-seo**: Programmatic SEO (template + data pages); X traffic can accelerate indexing
 - **open-graph, twitter-cards**: OG and Twitter Card tags for X link previews
 - **visual-content**: Cross-channel visual planning; X image specs in context
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

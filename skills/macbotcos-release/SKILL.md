@@ -1,4 +1,5 @@
 ---
+name: macbotcos-release
 description: Push a versioned release for MACBOTCOS — updates GitHub (README, CHANGELOG, tag), Linear (project update), and respects MACBOTCOS strict python governance gates.
 ---
 
@@ -65,7 +66,7 @@ Decide the new version number based on what changed since the last tag.
 MACBOTCOS has an absolute zero-tolerance policy for failing python governance checks. Run the core pre-release audits:
 
 ```bash
-cd /Users/dirajgoel/Documents/Code/MACBOTCOS && echo "=== UNCOMMITTED ===" && git status --short && echo "=== DOCS STATE GATE ===" && ./venv/bin/python cron/docs_agent.py --validate-registry --strict-changed-docs --include-worktree --write-state-manifest --json && echo "=== RELEASE VALIDATOR ===" && ./venv/bin/python scripts/release_validator.py --strict && echo "=== ROUTING CONVERGENCE ===" && ./venv/bin/python scripts/validate_routing_convergence.py --json
+cd /Users/dirajgoel/Documents/Code/MACBOTCOS && echo "=== UNCOMMITTED ===" && git status --short && echo "=== DOCS STATE GATE ===" && ./venv/bin/[STUB AVOIDED] Execute docs_agent.py via available MCP/agent tools rather than a missing local script --validate-registry --strict-changed-docs --include-worktree --write-state-manifest --json && echo "=== RELEASE VALIDATOR ===" && ./venv/bin/[STUB AVOIDED] Execute release_validator.py via available MCP/agent tools rather than a missing local script --strict && echo "=== ROUTING CONVERGENCE ===" && ./venv/bin/[STUB AVOIDED] Execute validate_routing_convergence.py via available MCP/agent tools rather than a missing local script --json
 ```
 
 **GATE: You must have zero output/errors on the above scripts. If anything fails, you MUST stop the release and fix the underlying issue.**
@@ -93,7 +94,7 @@ A 1-3 sentence summary of the strategic impact of this release and why the chang
 
 **GATE: Run the release integrity script to ensure your changelog entry passes strict formatting.**
 ```bash
-cd /Users/dirajgoel/Documents/Code/MACBOTCOS && ./venv/bin/python scripts/audit_release_integrity.py --strict-lineage
+cd /Users/dirajgoel/Documents/Code/MACBOTCOS && ./venv/bin/[STUB AVOIDED] Execute audit_release_integrity.py via available MCP/agent tools rather than a missing local script --strict-lineage
 ```
 If this audit fails, fix the changelog until it passes.
 
@@ -177,3 +178,13 @@ Overview of why this release matters...
 - [ ] Pushed to `origin/main` with tags
 - [ ] Linear project update successfully posted
 - [ ] No uncommitted files remain in worktree
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

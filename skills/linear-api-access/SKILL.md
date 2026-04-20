@@ -191,3 +191,13 @@ Known project IDs:
 - Always handle GraphQL errors gracefully (`if 'errors' in res:`).
 - Always print explicit identifiers and execution status in stdout so you can read the command output.
 - When reporting issue counts, cross-check with the user's Linear board view — API pagination bugs can silently truncate results.
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

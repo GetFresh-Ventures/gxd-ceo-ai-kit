@@ -228,3 +228,13 @@ The battle-tested, production-verified script is at `/tmp/gsc_final.py`. Copy it
 - **Chrome DevTools Protocol**: https://chromedevtools.github.io/devtools-protocol/
 - **CDP Input Domain**: https://chromedevtools.github.io/devtools-protocol/tot/Input/
 - **GFV Standard**: Draft Review Before Send (indexing is autonomous, no draft needed)
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

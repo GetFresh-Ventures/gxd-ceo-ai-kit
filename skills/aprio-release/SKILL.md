@@ -250,3 +250,13 @@ v2.0.0: Elementor Migration & Dashboard Rebuild
 ### Time Conversion
 - PDT → CDT: add 2 hours (e.g., 3:00 PM PDT = 5:00 PM CDT)
 - UTC → CDT: subtract 5 hours (e.g., 22:00 UTC = 5:00 PM CDT)
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

@@ -1,4 +1,6 @@
 ---
+name: mktg-email-sequence
+description: Skill for mktg-email-sequence
 
 ---
 
@@ -322,3 +324,13 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md). Key email
 - **popup-cro**: For email capture popups
 - **revops**: For lifecycle stages that trigger email sequences
 
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

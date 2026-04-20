@@ -44,7 +44,7 @@ export TWITTERAPI_API_KEY="your_api_key"
 **Quick Check**:
 ```bash
 cd <skill_directory>
-python3 scripts/get_user_info.py elonmusk
+[STUB AVOIDED] Execute get_user_info.py via available MCP/agent tools rather than a missing local script elonmusk
 ```
 
 ## Commands
@@ -53,70 +53,70 @@ All commands run from the skill directory.
 
 ### User Endpoints
 ```bash
-python3 scripts/get_user_info.py USERNAME
-python3 scripts/get_user_about.py USERNAME
-python3 scripts/batch_get_users.py USER_ID1,USER_ID2
-python3 scripts/get_user_tweets.py USERNAME --limit 20
-python3 scripts/get_user_mentions.py USERNAME --limit 20
-python3 scripts/get_followers.py USERNAME --limit 100
-python3 scripts/get_following.py USERNAME --limit 100
-python3 scripts/get_verified_followers.py USERNAME --limit 20
-python3 scripts/check_relationship.py USER1 USER2
-python3 scripts/search_users.py "query" --limit 20
+[STUB AVOIDED] Execute get_user_info.py via available MCP/agent tools rather than a missing local script USERNAME
+[STUB AVOIDED] Execute get_user_about.py via available MCP/agent tools rather than a missing local script USERNAME
+[STUB AVOIDED] Execute batch_get_users.py via available MCP/agent tools rather than a missing local script USER_ID1,USER_ID2
+[STUB AVOIDED] Execute get_user_tweets.py via available MCP/agent tools rather than a missing local script USERNAME --limit 20
+[STUB AVOIDED] Execute get_user_mentions.py via available MCP/agent tools rather than a missing local script USERNAME --limit 20
+[STUB AVOIDED] Execute get_followers.py via available MCP/agent tools rather than a missing local script USERNAME --limit 100
+[STUB AVOIDED] Execute get_following.py via available MCP/agent tools rather than a missing local script USERNAME --limit 100
+[STUB AVOIDED] Execute get_verified_followers.py via available MCP/agent tools rather than a missing local script USERNAME --limit 20
+[STUB AVOIDED] Execute check_relationship.py via available MCP/agent tools rather than a missing local script USER1 USER2
+[STUB AVOIDED] Execute search_users.py via available MCP/agent tools rather than a missing local script "query" --limit 20
 ```
 
 ### Tweet Endpoints
 ```bash
-python3 scripts/get_tweet.py TWEET_ID [TWEET_ID2...]
-python3 scripts/search_tweets.py "query" --type Latest --limit 20
-python3 scripts/get_tweet_replies.py TWEET_ID --limit 20
-python3 scripts/get_tweet_quotes.py TWEET_ID --limit 20
-python3 scripts/get_tweet_retweeters.py TWEET_ID --limit 50
-python3 scripts/get_tweet_thread.py TWEET_ID
-python3 scripts/get_article.py TWEET_ID
+[STUB AVOIDED] Execute get_tweet.py via available MCP/agent tools rather than a missing local script TWEET_ID [TWEET_ID2...]
+[STUB AVOIDED] Execute search_tweets.py via available MCP/agent tools rather than a missing local script "query" --type Latest --limit 20
+[STUB AVOIDED] Execute get_tweet_replies.py via available MCP/agent tools rather than a missing local script TWEET_ID --limit 20
+[STUB AVOIDED] Execute get_tweet_quotes.py via available MCP/agent tools rather than a missing local script TWEET_ID --limit 20
+[STUB AVOIDED] Execute get_tweet_retweeters.py via available MCP/agent tools rather than a missing local script TWEET_ID --limit 50
+[STUB AVOIDED] Execute get_tweet_thread.py via available MCP/agent tools rather than a missing local script TWEET_ID
+[STUB AVOIDED] Execute get_article.py via available MCP/agent tools rather than a missing local script TWEET_ID
 ```
 
 ### List Endpoints
 ```bash
-python3 scripts/get_list_followers.py LIST_ID --limit 20
-python3 scripts/get_list_members.py LIST_ID --limit 20
+[STUB AVOIDED] Execute get_list_followers.py via available MCP/agent tools rather than a missing local script LIST_ID --limit 20
+[STUB AVOIDED] Execute get_list_members.py via available MCP/agent tools rather than a missing local script LIST_ID --limit 20
 ```
 
 ### Community Endpoints
 ```bash
-python3 scripts/get_community.py COMMUNITY_ID
-python3 scripts/get_community_members.py COMMUNITY_ID --limit 20
-python3 scripts/get_community_moderators.py COMMUNITY_ID
-python3 scripts/get_community_tweets.py COMMUNITY_ID --limit 20
-python3 scripts/search_community_tweets.py "query" --limit 20
+[STUB AVOIDED] Execute get_community.py via available MCP/agent tools rather than a missing local script COMMUNITY_ID
+[STUB AVOIDED] Execute get_community_members.py via available MCP/agent tools rather than a missing local script COMMUNITY_ID --limit 20
+[STUB AVOIDED] Execute get_community_moderators.py via available MCP/agent tools rather than a missing local script COMMUNITY_ID
+[STUB AVOIDED] Execute get_community_tweets.py via available MCP/agent tools rather than a missing local script COMMUNITY_ID --limit 20
+[STUB AVOIDED] Execute search_community_tweets.py via available MCP/agent tools rather than a missing local script "query" --limit 20
 ```
 
 ### Other Endpoints
 ```bash
-python3 scripts/get_space.py SPACE_ID
-python3 scripts/get_trends.py --woeid 1  # Worldwide
+[STUB AVOIDED] Execute get_space.py via available MCP/agent tools rather than a missing local script SPACE_ID
+[STUB AVOIDED] Execute get_trends.py via available MCP/agent tools rather than a missing local script --woeid 1  # Worldwide
 ```
 
 ## Search Query Syntax
 
 ```bash
 # Basic search
-python3 scripts/search_tweets.py "AI agent"
+[STUB AVOIDED] Execute search_tweets.py via available MCP/agent tools rather than a missing local script "AI agent"
 
 # From specific user
-python3 scripts/search_tweets.py "from:elonmusk"
+[STUB AVOIDED] Execute search_tweets.py via available MCP/agent tools rather than a missing local script "from:elonmusk"
 
 # Date range
-python3 scripts/search_tweets.py "AI since:2024-01-01 until:2024-12-31"
+[STUB AVOIDED] Execute search_tweets.py via available MCP/agent tools rather than a missing local script "AI since:2024-01-01 until:2024-12-31"
 
 # Exclude retweets
-python3 scripts/search_tweets.py "AI -filter:retweets"
+[STUB AVOIDED] Execute search_tweets.py via available MCP/agent tools rather than a missing local script "AI -filter:retweets"
 
 # With media
-python3 scripts/search_tweets.py "AI filter:media"
+[STUB AVOIDED] Execute search_tweets.py via available MCP/agent tools rather than a missing local script "AI filter:media"
 
 # Minimum engagement
-python3 scripts/search_tweets.py "AI min_faves:1000"
+[STUB AVOIDED] Execute search_tweets.py via available MCP/agent tools rather than a missing local script "AI min_faves:1000"
 ```
 
 ## API: twitterapi.io
@@ -124,3 +124,13 @@ python3 scripts/search_tweets.py "AI min_faves:1000"
 - Auth: X-API-Key header
 - Pricing: ~$0.15-0.18/1k requests
 - Docs: https://docs.twitterapi.io/
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

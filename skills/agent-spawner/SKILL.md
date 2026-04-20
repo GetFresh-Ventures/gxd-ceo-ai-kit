@@ -140,3 +140,13 @@ Flag as drift if:
 - **Source Pattern**: [ruflo/swarm-orchestration](https://github.com/ruvnet/ruflo/tree/main/.agents/skills/swarm-orchestration)
 - **Source Pattern**: [ruflo/agent-coordinator-swarm-init](https://github.com/ruvnet/ruflo/tree/main/.agents/skills/agent-coordinator-swarm-init)
 - **GFV Standard**: Execution Speed workflow, Parallel Execution workflow
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

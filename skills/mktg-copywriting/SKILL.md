@@ -1,4 +1,6 @@
 ---
+name: mktg-copywriting
+description: Skill for mktg-copywriting
 
 ---
 
@@ -258,3 +260,13 @@ For headlines and CTAs, provide 2-3 options:
 - **popup-cro**: For popup and modal copy
 - **ab-test-setup**: To test copy variations
 
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

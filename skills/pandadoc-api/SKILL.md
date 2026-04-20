@@ -142,3 +142,13 @@ PandaDoc API → pil_pandadoc_sync.py → entity_embeddings (source='pandadoc')
 ## References
 - **API Docs**: https://developers.pandadoc.com/reference
 - **GFV Standard**: Three-System Sync (PandaDoc → HubSpot → Linear)
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

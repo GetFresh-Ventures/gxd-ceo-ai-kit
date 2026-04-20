@@ -46,7 +46,7 @@ Get your token from: https://www.producthunt.com/v2/oauth/applications
 **Quick Check**:
 ```bash
 cd <skill_directory>
-python3 scripts/get_posts.py --limit 3
+[STUB AVOIDED] Execute get_posts.py via available MCP/agent tools rather than a missing local script --limit 3
 ```
 
 ## Commands
@@ -55,31 +55,31 @@ All commands run from the skill directory.
 
 ### Posts
 ```bash
-python3 scripts/get_post.py chatgpt                    # Get post by slug
-python3 scripts/get_post.py 12345                      # Get post by ID
-python3 scripts/get_posts.py --limit 20                # Today's featured posts
-python3 scripts/get_posts.py --topic ai --limit 10     # Posts in topic
-python3 scripts/get_posts.py --after 2026-01-01        # Posts after date
-python3 scripts/get_post_comments.py POST_ID --limit 20
+[STUB AVOIDED] Execute get_post.py via available MCP/agent tools rather than a missing local script chatgpt                    # Get post by slug
+[STUB AVOIDED] Execute get_post.py via available MCP/agent tools rather than a missing local script 12345                      # Get post by ID
+[STUB AVOIDED] Execute get_posts.py via available MCP/agent tools rather than a missing local script --limit 20                # Today's featured posts
+[STUB AVOIDED] Execute get_posts.py via available MCP/agent tools rather than a missing local script --topic ai --limit 10     # Posts in topic
+[STUB AVOIDED] Execute get_posts.py via available MCP/agent tools rather than a missing local script --after 2026-01-01        # Posts after date
+[STUB AVOIDED] Execute get_post_comments.py via available MCP/agent tools rather than a missing local script POST_ID --limit 20
 ```
 
 ### Topics
 ```bash
-python3 scripts/get_topic.py artificial-intelligence  # Get topic by slug
-python3 scripts/get_topics.py --query "AI" --limit 20 # Search topics
-python3 scripts/get_topics.py --limit 50              # Popular topics
+[STUB AVOIDED] Execute get_topic.py via available MCP/agent tools rather than a missing local script artificial-intelligence  # Get topic by slug
+[STUB AVOIDED] Execute get_topics.py via available MCP/agent tools rather than a missing local script --query "AI" --limit 20 # Search topics
+[STUB AVOIDED] Execute get_topics.py via available MCP/agent tools rather than a missing local script --limit 50              # Popular topics
 ```
 
 ### Users
 ```bash
-python3 scripts/get_user.py rrhoover                  # Get user by username
-python3 scripts/get_user_posts.py rrhoover --limit 20 # User's posts
+[STUB AVOIDED] Execute get_user.py via available MCP/agent tools rather than a missing local script rrhoover                  # Get user by username
+[STUB AVOIDED] Execute get_user_posts.py via available MCP/agent tools rather than a missing local script rrhoover --limit 20 # User's posts
 ```
 
 ### Collections
 ```bash
-python3 scripts/get_collection.py SLUG_OR_ID          # Get collection
-python3 scripts/get_collections.py --featured --limit 20
+[STUB AVOIDED] Execute get_collection.py via available MCP/agent tools rather than a missing local script SLUG_OR_ID          # Get collection
+[STUB AVOIDED] Execute get_collections.py via available MCP/agent tools rather than a missing local script --featured --limit 20
 ```
 
 ## API Info
@@ -87,3 +87,13 @@ python3 scripts/get_collections.py --featured --limit 20
 - **Type**: GraphQL
 - **Rate Limits**: 6250 complexity points / 15 min
 - **Docs**: https://api.producthunt.com/v2/docs
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

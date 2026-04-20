@@ -41,7 +41,7 @@ Get posts, comments, subreddit info, and user profiles from Reddit via the publi
 **Quick Check**:
 ```bash
 cd <skill_directory>
-python3 scripts/get_posts.py python --limit 3
+[STUB AVOIDED] Execute get_posts.py via available MCP/agent tools rather than a missing local script python --limit 3
 ```
 
 ## Commands
@@ -50,35 +50,35 @@ All commands run from the skill directory.
 
 ### Subreddit Posts
 ```bash
-python3 scripts/get_posts.py python --limit 20           # Hot posts (default)
-python3 scripts/get_posts.py python --sort new --limit 20
-python3 scripts/get_posts.py python --sort top --time week
-python3 scripts/get_posts.py python --sort top --time all --limit 10
+[STUB AVOIDED] Execute get_posts.py via available MCP/agent tools rather than a missing local script python --limit 20           # Hot posts (default)
+[STUB AVOIDED] Execute get_posts.py via available MCP/agent tools rather than a missing local script python --sort new --limit 20
+[STUB AVOIDED] Execute get_posts.py via available MCP/agent tools rather than a missing local script python --sort top --time week
+[STUB AVOIDED] Execute get_posts.py via available MCP/agent tools rather than a missing local script python --sort top --time all --limit 10
 ```
 
 ### Search Posts
 ```bash
-python3 scripts/search_posts.py "AI agent" --limit 20
-python3 scripts/search_posts.py "MCP server" --subreddit ClaudeAI --limit 10
-python3 scripts/search_posts.py "async python" --sort top --time year
+[STUB AVOIDED] Execute search_posts.py via available MCP/agent tools rather than a missing local script "AI agent" --limit 20
+[STUB AVOIDED] Execute search_posts.py via available MCP/agent tools rather than a missing local script "MCP server" --subreddit ClaudeAI --limit 10
+[STUB AVOIDED] Execute search_posts.py via available MCP/agent tools rather than a missing local script "async python" --sort top --time year
 ```
 
 ### Subreddit Info
 ```bash
-python3 scripts/get_subreddit.py python
-python3 scripts/get_subreddit.py ClaudeAI
+[STUB AVOIDED] Execute get_subreddit.py via available MCP/agent tools rather than a missing local script python
+[STUB AVOIDED] Execute get_subreddit.py via available MCP/agent tools rather than a missing local script ClaudeAI
 ```
 
 ### Post & Comments
 ```bash
-python3 scripts/get_post.py abc123                       # Get post by ID
-python3 scripts/get_post.py abc123 --comments 50         # With more comments
+[STUB AVOIDED] Execute get_post.py via available MCP/agent tools rather than a missing local script abc123                       # Get post by ID
+[STUB AVOIDED] Execute get_post.py via available MCP/agent tools rather than a missing local script abc123 --comments 50         # With more comments
 ```
 
 ### User Profile
 ```bash
-python3 scripts/get_user.py spez
-python3 scripts/get_user.py spez --posts 10              # Include recent posts
+[STUB AVOIDED] Execute get_user.py via available MCP/agent tools rather than a missing local script spez
+[STUB AVOIDED] Execute get_user.py via available MCP/agent tools rather than a missing local script spez --posts 10              # Include recent posts
 ```
 
 ## Sort Options
@@ -96,3 +96,13 @@ python3 scripts/get_user.py spez --posts 10              # Include recent posts
 - **Trick**: Append `.json` to any Reddit URL
 - **Rate Limit**: 100 requests/minute
 - **Docs**: https://www.reddit.com/dev/api
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

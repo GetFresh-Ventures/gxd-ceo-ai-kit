@@ -109,3 +109,13 @@ When generating Reddit copy, provide:
 - **community-forum**: Forum and community promotion; HN, Indie Hacker; community invitation tactics
 - **indie-hacker-strategy**: Indie hacker first 100 users; Reddit for niche products
 - **influencer-marketing**: Reddit can complement influencer outreach
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

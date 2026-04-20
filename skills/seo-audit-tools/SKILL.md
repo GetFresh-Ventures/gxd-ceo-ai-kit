@@ -129,3 +129,13 @@ When auditing getfreshventures.com, focus on these high-impact categories:
 - **LLM Output**: `--format llm` gives structured output optimized for AI analysis
 - **E-E-A-T Dedicated Rules**: 14 rules specifically testing Experience, Expertise, Authority, Trust
 - **Secret Leak Detection**: 96 patterns for detecting leaked API keys, tokens, credentials
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

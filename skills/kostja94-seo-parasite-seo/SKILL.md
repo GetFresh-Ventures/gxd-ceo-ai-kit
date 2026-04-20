@@ -154,3 +154,13 @@ Instead of waiting months for your own domain to gain trust, you publish on esta
 - **community-forum**: Forum and community promotion; HN, Indie Hacker
 - **indie-hacker-strategy**: Indie hacker growth; Indie Hackers, Reddit as channels
 - **seo-strategy**: SEO workflow; parasite SEO as alternative strategy
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

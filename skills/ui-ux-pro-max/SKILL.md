@@ -53,3 +53,13 @@ python3 /Users/dirajgoel/Documents/Code/.agents/skills/ui-ux-pro-max/scripts/sea
 
 ### Step 3: Cross-Reference
 Read `design-system/MASTER.md` to guide your layout choices and CSS implementations. Comply strictly with the listed Anti-Patterns. Use the specified typography pairings and exact hex codes calculated by the script.
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

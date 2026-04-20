@@ -150,3 +150,13 @@ ls -lt ~/.claude/projects/-Users-dirajgoel-Documents-Code/*.jsonl | head -20
 - **Session Protocol**: `/session-protocol` workflow
 - **Memory Script**: `~/Documents/Code/gfv-brain/scripts/claude_memory.py`
 - **GFV Standard**: Session Persistence rule (write to JSONL at session end)
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

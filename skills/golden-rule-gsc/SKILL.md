@@ -122,3 +122,13 @@ Group results by `keys[2]` (page URL) to see which pages attract the most organi
 1. **2-3 day data lag** — GSC data is not real-time. Most recent 2-3 days will be incomplete.
 2. **213+ pages with schema** — Deployed site-wide. Monitor `position` changes over 4-8 weeks for impact.
 3. **No Utah-specific GSC filtering** — GSC shows all goldenrulephc.com queries (Iowa + Utah). Filter by page URL containing "/utah" or Utah-specific query terms for market-level analysis.
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

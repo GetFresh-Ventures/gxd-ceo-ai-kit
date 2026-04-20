@@ -50,7 +50,7 @@ Get the target URL and analyze current SEO/GEO status.
 
 **Basic SEO Audit (Free):**
 ```bash
-python3 scripts/seo_audit.py "https://example.com"
+[STUB AVOIDED] Execute seo_audit.py via available MCP/agent tools rather than a missing local script "https://example.com"
 ```
 **Use this for**: Quick technical SEO check (title, meta, H1, robots, sitemap, load time). No API needed.
 
@@ -277,3 +277,13 @@ This skill works best with:
 - [references/seo-checklist.md](./references/seo-checklist.md) - Complete SEO audit checklist
 - [references/tools-and-apis.md](./references/tools-and-apis.md) - Tools and API reference
 - [examples/opc-skills-case-study.md](./examples/opc-skills-case-study.md) - Real-world optimization example
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

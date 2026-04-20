@@ -1,4 +1,6 @@
 ---
+name: mktg-competitor-alternatives
+description: Skill for mktg-competitor-alternatives
 
 ---
 
@@ -256,3 +258,13 @@ Recommended pages to create with priority order based on search volume.
 - **schema-markup**: For FAQ and comparison schema
 - **sales-enablement**: For internal sales collateral, decks, and objection docs
 
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

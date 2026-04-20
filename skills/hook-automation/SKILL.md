@@ -200,3 +200,13 @@ For tasks that touch multiple systems (e.g., releases, onboarding):
 - **Source Pattern**: [ruflo/hooks-automation](https://github.com/ruvnet/ruflo/tree/main/.agents/skills/hooks-automation)
 - **Source Pattern**: [ruflo/@claude-flow/hooks](https://github.com/ruvnet/ruflo/tree/main/v3/@claude-flow/hooks)
 - **GFV Standard**: Draft Review Before Send rule, Three-System Sync
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

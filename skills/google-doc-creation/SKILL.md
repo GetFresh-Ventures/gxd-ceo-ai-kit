@@ -334,3 +334,13 @@ If ANY check fails, fix the issue before returning the URL to the user.
 - **No ASCII art bar charts** — Replace with proper markdown tables
 - **Keep cell text < 50 chars** — Long text wraps poorly in narrow columns
 - **Use emoji sparingly in tables** — Each supplementary plane emoji costs 2 index units
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

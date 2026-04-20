@@ -333,3 +333,13 @@ To run this audit for a new market (e.g., new city, new service area):
 5. **Run Phases 1-4 in sequence** — the SEMrush tools work for any domain
 
 The framework is market-agnostic. The keyword design principles (Tier 1 symptom → Tier 5 research) apply universally to all home services markets.
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

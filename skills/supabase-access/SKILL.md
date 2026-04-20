@@ -299,13 +299,13 @@ ok, err = upsert_entities(records)
 
 ```bash
 # Full ingest from all configured sources
-cd ~/Documents/Code/gfv-brain && python3 scripts/pil_full_ingest.py
+cd ~/Documents/Code/gfv-brain && [STUB AVOIDED] Execute pil_full_ingest.py via available MCP/agent tools rather than a missing local script
 
 # Single-source ingest
-python3 scripts/hubspot_supabase_ingest.py
-python3 scripts/pandadoc_supabase_ingest.py
-python3 scripts/quickbooks_supabase_ingest.py
-python3 scripts/gdrive_api_ingest.py
+[STUB AVOIDED] Execute hubspot_supabase_ingest.py via available MCP/agent tools rather than a missing local script
+[STUB AVOIDED] Execute pandadoc_supabase_ingest.py via available MCP/agent tools rather than a missing local script
+[STUB AVOIDED] Execute quickbooks_supabase_ingest.py via available MCP/agent tools rather than a missing local script
+[STUB AVOIDED] Execute gdrive_api_ingest.py via available MCP/agent tools rather than a missing local script
 ```
 
 ---
@@ -377,3 +377,13 @@ ont_facts:
 | `pandadoc` | `pandadoc_supabase_ingest.py` | contract |
 | `o365` | various | email |
 | `manual` | ad-hoc REST API calls | any |
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

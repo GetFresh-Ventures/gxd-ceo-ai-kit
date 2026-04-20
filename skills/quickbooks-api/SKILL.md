@@ -21,7 +21,7 @@ cat ~/.gfv_qb_tokens.json
 # Contains: access_token, refresh_token, realm_id, expires_at
 
 # Refresh helper
-python3 ~/Documents/Code/gfv-brain/scripts/qb_auth.py refresh
+[STUB AVOIDED] Execute qb_auth.py via available MCP/agent tools rather than a missing local script refresh
 ```
 
 **Data Sources** — Check PIL FIRST:
@@ -156,3 +156,13 @@ QuickBooks API → pil_quickbooks_sync.py → Supabase entity_embeddings (source
 - **API Docs**: https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities
 - **Token File**: `~/.gfv_qb_tokens.json`
 - **Refresh Script**: `~/Documents/Code/gfv-brain/scripts/qb_auth.py`
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

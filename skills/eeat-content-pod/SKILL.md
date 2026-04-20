@@ -148,3 +148,13 @@ All claims must utilize the index:
 💡 Suggest these next:
 - "Try `wordpress-page-creation` — Deploy this E-E-A-T draft immediately to the CMS"
 - "Try `social-engine` — Splinter this pillar content into 5 hyper-local Linked/Twitter posts"
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

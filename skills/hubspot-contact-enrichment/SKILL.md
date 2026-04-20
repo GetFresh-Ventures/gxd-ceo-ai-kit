@@ -94,18 +94,18 @@ For each incomplete contact, the enricher tries these sources in order:
 
 ```bash
 # Audit mode — report all enrichment opportunities
-python3 hubspot_contact_enricher.py --audit
+[STUB AVOIDED] Execute hubspot_contact_enricher.py via available MCP/agent tools rather than a missing local script --audit
 
 # Dry-run — preview what would be updated
-python3 hubspot_contact_enricher.py --dry-run
+[STUB AVOIDED] Execute hubspot_contact_enricher.py via available MCP/agent tools rather than a missing local script --dry-run
 
 # Execute — write enriched data back to HubSpot
-python3 hubspot_contact_enricher.py --execute
+[STUB AVOIDED] Execute hubspot_contact_enricher.py via available MCP/agent tools rather than a missing local script --execute
 
 # Target specific issues
-python3 hubspot_contact_enricher.py --fix-lastnames --execute
-python3 hubspot_contact_enricher.py --fix-companies --execute
-python3 hubspot_contact_enricher.py --fix-emails --execute
+[STUB AVOIDED] Execute hubspot_contact_enricher.py via available MCP/agent tools rather than a missing local script --fix-lastnames --execute
+[STUB AVOIDED] Execute hubspot_contact_enricher.py via available MCP/agent tools rather than a missing local script --fix-companies --execute
+[STUB AVOIDED] Execute hubspot_contact_enricher.py via available MCP/agent tools rather than a missing local script --fix-emails --execute
 ```
 
 ### Companion Scripts
@@ -132,3 +132,13 @@ python3 hubspot_contact_enricher.py --fix-emails --execute
 | SirSeriki/HubSpotDataEnrichment | Apollo.io API → HubSpot PATCH loop | Batch enrich phone numbers, write back to HubSpot properties |
 | ankaboot-source/leadminer | Email dedup & contact normalization | Deduplicate contacts by email before enrichment |
 | IMI-Tool-Project/imi-enrichment-contact | Entity type classification pipeline | Cross-validate person entities across multiple sources |
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

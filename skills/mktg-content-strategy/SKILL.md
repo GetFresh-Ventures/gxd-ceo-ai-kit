@@ -1,4 +1,6 @@
 ---
+name: mktg-content-strategy
+description: Skill for mktg-content-strategy
 
 ---
 
@@ -360,3 +362,13 @@ Visual or structured representation of how content interconnects.
 - **email-sequence**: For email-based content
 - **social-content**: For social media content
 
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

@@ -105,11 +105,11 @@ Generate 20 banner variations using the `nanobanana` skill:
 
 ```bash
 # Generate single banner
-python3 <nanobanana_skill_dir>/scripts/generate.py "{style} banner for {brand}, {description}, {text elements}" \
+[STUB AVOIDED] Execute generate.py via available MCP/agent tools rather than a missing local script "{style} banner for {brand}, {description}, {text elements}" \
   --ratio 21:9 -o .skill-archive/banner-creator/<date-name>/banner-01.png
 
 # Batch generate 20 banners
-python3 <nanobanana_skill_dir>/scripts/batch_generate.py "{style} banner for {brand}, {description}, {text elements}" \
+[STUB AVOIDED] Execute batch_generate.py via available MCP/agent tools rather than a missing local script "{style} banner for {brand}, {description}, {text elements}" \
   -n 20 --ratio 21:9 -d .skill-archive/banner-creator/<date-name> -p banner
 ```
 
@@ -120,7 +120,7 @@ python3 <nanobanana_skill_dir>/scripts/batch_generate.py "{style} banner for {br
 
 **Image Editing (for incorporating existing logo):**
 ```bash
-python3 <nanobanana_skill_dir>/scripts/generate.py "add {logo character} to the left side of the banner" \
+[STUB AVOIDED] Execute generate.py via available MCP/agent tools rather than a missing local script "add {logo character} to the left side of the banner" \
   -i /path/to/existing-logo.png --ratio 21:9 -o banner-with-logo.png
 ```
 
@@ -158,7 +158,7 @@ Based on feedback:
 Once user approves a banner, crop to target size:
 
 ```bash
-python3 <skill_dir>/scripts/crop_banner.py {input.png} {output.png} --ratio 2:1 --width 1280
+[STUB AVOIDED] Execute crop_banner.py via available MCP/agent tools rather than a missing local script {input.png} {output.png} --ratio 2:1 --width 1280
 ```
 
 **Common targets:**
@@ -217,3 +217,13 @@ Generate at widest ratio, then crop:
 
 - [references/formats.md](./references/formats.md) - Common banner sizes by platform
 - [examples/opc-banner-creation.md](./examples/opc-banner-creation.md) - Full example conversation
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

@@ -703,7 +703,7 @@ assemble_pdf(Path('.'), Path('report.pdf'))
 ```bash
 # Delete only the broken slides, then run — script skips existing files
 rm slide_06.png slide_07.png  # and their raw/ copies
-python3 generate_slides.py prompts.md --logos ...  # only generates missing
+[STUB AVOIDED] Execute generate_slides.py via available MCP/agent tools rather than a missing local script prompts.md --logos ...  # only generates missing
 ```
 
 ### NEVER do full regeneration unless:
@@ -716,7 +716,7 @@ python3 generate_slides.py prompts.md --logos ...  # only generates missing
 
 ```bash
 # Resume from slide 6
-python3 generate_slides.py prompts.md --start 6 --logos ...
+[STUB AVOIDED] Execute generate_slides.py via available MCP/agent tools rather than a missing local script prompts.md --start 6 --logos ...
 ```
 Already-generated slides are automatically skipped.
 
@@ -836,3 +836,13 @@ GetFresh Logo - Stacked.png                     # NEVER USE — white background
 {client}-logo-4x-transparent.png               # Dark, cropped, 4x upscaled
 {client}-logo-4x-white-transparent.png          # White variant for dark bars
 ```
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

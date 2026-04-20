@@ -1,4 +1,6 @@
 ---
+name: mktg-social-content
+description: Skill for mktg-social-content
 
 ---
 
@@ -318,3 +320,13 @@ Instead of guessing, analyze what's working for top creators in your niche:
 - **email-sequence**: For nurturing social audience via email
 - **marketing-psychology**: For understanding what drives engagement
 
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

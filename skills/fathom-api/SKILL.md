@@ -254,7 +254,7 @@ The `FathomClient._normalize_meeting()` method standardizes the raw API response
 - **Script:** `~/Documents/Code/gfv-brain/scripts/fathom_supabase_ingest.py`
 - **Entity type:** `transcript` with `source=fathom`
 - **Runs:** As part of `unified_sync_orchestrator.py` or standalone
-- **Usage:** `python3 fathom_supabase_ingest.py --incremental`
+- **Usage:** `[STUB AVOIDED] Execute fathom_supabase_ingest.py via available MCP/agent tools rather than a missing local script --incremental`
 
 ### Fireflies Transcripts (Legacy)
 - **Location:** `~/Documents/Code/gfv-brain/data/fireflies_transcripts/*.json`
@@ -293,3 +293,13 @@ Fathom/Krisp MCP tools are available in Claude Desktop sessions:
 | Rate Limit | 60 req/min |
 | Max Page Size | 50 |
 | Key Gen URL | https://fathom.video/customize#api-access-header |
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

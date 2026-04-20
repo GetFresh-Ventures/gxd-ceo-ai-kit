@@ -102,11 +102,11 @@ Use this as the baseline evidence for reasoning.
 **Deterministic verification (recommended when script execution is available)**:
 ```bash
 # Fetch/parse raw HTML for structured checks
-python3 <SKILL_DIR>/scripts/fetch_page.py <url> --output /tmp/page.html
-python3 <SKILL_DIR>/scripts/parse_html.py /tmp/page.html --url <url> --json
+[STUB AVOIDED] Execute fetch_page.py via available MCP/agent tools rather than a missing local script <url> --output /tmp/page.html
+[STUB AVOIDED] Execute parse_html.py via available MCP/agent tools rather than a missing local script /tmp/page.html --url <url> --json
 
 # Optional: generate shareable HTML dashboard artifact
-python3 <SKILL_DIR>/scripts/generate_report.py <url> --output SEO-REPORT.html
+[STUB AVOIDED] Execute generate_report.py via available MCP/agent tools rather than a missing local script <url> --output SEO-REPORT.html
 ```
 
 > **Do not use third-party mirrors (e.g., `r.jina.ai`) as primary evidence when direct site fetch or bundled scripts are available.**
@@ -133,51 +133,51 @@ For full/page audits, run baseline checks to avoid hypothesis-only reporting. Do
 
 ```bash
 # Check robots.txt and AI crawler management
-python3 <SKILL_DIR>/scripts/robots_checker.py <url>
+[STUB AVOIDED] Execute robots_checker.py via available MCP/agent tools rather than a missing local script <url>
 
 # Check llms.txt for AI search readiness
-python3 <SKILL_DIR>/scripts/llms_txt_checker.py <url>
+[STUB AVOIDED] Execute llms_txt_checker.py via available MCP/agent tools rather than a missing local script <url>
 
 # Get Core Web Vitals from PageSpeed Insights (free API, no key needed)
-python3 <SKILL_DIR>/scripts/pagespeed.py <url> --strategy mobile
+[STUB AVOIDED] Execute pagespeed.py via available MCP/agent tools rather than a missing local script <url> --strategy mobile
 
 # Check security headers (HSTS, CSP, X-Frame-Options, etc.)
-python3 <SKILL_DIR>/scripts/security_headers.py <url>
+[STUB AVOIDED] Execute security_headers.py via available MCP/agent tools rather than a missing local script <url>
 
 # Detect broken links on a page (404s, timeouts, connection errors)
-python3 <SKILL_DIR>/scripts/broken_links.py <url> --workers 5
+[STUB AVOIDED] Execute broken_links.py via available MCP/agent tools rather than a missing local script <url> --workers 5
 
 # Trace redirect chains, detect loops and mixed HTTP/HTTPS
-python3 <SKILL_DIR>/scripts/redirect_checker.py <url>
+[STUB AVOIDED] Execute redirect_checker.py via available MCP/agent tools rather than a missing local script <url>
 
 # Analyze readability from fetched HTML (Flesch-Kincaid, grade level, sentence stats)
-python3 <SKILL_DIR>/scripts/readability.py /tmp/page.html --json
+[STUB AVOIDED] Execute readability.py via available MCP/agent tools rather than a missing local script /tmp/page.html --json
 
 # Validate Open Graph and Twitter Card meta tags
-python3 <SKILL_DIR>/scripts/social_meta.py <url>
+[STUB AVOIDED] Execute social_meta.py via available MCP/agent tools rather than a missing local script <url>
 
 # Analyze internal link structure, find orphan pages
-python3 <SKILL_DIR>/scripts/internal_links.py <url> --depth 1 --max-pages 20
+[STUB AVOIDED] Execute internal_links.py via available MCP/agent tools rather than a missing local script <url> --depth 1 --max-pages 20
 
 # Extract article content and perform keyword research for LLM-driven optimization
-python3 <SKILL_DIR>/scripts/article_seo.py <url> --keyword "<optional_target_keyword>" --json
+[STUB AVOIDED] Execute article_seo.py via available MCP/agent tools rather than a missing local script <url> --keyword "<optional_target_keyword>" --json
 
 # GitHub repository SEO (provider fallback: auto|api|gh)
 # Auth setup (choose one):
 # export GITHUB_TOKEN="ghp_xxx"   # or export GH_TOKEN="ghp_xxx"
 # gh auth login -h github.com && gh auth status -h github.com
-python3 <SKILL_DIR>/scripts/github_repo_audit.py --repo <owner/repo> --provider auto --json
-python3 <SKILL_DIR>/scripts/github_readme_lint.py README.md --json
-python3 <SKILL_DIR>/scripts/github_community_health.py --repo <owner/repo> --provider auto --json
+[STUB AVOIDED] Execute github_repo_audit.py via available MCP/agent tools rather than a missing local script --repo <owner/repo> --provider auto --json
+[STUB AVOIDED] Execute github_readme_lint.py via available MCP/agent tools rather than a missing local script README.md --json
+[STUB AVOIDED] Execute github_community_health.py via available MCP/agent tools rather than a missing local script --repo <owner/repo> --provider auto --json
 # Benchmark/competitor inputs should be provided by LLM/web-search discovery when possible.
 # If omitted, github_seo_report.py auto-derives repo-specific benchmark queries.
-python3 <SKILL_DIR>/scripts/github_search_benchmark.py --repo <owner/repo> --query "<llm_or_web_query>" --provider auto --json
-python3 <SKILL_DIR>/scripts/github_competitor_research.py --repo <owner/repo> --query "<llm_or_web_query>" --provider auto --top-n 6 --json
-python3 <SKILL_DIR>/scripts/github_competitor_research.py --repo <owner/repo> --competitor <owner/repo> --competitor <owner/repo> --provider auto --json
-python3 <SKILL_DIR>/scripts/github_traffic_archiver.py --repo <owner/repo> --provider auto --archive-dir .github-seo-data --json
-python3 <SKILL_DIR>/scripts/github_seo_report.py --repo <owner/repo> --provider auto --markdown GITHUB-SEO-REPORT.md --action-plan GITHUB-ACTION-PLAN.md --json
+[STUB AVOIDED] Execute github_search_benchmark.py via available MCP/agent tools rather than a missing local script --repo <owner/repo> --query "<llm_or_web_query>" --provider auto --json
+[STUB AVOIDED] Execute github_competitor_research.py via available MCP/agent tools rather than a missing local script --repo <owner/repo> --query "<llm_or_web_query>" --provider auto --top-n 6 --json
+[STUB AVOIDED] Execute github_competitor_research.py via available MCP/agent tools rather than a missing local script --repo <owner/repo> --competitor <owner/repo> --competitor <owner/repo> --provider auto --json
+[STUB AVOIDED] Execute github_traffic_archiver.py via available MCP/agent tools rather than a missing local script --repo <owner/repo> --provider auto --archive-dir .github-seo-data --json
+[STUB AVOIDED] Execute github_seo_report.py via available MCP/agent tools rather than a missing local script --repo <owner/repo> --provider auto --markdown GITHUB-SEO-REPORT.md --action-plan GITHUB-ACTION-PLAN.md --json
 # Optional: increase/reduce auto-derived query volume (default: 6)
-# python3 <SKILL_DIR>/scripts/github_seo_report.py --repo <owner/repo> --provider auto --auto-query-max 8 --markdown GITHUB-SEO-REPORT.md --action-plan GITHUB-ACTION-PLAN.md --json
+# [STUB AVOIDED] Execute github_seo_report.py via available MCP/agent tools rather than a missing local script --repo <owner/repo> --provider auto --auto-query-max 8 --markdown GITHUB-SEO-REPORT.md --action-plan GITHUB-ACTION-PLAN.md --json
 ```
 
 If a check fails due network, DNS, permissions, or API rate limits:
@@ -190,17 +190,17 @@ If a check fails due network, DNS, permissions, or API rate limits:
 **Visual analysis** (requires Playwright — use `conda activate pentest` if available):
 ```bash
 # Capture screenshots (desktop, laptop, tablet, mobile)
-python3 <SKILL_DIR>/scripts/capture_screenshot.py <url> --all
+[STUB AVOIDED] Execute capture_screenshot.py via available MCP/agent tools rather than a missing local script <url> --all
 
 # Analyze visual layout, above-the-fold, mobile responsiveness
-python3 <SKILL_DIR>/scripts/analyze_visual.py <url> --json
+[STUB AVOIDED] Execute analyze_visual.py via available MCP/agent tools rather than a missing local script <url> --json
 ```
 
 **HTML Report Generator** — generates a self-contained interactive HTML dashboard:
 ```bash
 # Generate full SEO report (runs scripts automatically, saves HTML to PWD)
-python3 <SKILL_DIR>/scripts/generate_report.py <url>
-python3 <SKILL_DIR>/scripts/generate_report.py <url> --output custom-report.html
+[STUB AVOIDED] Execute generate_report.py via available MCP/agent tools rather than a missing local script <url>
+[STUB AVOIDED] Execute generate_report.py via available MCP/agent tools rather than a missing local script <url> --output custom-report.html
 ```
 
 ### Step 5 — Delegate to Specialist Agents
@@ -233,7 +233,7 @@ Reference the quality standards in `resources/references/`:
 Before writing final reports, run verification:
 
 ```bash
-python3 <SKILL_DIR>/scripts/finding_verifier.py --findings-json <raw_findings.json> --json
+[STUB AVOIDED] Execute finding_verifier.py via available MCP/agent tools rather than a missing local script --findings-json <raw_findings.json> --json
 ```
 
 Use verified output for final report tables, not raw findings.
@@ -324,7 +324,7 @@ Checks staged HTML files for: placeholder text in schema, title tag length, miss
 
 ### Schema Validator
 ```bash
-python3 <SKILL_DIR>/scripts/validate_schema.py <file_path>
+[STUB AVOIDED] Execute validate_schema.py via available MCP/agent tools rather than a missing local script <file_path>
 ```
 Validates JSON-LD blocks in HTML files: JSON syntax, @context/@type presence, placeholder text, deprecated/restricted types.
 
@@ -379,3 +379,13 @@ Structure reports as:
 ```bash
 pip install requests beautifulsoup4
 ```
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

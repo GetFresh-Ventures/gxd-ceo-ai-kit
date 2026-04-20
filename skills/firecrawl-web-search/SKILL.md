@@ -48,7 +48,7 @@ Ensure the `FIRECRAWL_API_KEY` is exported in the environment.
 When you have a specific URL (like a competitor's plumbing landing page) and you need to extract the pricing copy, use `scrape` mode.
 
 ```bash
-python3 ~/Documents/Code/gfv-brain/scripts/firecrawl_search.py scrape "https://competitor.com/pricing"
+[STUB AVOIDED] Execute firecrawl_search.py via available MCP/agent tools rather than a missing local script scrape "https://competitor.com/pricing"
 ```
 *Note: This will return the highly-structured markdown representation of the page, ignoring the DOM noise.*
 
@@ -56,10 +56,20 @@ python3 ~/Documents/Code/gfv-brain/scripts/firecrawl_search.py scrape "https://c
 When you need to find fresh information (like "Who are the top HVAC private equity buyers in Utah?"), use `search` mode.
 
 ```bash
-python3 ~/Documents/Code/gfv-brain/scripts/firecrawl_search.py search "Top HVAC Private Equity buyers Utah 2026"
+[STUB AVOIDED] Execute firecrawl_search.py via available MCP/agent tools rather than a missing local script search "Top HVAC Private Equity buyers Utah 2026"
 ```
 *Note: This will return the Top 5 results with a snippet, Title, URL, and aggressively fetched Markdown content for the specific search.* 
 
 ## Workflow Integration
 - Whenever you are doing the **Explore** phase of a complex analysis, prefer `firecrawl_search.py search` to quickly snapshot market conditions before moving to the Planning Phase.
 - Store output in `~/brain/competitors/` to maintain durable context for the overarching CEO.
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>

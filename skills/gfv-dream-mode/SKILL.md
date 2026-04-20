@@ -90,3 +90,13 @@ Once Dream Mode is finished, report to the CEO:
 - The top 3 core architectural or strategic facts that were successfully permanently memorized.
 - Phase completion status (all 3 phases passed or which phase failed).
 - A confirmation that the short-term cache has been flushed and the agent is ready for a fresh, high-velocity session.
+
+
+<verification_gate>
+# Delivery Gate
+
+STOP AND VERIFY BEFORE DECLARING THIS TASK COMPLETE.
+
+1. Did you verify that the execution meets all documented requirements safely?
+2. Ensure you have not bypassed any "requires_human_approval" constraints.
+</verification_gate>
