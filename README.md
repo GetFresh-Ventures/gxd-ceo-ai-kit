@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/gfv-logo-dark.png" alt="GetFresh Ventures Logo" height="60">
+  <img src="assets/gfv-logo-dark.png" alt="GetFresh Ventures Logo" height="180">
 
   # Growth by Design CEO AI Kit
 
