@@ -10,8 +10,8 @@ A modular skill system that transforms a coding agent into a CEO's Chief of Staf
 
 ```bash
 # Clone
-git clone https://github.com/GetFresh-Ventures/ceo-ai-kit.git
-cd ceo-ai-kit
+git clone https://github.com/GetFresh-Ventures/gxd-ceo-ai-kit.git
+cd gxd-ceo-ai-kit
 
 # Run the installer (interactive — choose your tier)
 chmod +x bootstrap.sh && ./bootstrap.sh
@@ -60,7 +60,7 @@ Re-run `bootstrap.sh` anytime to change levels.
 ## Architecture
 
 ```
-ceo-ai-kit/
+gxd-ceo-ai-kit/
 ├── AGENT.md                 # Operating rules — read after this file
 ├── AGENT-GUIDE.md           # This file — skill catalog and usage
 ├── bootstrap.sh/.ps1        # Installer

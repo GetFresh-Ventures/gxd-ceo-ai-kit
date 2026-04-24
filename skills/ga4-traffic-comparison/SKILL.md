@@ -57,7 +57,7 @@ Each period is a colon-delimited string: `Name:StartDate:EndDate`
 
 ## Common Recipes
 
-### 1. Before/After Client Engagement (Aprio)
+### 1. Before/After Client Engagement (Globex Corp)
 
 ```bash
 [STUB AVOIDED] Execute ga4_compare.py via available MCP/agent tools rather than a missing local script 373880369 \
@@ -82,7 +82,7 @@ Each period is a colon-delimited string: `Name:StartDate:EndDate`
             "Last 48h:2026-04-17:2026-04-18"
 ```
 
-### 4. Golden Rule Weekly Check
+### 4. Acme Corp Weekly Check
 
 ```bash
 [STUB AVOIDED] Execute ga4_compare.py via available MCP/agent tools rather than a missing local script 319584840 \

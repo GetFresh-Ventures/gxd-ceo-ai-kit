@@ -253,9 +253,9 @@ cd $HOME/Documents/Code/getfresh-ventures-website && echo "=== LAST COMMIT ===" 
 ## Quick Reference
 
 ### Key Differences from Other Releases
-| Property | Golden Rule | Aprio | GFV Website |
+| Property | Acme Corp | Globex Corp | GFV Website |
 |----------|------------|-------|-------------|
-| Repo | `golden-rule-dashboard` | `aprio-dashboard` | `getfresh-ventures-website` |
+| Repo | `golden-rule-dashboard` | `Globex Corp-dashboard` | `getfresh-ventures-website` |
 | Branch | `main` | `master` | `main` |
 | Linear Project ID | `a6f05311-...` | `600a9682-...` | `0d033c84-...` |
 | Hosting | Cloudflare Pages | Vercel (auto) | Vercel (auto) |

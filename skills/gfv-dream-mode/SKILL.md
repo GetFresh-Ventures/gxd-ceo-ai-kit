@@ -55,7 +55,7 @@ If dream mode is interrupted, the next run checks `dream_mode_status`:
 
 1. **Invoke the Dream Script**
    ```bash
-   ~/Documents/Code/ceo-ai-kit/tools/gfv-dream.sh
+   ~/Documents/Code/gxd-ceo-ai-kit/tools/gfv-dream.sh
    ```
    *Action:* The agent will run this script. The script parses the last 3 sessions from the Claude Code `~/brain/` memory tier, and autonomously extracts the facts, writing them to SQLite or updating markdown artifacts.
 
@@ -84,7 +84,7 @@ Dream Mode can run autonomously on a schedule instead of manual invocation:
 # Memory consolidation — every 6 hours
 # Create ~/Library/LaunchAgents/com.gfv.dream-mode.plist
 # Or add to crontab:
-0 */6 * * * ~/Documents/Code/ceo-ai-kit/tools/gfv-dream.sh >> /tmp/dream.log 2>&1
+0 */6 * * * ~/Documents/Code/gxd-ceo-ai-kit/tools/gfv-dream.sh >> /tmp/dream.log 2>&1
 ```
 
 ## CEO Communication

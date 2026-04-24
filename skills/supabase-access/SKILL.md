@@ -39,7 +39,7 @@ Use `supabase_query.py` for most queries — it handles auth, URL construction, 
 
 ```bash
 # Look up an entity and its facts/relations
-python3 ~/Documents/Code/gfv-brain/scripts/supabase_query.py --entity "Greg Romans"
+python3 ~/Documents/Code/gfv-brain/scripts/supabase_query.py --entity "Bob Roberts"
 
 # Show table schema (column names + types)
 python3 ~/Documents/Code/gfv-brain/scripts/supabase_query.py --schema ont_facts
@@ -98,7 +98,7 @@ The PIL MCP server exposes 10 tools for AI agent access:
 
 ```python
 # Example: Single-call entity context
-result = supabase_rpc("pil_entity_context", {"p_name": "Golden Rule"})
+result = supabase_rpc("pil_entity_context", {"p_name": "Acme Corp"})
 # Returns: { entity: {...}, facts: [...], vectors: [...], edges: [...] }
 ```
 

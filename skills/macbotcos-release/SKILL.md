@@ -34,7 +34,7 @@ Check `~/Documents/Code/gfv-brain/scripts/pil_config.py` for service mappings.
 
 ## Prerequisites
 - Repo: `$HOME/Documents/Code/MACBOTCOS`
-- Linear API Key: `op read "op://Machine One/Golden Rule Live Linear API Key/credential"`
+- Linear API Key: `op read "op://Machine One/Acme Corp Live Linear API Key/credential"`
 - Linear Team ID: `MAC`
 - Linear Project ID: `9304b035-a505-4580-adf1-34dc11cf2737` (MACBOTCOS)
 

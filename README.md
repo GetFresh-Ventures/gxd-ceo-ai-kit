@@ -30,7 +30,7 @@ This kit enables the proprietary **Growth by Design (GxD)** architecture directl
 
 **Runtime:** Local / Edge-Compute · 194 Domain Skills · SQLite FTS5 Memory Caching
 
-**The Brand (GxD)**: Growth by Design is the architecture of predictable revenue, uniting Marketing, Sales, and RevOps data into a single, unified ontology.
+**The Brand (GxD)**: Growth by Design is the architecture of predictable revenue end-to-end including CX, retention, growth, accounting, and operations—uniting Marketing, Sales, and RevOps data into a single, unified ontology.
 
 **The Solution**: An Edge-Native intelligence layer that installs directly onto your laptop. It removes the friction between strategic planning and agentic execution, allowing you to orchestrate complex GTM strategies autonomously.
 

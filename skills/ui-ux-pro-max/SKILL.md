@@ -39,7 +39,7 @@ Every time you are tasked with creating a new web app, frontend component, or la
 ```bash
 python3 $HOME/Documents/Code/.agents/skills/ui-ux-pro-max/scripts/search.py "<product_or_industry>" --design-system --persist -p "<ProjectName>"
 ```
-*Example: `python3 $HOME/Documents/Code/.agents/skills/ui-ux-pro-max/scripts/search.py "fintech dashboard" --design-system --persist -p "Aprio"`*
+*Example: `python3 $HOME/Documents/Code/.agents/skills/ui-ux-pro-max/scripts/search.py "fintech dashboard" --design-system --persist -p "Globex Corp"`*
 
 This command mathematically ranks and calculates colors, typography, styles, and anti-patterns based on 161 industry rules and saves them to `design-system/MASTER.md` in the current working directory.
 

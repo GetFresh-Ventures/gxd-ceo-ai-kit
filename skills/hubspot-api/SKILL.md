@@ -63,7 +63,7 @@ POST /crm/v3/objects/deals/search
     "filters": [{
       "propertyName": "dealname",
       "operator": "CONTAINS_TOKEN",
-      "value": "Golden Rule"
+      "value": "Acme Corp"
     }]
   }],
   "properties": ["dealname", "amount", "dealstage", "closedate"]
@@ -100,7 +100,7 @@ POST /crm/v3/objects/companies/search
     "filters": [{
       "propertyName": "name",
       "operator": "CONTAINS_TOKEN",
-      "value": "Golden Rule"
+      "value": "Acme Corp"
     }]
   }],
   "properties": ["name", "domain", "industry", "numberofemployees"]

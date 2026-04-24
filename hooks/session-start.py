@@ -63,7 +63,7 @@ def check_for_updates():
         
         # Get remote latest release tag (simplified check against GitHub API without auth)
         # Using a brief timeout so it never blocks the session start
-        url = "https://api.github.com/repos/GetFresh-Ventures/ceo-ai-kit/releases/latest"
+        url = "https://api.github.com/repos/GetFresh-Ventures/gxd-ceo-ai-kit/releases/latest"
         req = urllib.request.Request(url, headers={'User-Agent': 'GFV-Kit-OTA-Check'})
         with urllib.request.urlopen(req, timeout=2.0) as response:
             data = json.loads(response.read().decode())

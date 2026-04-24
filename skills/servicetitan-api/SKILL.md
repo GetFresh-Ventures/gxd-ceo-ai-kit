@@ -1,22 +1,22 @@
 ---
 name: servicetitan-api
-description: Access ServiceTitan data for Golden Rule PHC via MCP connector. Covers multi-tenant queries, job data, lead attribution, business units, technician performance, and revenue tracking.
+description: Access ServiceTitan data for Acme Home Services via MCP connector. Covers multi-tenant queries, job data, lead attribution, business units, technician performance, and revenue tracking.
 ---
 
-# ServiceTitan API Access (Golden Rule)
+# ServiceTitan API Access (Acme Corp)
 
 ## Status: ✅ Working (via MCP)
 
 ## Access Method
 
-ServiceTitan data is accessed through the **Golden Rule MCP connector**, not direct API calls.
+ServiceTitan data is accessed through the **Acme Corp MCP connector**, not direct API calls.
 
 - **Endpoint**: `https://gr-connectors-web.vercel.app/api/mcp`
 - **Auth**: Bearer token via `op read "op://Machine One/GR MCP Bearer Token/credential"`
 
 ## Multi-Tenant Structure
 
-Golden Rule has **4 ServiceTitan tenants**:
+Acme Corp has **4 ServiceTitan tenants**:
 
 | Tenant | Tool Prefix | Market | Services |
 |--------|-------------|--------|----------|
@@ -83,7 +83,7 @@ Sewer lines, sewer repair, sewer replacement — **zero** sewer jobs in ServiceT
 
 | Person | Role | Context |
 |--------|------|---------|
-| Greg Romans | GM, Utah | Ask about financing, services, team |
+| Bob Roberts | GM, Utah | Ask about financing, services, team |
 | Derrick | Tech lead | GA4/GTM access elevation |
 | Arvin | MCP connector dev | ServiceTitan tool additions |
 

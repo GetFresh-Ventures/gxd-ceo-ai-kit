@@ -179,7 +179,7 @@
 | [`seo-audit-tools`](skills/seo-audit-tools/) | **squirrelscan** | "CLI-based SEO site auditor with 230+ rules across 21 categories. Supports incremental crawling, E-E-A-T auditing, an... |
 | [`seo-growth`](skills/seo-growth/) | **seo-growth** | "Audit and optimize SEO — technical SEO, on-page optimization, schema markup, site architecture, and AI search optimi... |
 | [`seobuild-onpage`](skills/seobuild-onpage/) | **seobuild-onpage** | >   Write SEO pages that rank on Google AND get cited by LLMs. Uses live SERP data,   500-token chunk architecture, a... |
-| [`servicetitan-api`](skills/servicetitan-api/) | **servicetitan-api** | Access ServiceTitan data for Golden Rule PHC via MCP connector. Covers multi-tenant queries, job data, lead attributi... |
+| [`servicetitan-api`](skills/servicetitan-api/) | **servicetitan-api** | Access ServiceTitan data for Acme Home Services via MCP connector. Covers multi-tenant queries, job data, lead attributi... |
 | [`ship-pil`](skills/ship-pil/) | **ship-pil** | End-to-end verification + Linear evidence + PR for PIL changes. Use after modifying any pil_*.py script or LaunchAgen... |
 | [`skill-builder`](skills/skill-builder/) | **skill-builder** | >   Meta-skill for auto-generating new GFV skills from templates. Creates properly structured   SKILL.md files with f... |
 | [`slack-connector`](skills/slack-connector/) | **slack-connector** | Read, post, and manage Slack team communications. Channel monitoring, thread replies, and workflow notifications. sho... |

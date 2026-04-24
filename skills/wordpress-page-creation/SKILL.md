@@ -5,7 +5,7 @@ description: End-to-end methodology for creating high-conversion WordPress landi
   Skip when: Not applicable.
 ---
 
-# WordPress Page Creation Skill — Golden Rule
+# WordPress Page Creation Skill — Acme Corp
 
 ## Purpose
 
@@ -171,11 +171,11 @@ Every page MUST use semantic HTML5 elements (`<header>`, `<main>`, `<section>`, 
 
 | Element | Requirement | Example |
 |---------|-------------|---------|
-| **Title Tag** | `[Service] [City], [State] \| [Brand]` ≤ 60 chars | `Water Heater Repair & Replacement – Salt Lake City, Utah \| Golden Rule` |
+| **Title Tag** | `[Service] [City], [State] \| [Brand]` ≤ 60 chars | `Water Heater Repair & Replacement – Salt Lake City, Utah \| Acme Corp` |
 | **Meta Description** | Action-oriented, include phone, ≤ 155 chars | `24/7 water heater repair in Salt Lake City. Same-day service, upfront pricing. Call (801) 901-8553 for fast help.` |
 | **H1** | One per page, includes primary keyword | `Water Heater Repair & Replacement in Salt Lake City` |
 | **H2s** | Service-specific, include secondary keywords | `Expert Water Heater Repair`, `When to Replace Your Water Heater` |
-| **Alt Text** | Every image, descriptive + keyword | `Golden Rule technician repairing water heater in Salt Lake City home` |
+| **Alt Text** | Every image, descriptive + keyword | `Acme Corp technician repairing water heater in Salt Lake City home` |
 | **Internal Links** | 2-3 links to related service/location pages | Link to HVAC, plumbing, general services pages |
 | **Word Count** | Minimum 800 words for PPC, 1500+ for organic | Ensures content depth for E-E-A-T |
 
@@ -189,7 +189,7 @@ Every page MUST use semantic HTML5 elements (`<header>`, `<main>`, `<section>`, 
 {
   "@context": "https://schema.org",
   "@type": "Plumber",
-  "name": "Golden Rule Plumbing, Heating, Cooling & Electrical",
+  "name": "Acme Corp Plumbing, Heating, Cooling & Electrical",
   "telephone": "+1-801-901-8553",
   "address": {
     "@type": "PostalAddress",
@@ -266,11 +266,11 @@ For all LocalBusiness rendering, embed the author parameters directly into JSON-
 ```json
 "author": {
   "@type": "Person",
-  "name": "Golden Rule Licensed Master Technician",
+  "name": "Acme Corp Licensed Master Technician",
   "jobTitle": "Licensed Master Plumber/HVAC Technician",
   "worksFor": {
     "@type": "LocalBusiness",
-    "name": "Golden Rule Plumbing, Heating, Cooling & Electrical"
+    "name": "Acme Corp Plumbing, Heating, Cooling & Electrical"
   },
   "sameAs": [
     "https://en.wikipedia.org/wiki/Plumber",
@@ -286,7 +286,7 @@ For all LocalBusiness rendering, embed the author parameters directly into JSON-
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "[Service Name]",
-  "provider": { "@type": "LocalBusiness", "name": "Golden Rule" },
+  "provider": { "@type": "LocalBusiness", "name": "Acme Corp" },
   "areaServed": { "@type": "City", "name": "[City]" },
   "description": "[Service description]",
   "offers": {
@@ -617,7 +617,7 @@ WP_USER = "marketing"
 
 def get_wp_password():
     r = subprocess.run(
-        ["op", "read", "op://Machine One/Golden Rule WP Bulk App Password/password"],
+        ["op", "read", "op://Machine One/Acme Corp WP Bulk App Password/password"],
         capture_output=True, text=True, timeout=30
     )
     if r.returncode != 0:

@@ -81,7 +81,7 @@ results = db.execute("""
     WHERE transcripts_fts MATCH ?
     ORDER BY rank
     LIMIT 20
-""", ("golden rule attribution",)).fetchall()
+""", ("Acme Corp attribution",)).fetchall()
 
 for session_id, ts, content, rank in results:
     print(f"[{ts}] Session {session_id[:8]}... (rank={rank})")

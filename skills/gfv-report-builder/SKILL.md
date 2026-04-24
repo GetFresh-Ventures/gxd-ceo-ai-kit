@@ -58,7 +58,7 @@ Generate branded consulting report slides as high-quality images, then assemble 
 
 ### After Intake:
 
-1. Confirm the configuration back to the user in one line (e.g., *"Got it — 14 slides, free method, 16:9 4K, GFD v4.4 style, Aprio + GFV logos"*)
+1. Confirm the configuration back to the user in one line (e.g., *"Got it — 14 slides, free method, 16:9 4K, GFD v4.4 style, Globex Corp + GFV logos"*)
 2. Generate 2 test slides first (one text-heavy, one data-heavy)
 3. Show test slides for approval before generating the full batch
 4. Post-process all slides (verify dimensions, composite logos, page numbers)

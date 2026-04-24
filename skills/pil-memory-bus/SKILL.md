@@ -99,7 +99,7 @@ python3 ~/Documents/Code/gfv-brain/scripts/claude_memory.py vector --query="<nat
 ```bash
 # Store a new fact
 python3 ~/Documents/Code/gfv-brain/scripts/claude_memory.py store \
-  --entity="Golden Rule PHC" \
+  --entity="Acme Home Services" \
   --fact-type="campaign_metric" \
   --value="Utah LSA leads dropped 58% in Q1 2026" \
   --confidence=0.85 \
@@ -111,7 +111,7 @@ python3 ~/Documents/Code/gfv-brain/scripts/claude_memory.py store \
 Connect related facts to build intelligence graphs:
 
 ```
-Fact A: "Golden Rule Utah LSA leads dropped 58%"
+Fact A: "Acme Corp Utah LSA leads dropped 58%"
   ↓ linked to
 Fact B: "ServiceTitan shows 58% abandonment rate on calls"
   ↓ linked to  

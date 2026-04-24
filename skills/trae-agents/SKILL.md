@@ -49,7 +49,7 @@ Check `~/Documents/Code/gfv-brain/scripts/pil_config.py` for service mappings.
 |---|---|
 | **Frontend Expert** | Production-ready UI checklist: React, Tailwind, Next.js, Astro |
 | **Designer Architect** | UI/UX system definition: interaction patterns, developer-ready specs |
-| **WordPress Builder** | Theme/plugin/Gutenberg/perf patterns (useful for Golden Rule) |
+| **WordPress Builder** | Theme/plugin/Gutenberg/perf patterns (useful for Acme Corp) |
 | **UX Flow Architect** | User journey optimization: friction reduction, clarity, retention, conversion |
 
 ### 📊 Analytics & Strategy (Direct GFV Use)

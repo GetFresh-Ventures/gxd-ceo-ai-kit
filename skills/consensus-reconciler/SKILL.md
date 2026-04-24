@@ -17,9 +17,9 @@ The Consensus Reconciler resolves conflicting data across GFV's multi-system lan
 ## Problem This Solves
 
 ```
-Source A (HubSpot):    "Golden Rule has 12 active deals"
-Source B (PandaDoc):   "Golden Rule has 8 active contracts"  
-Source C (ServiceTitan):"Golden Rule has 15 active jobs"
+Source A (HubSpot):    "Acme Corp has 12 active deals"
+Source B (PandaDoc):   "Acme Corp has 8 active contracts"  
+Source C (ServiceTitan):"Acme Corp has 15 active jobs"
 Source D (the Executive):      "We have about 10 deals going"
 
 → Which number is truth? Consensus Reconciler resolves this.

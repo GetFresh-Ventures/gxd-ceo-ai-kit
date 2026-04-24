@@ -163,7 +163,7 @@ url = create_formatted_doc(
     folder_id="DRIVE_FOLDER_ID",
     cover_page={
         "title": "SEO Growth Strategy",
-        "subtitle": "Aprio Board Portal",
+        "subtitle": "Globex Board Portal",
         "prepared_by": "GetFresh Ventures",
         "date": "April 2026",
         "confidential": True,
@@ -199,7 +199,7 @@ Write content as standard markdown. The parser supports:
 
 | Client | Drive ID | Notes |
 |--------|----------|-------|
-| Aprio | `0AGZeuLXeKiBzUk9PVA` | Aprio shared drive |
+| Globex Corp | `0AGZeuLXeKiBzUk9PVA` | Globex Corp shared drive |
 | GFV Internal | `1SxiQMO8MwgHEeQ9KgpNruoDK-axbks6F` | gfv_brain folder |
 
 ## Common Workflow
@@ -210,7 +210,7 @@ sys.path.insert(0, os.path.expanduser("~/Documents/Code/gfv-brain/scripts"))
 
 # 1. Write the markdown content
 md_content = """
-# Aprio Board Portal — SEO Growth Strategy
+# Globex Board Portal — SEO Growth Strategy
 
 
 ---
@@ -236,7 +236,7 @@ The key findings are...
 from create_google_doc import create_formatted_doc
 url = create_formatted_doc(
     md_content,
-    title="Aprio Board Portal — SEO Growth Strategy",
+    title="Globex Board Portal — SEO Growth Strategy",
     folder_id="0AGZeuLXeKiBzUk9PVA"
 )
 print(f"Doc ready: {url}")

@@ -4,7 +4,7 @@ How to write eval criteria that actually improve your skills instead of giving y
 
 ---
 
-## the golden rule
+## the Acme Corp
 
 Every eval must be a yes/no question. Not a scale. Not a vibe check. Binary.
 

@@ -32,7 +32,7 @@ Check `~/Documents/Code/gfv-brain/scripts/pil_config.py` for service mappings.
 
 # PPC Keyword Strategy — Home Services
 
-**Use this skill when:** Building or restructuring Search campaigns for a home services company (HVAC, Plumbing, Water Heater, Electrical, Roofing, etc.). This methodology was developed and validated on the Golden Rule Utah market restructure (April 2026) and can be applied to any metro area.
+**Use this skill when:** Building or restructuring Search campaigns for a home services company (HVAC, Plumbing, Water Heater, Electrical, Roofing, etc.). This methodology was developed and validated on the Acme Corp Utah market restructure (April 2026) and can be applied to any metro area.
 
 
 ---
@@ -280,7 +280,7 @@ gr_google_ads_ppc_get_keyword_performance {"start_date":"<5d ago>","end_date":"<
 
 ---
 
-## Proven Keyword Lists (Golden Rule — Utah)
+## Proven Keyword Lists (Acme Corp — Utah)
 
 These are the exact keyword lists deployed in the April 2026 Utah restructure. Use as templates for other markets — swap city names.
 

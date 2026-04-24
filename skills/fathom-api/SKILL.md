@@ -74,7 +74,7 @@ Returns a paginated list of meetings the API key owner has access to (own record
 ```json
 {
   "recording_id": "abc123",
-  "title": "GetFresh Ventures <> Golden Rule",
+  "title": "GetFresh Ventures <> Acme Corp",
   "created_at": "2026-04-09T18:09:37Z",
   "url": "https://fathom.video/share/...",
   "calendar_invitees": [
@@ -120,7 +120,7 @@ for m in result["items"]:
 
 ### 2. Search for Client Meetings
 ```python
-meetings = client.search_meetings("Golden Rule", limit=10)
+meetings = client.search_meetings("Acme Corp", limit=10)
 for m in meetings:
     print(f"[{m['date'][:10]}] {m['title']} ({len(m['attendees'])} attendees)")
 ```
@@ -187,10 +187,10 @@ def search_transcripts(keyword, days_back=7):
     return sorted(results, key=lambda x: -x["mentions"])
 ```
 
-### 5. Extract Golden Rule Meetings
+### 5. Extract Acme Corp Meetings
 ```python
 def get_golden_rule_meetings(days_back=30):
-    """Get all Golden Rule related meetings from Fathom."""
+    """Get all Acme Corp related meetings from Fathom."""
     client = FathomClient()
     from datetime import datetime, timezone, timedelta
     
@@ -198,7 +198,7 @@ def get_golden_rule_meetings(days_back=30):
     gr_meetings = []
     cursor = None
     
-    gr_keywords = ["golden rule", "greg romans", "mark paup", "derrick", "golden rule"]
+    gr_keywords = ["Acme Corp", "Bob Roberts", "Chris Evans", "derrick", "Acme Corp"]
     
     while True:
         batch = client.list_meetings(

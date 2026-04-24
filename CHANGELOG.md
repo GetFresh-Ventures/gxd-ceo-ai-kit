@@ -107,7 +107,7 @@ This release completes a comprehensive audit and consolidation of 13 external op
 ## 2026-04-17 7:07 PM PT — v1.33.0 — Kit Integrity Hardening + Skill Imports
 
 ### Why it matters
-This release is a comprehensive integrity hardening milestone. A 6-pass end-to-end audit across all 75 skills, documentation, and infrastructure scripts purged every instance of client-specific data (ServiceTitan, Aprio, Golden Rule PHC), geographic leaks (Utah, Iowa, Des Moines), personal identifiers, and legacy proprietary system references (PIL, Supabase, CAAI, ccflare) that had leaked into the product codebase during operational skill authoring. The kit now ships as a clean, fully agnostic GFV product — ready for any executive deployment without modification. Additionally, two new skills were imported: `import-skill` (deterministic external skill intake) and `dev-browser` (Playwright-based browser automation).
+This release is a comprehensive integrity hardening milestone. A 6-pass end-to-end audit across all 75 skills, documentation, and infrastructure scripts purged every instance of client-specific data (ServiceTitan, Globex Corp, Acme Home Services), geographic leaks (Utah, Iowa, Des Moines), personal identifiers, and legacy proprietary system references (PIL, Supabase, CAAI, ccflare) that had leaked into the product codebase during operational skill authoring. The kit now ships as a clean, fully agnostic GFV product — ready for any executive deployment without modification. Additionally, two new skills were imported: `import-skill` (deterministic external skill intake) and `dev-browser` (Playwright-based browser automation).
 
 ### Added
 - **`skills/import-skill/`** — Deterministic external skill intake with 10-point verification protocol. Ensures any skill imported from GitHub, npm, or raw sources is fully GFV-compliant before registration.
@@ -124,7 +124,7 @@ This release is a comprehensive integrity hardening milestone. A 6-pass end-to-e
 - **Pass 3 (2 files):** Removed `ccflare` hardcoded examples and depersonalized `the Executive` name references in `import-skill`.
 - **Pass 4 (6 files):** Purged `ServiceTitan`, `CAAI`, `Utah`, `Iowa`, `Des Moines` geography, and client contact name `Greg` from examples.
 - **Pass 5 (12 files):** Purged all `Field Service Platform` aliases (the ServiceTitan rename). Added GFV website URL branding.
-- **Pass 6 (1 file):** Removed final `PIL` reference in `tools/gfv-brain-search.py` docstring and `aprio` client example query.
+- **Pass 6 (1 file):** Removed final `PIL` reference in `tools/gfv-brain-search.py` docstring and `Globex Corp` client example query.
 
 ### Files Modified
 - README.md, AGENT-GUIDE.md, SKILL-AUTHORING-STANDARD.md, CHANGELOG.md
@@ -236,7 +236,7 @@ The previous onboarding funnels assumed an engineering baseline—requiring SSH 
 - **AI Agent Auto-Installers:** Injected native `curl`/`unzip` hooks and `nvm`/`node.js` dependency resolution chains into `bootstrap.sh`. The kit now seamlessly downloads MacOS Cursor Universal binaries or globally installs `@anthropic-ai/claude-code` completely under the hood, depending on the executive's preference.
 
 ### Changed
-- **Visual Clone Pathing:** Relocated the foundational clone target from the hidden `~/.ceo-ai-kit` directory to a highly visible `~/Documents/GTM-Enablement-Kit` path.
+- **Visual Clone Pathing:** Relocated the foundational clone target from the hidden `~/.gxd-ceo-ai-kit` directory to a highly visible `~/Documents/GTM-Enablement-Kit` path.
 - **HTTPS Git Routing:** Eliminated the SSH `git@github.com` clone requisite that previously returned `Permission Denied` exceptions for business users, pivoting to unrestricted HTTPS routing.
 - **Documentation Restructure:** Overhauled `GETTING-STARTED.md` and `README.md` to omit CLI engineering instructions and instead utilize explicit, UI-driven navigation (e.g. `File > Open Folder`) to natively activate dotfile workspaces inside Cursor.
 
@@ -1038,7 +1038,7 @@ This release hardens the GetFresh Ventures Growth by Design CEO AI Kit from a st
 ## Repository Structure
 
 ```
-ceo-ai-kit/
+gxd-ceo-ai-kit/
 ├── AGENT.md                         ← AI operating rules (universal)
 ├── CHANGELOG.md                     ← Versioned release history
 ├── GETTING-STARTED.md               ← Executive enablement walkthrough (start here)

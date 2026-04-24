@@ -69,7 +69,7 @@ for event in events.get('items', []):
 
 ```python
 event = {
-    'summary': 'Golden Rule Weekly Sync',
+    'summary': 'Acme Corp Weekly Sync',
     'description': 'Weekly progress review with Greg and Derrick',
     'start': {
         'dateTime': '2026-04-24T14:00:00-06:00',
@@ -103,7 +103,7 @@ event = service.events().get(
     eventId='event_id_here'
 ).execute()
 
-event['summary'] = 'Updated: Golden Rule Weekly Sync'
+event['summary'] = 'Updated: Acme Corp Weekly Sync'
 updated = service.events().update(
     calendarId='primary',
     eventId=event['id'],
@@ -138,9 +138,9 @@ busy_times = freebusy['calendars']['executive@company.com']['busy']
 
 | Client | Zone | IANA |
 |---|---|---|
-| Golden Rule (Utah) | Mountain | `America/Denver` |
-| Golden Rule (Iowa) | Central | `America/Chicago` |
-| Aprio (National) | Eastern | `America/New_York` |
+| Acme Corp (Utah) | Mountain | `America/Denver` |
+| Acme Corp (Iowa) | Central | `America/Chicago` |
+| Globex Corp (National) | Eastern | `America/New_York` |
 | the Executive | Pacific | `America/Los_Angeles` |
 
 ## Anti-Patterns

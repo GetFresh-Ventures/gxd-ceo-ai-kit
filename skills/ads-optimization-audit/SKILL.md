@@ -34,7 +34,7 @@ Check `~/Documents/Code/gfv-brain/scripts/pil_config.py` for service mappings.
 
 **Use this skill when:** Running a performance audit on Google Ads campaigns, diagnosing gaps, executing competitive research, or remediating keyword/bidding/targeting issues for any home services market.
 
-**This skill was battle-tested on:** Golden Rule Utah market (April 2026) — HVAC, Plumbing, Water Heater, Electrical campaigns.
+**This skill was battle-tested on:** Acme Corp Utah market (April 2026) — HVAC, Plumbing, Water Heater, Electrical campaigns.
 
 **Prerequisites:**
 - [PPC Keyword Strategy](../ppc-keyword-strategy/SKILL.md) — intent hierarchy & keyword design
@@ -175,7 +175,7 @@ for phrase in ["water heater repair", "plumber near me", "ac not working"]:
 
 ```python
 # Check our SERP presence for brand queries
-for query in ["golden rule plumbing heating cooling", "golden rule plumbing utah"]:
+for query in ["Acme Corp plumbing heating cooling", "Acme Corp plumbing utah"]:
     gr_semrush_keyword_organic_results(phrase=query, database="us", display_limit=20)
 ```
 
